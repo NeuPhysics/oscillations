@@ -72,19 +72,24 @@ Schrodinger equation is
 i\partial_t \ket{\Psi} = \mathbf H \ket{\Psi},
 \end{equation}
 
-where for relativistic neutrinos, the energy is
+where for relativistic neutrinos, the energy is\footnote{They all have the same momentum but different mass. The thing is we assume they have the same velocity since the mass is very small. To have an idea of the velocity difference, I can calculate the distance travelled by another neutrino in the frame of one neutrino. {\bf To Be Done!}  }
 
 \begin{align*}
-\mathbf H &= \sqrt{p^2 + m^2} \\
-&= p\sqrt{1 + \frac{m^2}{p^2}} \\
-&\approx p(1 + \frac{1}{2} \frac{m^2}{p^2}).
+\mathbf H^m &= \begin{pmatrix}\sqrt{p^2 + m_1^2} & 0 & 0 \\ 0& \sqrt{p^2 + m_2^2} & 0 \\ 0 & 0 & \sqrt{p^2 + m_3^2}  \end{pmatrix},
 \end{align*}
+
+in which the energy terms are simplified using the relativistic condition
+
+\begin{equation}
+&p\sqrt{1 + \frac{m_i^2}{p^2}} \\
+\approx & p(1 + \frac{1}{2} \frac{m_i^2}{p^2}).
+\end{equation}
 
 
 In general the flavor eigenstates are the mixing of the mass eigenstates with a unitary matrix $\mathbf U$, that is
 
 \begin{equation}
-\ket{\nu_{\alpha}} = \mathbf U_{\alpha i} \ket{\nu_i},
+\ket{\nu_{\alpha}} =  U_{\alpha i} \ket{\nu_i},
 \end{equation}
 
 where the $\alpha$s are indices for flavor states while the $i$s are indices for mass eigenstates.
@@ -92,7 +97,7 @@ where the $\alpha$s are indices for flavor states while the $i$s are indices for
 To find out the equation of motion for flavor states, plugin in the initary tranformation,
 
 \begin{equation}
-i \mathbf U_{\alpha i} \partial_t \ket{\nu_i} = \mathbf U_{\alpha i} \mathbf H^m_{ij} \ket{\nu_j}.
+i  U_{\alpha i} \partial_t \ket{\nu_i} =  U_{\alpha i}  H^m_{ij} \ket{\nu_j}.
 \end{equation}
 
 I use index ${}^m$ for representation of Hamiltonian in mass eigenstates. Applying the unitary condition of the transformation,
@@ -104,7 +109,7 @@ I use index ${}^m$ for representation of Hamiltonian in mass eigenstates. Applyi
 I get
 
 \begin{equation}
-i\mathbf U_{\alpha i} \partial_t \ket{\nu_i} = \mathbf U_{\alpha i} \mathbf H^m_{i j} \mathbf {U^\dagger_{j\beta}} \mathbf U_{\beta k} \ket{\nu_k},
+i U_{\alpha i} \partial_t \ket{\nu_i} =  U_{\alpha i} H^m_{i j}  {U^\dagger_{j\beta}}  U_{\beta k} \ket{\nu_k},
 \end{equation}
 
 which is simplified to
@@ -115,6 +120,11 @@ i \partial_t \ket{\nu_\alpha} = \mathbf H^f_{\alpha \beta} \ket{\nu_{\beta}},
 
 since the transformation is time independent.
 
+The new Hamiltonian in the representations of flavor eigenstates reads
+
+\begin{equation}
+\mathbf H^f_{\alpha\beta}  = \mathbf {U^\dagger}_{}
+\end{equation}
 
 
 
