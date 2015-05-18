@@ -46,6 +46,14 @@
 \newcommand{\doccls}[1]{\texttt{#1}}% document class name
 \newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
 
+
+
+% For quantum braket notation
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ket}[1]{\left| #1\right\rangle}
+\newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
+\newcommand{\avg}[1]{\left< #1 \right>}
+
 \begin{document}
 
 \maketitle% this prints the handout title, author, and date
@@ -61,7 +69,7 @@
 Schrodinger equation is
 
 \begin{equation}
-i\partial_t \Psi = \mathbf H \Psi,
+i\partial_t \ket{\Psi} = \mathbf H \ket{\Psi},
 \end{equation}
 
 where for relativistic neutrinos, the energy is
@@ -71,6 +79,47 @@ where for relativistic neutrinos, the energy is
 &= p\sqrt{1 + \frac{m^2}{p^2}} \\
 &\approx p(1 + \frac{1}{2} \frac{m^2}{p^2}).
 \end{align*}
+
+
+In general the flavor eigenstates are the mixing of the mass eigenstates with a unitary matrix $\mathbf U$, that is
+
+\begin{equation}
+\ket{\nu_{\alpha}} = \mathbf U_{\alpha i} \ket{\nu_i},
+\end{equation}
+
+where the $\alpha$s are indices for flavor states while the $i$s are indices for mass eigenstates.
+
+To find out the equation of motion for flavor states, plugin in the initary tranformation,
+
+\begin{equation}
+i \mathbf U_{\alpha i} \partial_t \ket{\nu_i} = \mathbf U_{\alpha i} \mathbf H^m_{ij} \ket{\nu_j}.
+\end{equation}
+
+I use index ${}^m$ for representation of Hamiltonian in mass eigenstates. Applying the unitary condition of the transformation,
+
+\begin{equation}
+\mathbf I = \mathbf {U^\dagger} \mathbf U,
+\end{equation}
+
+I get
+
+\begin{equation}
+i\mathbf U_{\alpha i} \partial_t \ket{\nu_i} = \mathbf U_{\alpha i} \mathbf H^m_{i j} \mathbf {U^\dagger_{j\beta}} \mathbf U_{\beta k} \ket{\nu_k},
+\end{equation}
+
+which is simplified to
+
+\begin{equation}
+i \partial_t \ket{\nu_\alpha} = \mathbf H^f_{\alpha \beta} \ket{\nu_{\beta}},
+\end{equation}
+
+since the transformation is time independent.
+
+
+
+
+\subsection{2 Flavor States}
+
 
 For 2 flavor neutrinos the Hamiltonian in the representation of propagation states,
 
@@ -84,6 +133,42 @@ p_1 + \frac{1}{2}\frac{m_1^2}{p_1} & 0 \\
 0 & p_2 + \frac{1}{2}\frac{m_1^2}{p_2}
 \end{pmatrix}.
 \end{equation*}
+
+The equation of motion in matrix form is
+
+\begin{equation}
+i\partial_t \begin{pmatrix}
+\nu_1 \\ \nu_2 \end{pmatrix} = \begin{pmatrix}
+p_1 + \frac{1}{2}\frac{m_1^2}{p_1} & 0 \\
+0 & p_2 + \frac{1}{2}\frac{m_1^2}{p_2}
+\end{pmatrix} \begin{pmatrix}
+\nu_1 \\ \nu_2 \end{pmatrix} 
+\end{equation}
+
+The flavor eigenstate is a mixing of the propagation eigenstates,
+
+\begin{equation}
+\begin{pmatrix}
+\nu_a \\ \nu_b \end{pmatrix} = 
+\begin{pmatrix} \cos\theta_v & \sin\theta_v \\ -\sin\theta_v  & \cos\theta_v
+\end{pmatrix} \begin{pmatrix}  \nu_a \\ \nu_b
+\end{pmatrix}
+\end{equation}
+
+
+Denote the rotation matrix using $\mathbf U$, the transofmation can be written as
+
+\begin{equation}
+\ket{\nu_{\alpha}} = \mathbf U_{\alpha i} \ket{i},
+\end{equation}
+
+where $\alpha$ is for the flavor eigenstates and $i$ is for the mass eigenstates.
+
+
+
+
+
+\subsection{3 Flavor States}
 
 
 
