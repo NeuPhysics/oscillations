@@ -72,7 +72,7 @@ Schrodinger equation is
 i\partial_t \ket{\Psi} = \mathbf H \ket{\Psi},
 \end{equation}
 
-where for relativistic neutrinos, the energy is\footnote{They all have the same momentum but different mass. The thing is we assume they have the same velocity since the mass is very small. To have an idea of the velocity difference, I can calculate the distance travelled by another neutrino in the frame of one neutrino. {\bf To Be Done!}  }
+where for relativistic neutrinos, the energy is\footnote{They all have the same momentum but different mass. The thing is we assume they have the same velocity since the mass is very small. To have an idea of the velocity difference, I can calculate the distance travelled by another neutrino in the frame of one neutrino.\newline {\bf To Be Discussed!} \newline Will decoherence happen due to this? }
 
 \begin{align*}
 \mathbf H^m &= \begin{pmatrix}\sqrt{p^2 + m_1^2} & 0 & 0 \\ 0& \sqrt{p^2 + m_2^2} & 0 \\ 0 & 0 & \sqrt{p^2 + m_3^2}  \end{pmatrix},
@@ -115,7 +115,7 @@ i U_{\alpha i} \partial_t \ket{\nu_i} =  U_{\alpha i} H^m_{i j}  {U^\dagger_{j\b
 which is simplified to
 
 \begin{equation}
-i \partial_t \ket{\nu_\alpha} = \mathbf H^f_{\alpha \beta} \ket{\nu_{\beta}},
+i \partial_t \ket{\nu_\alpha} = H^f_{\alpha \beta} \ket{\nu_{\beta}},
 \end{equation}
 
 since the transformation is time independent.
@@ -123,8 +123,25 @@ since the transformation is time independent.
 The new Hamiltonian in the representations of flavor eigenstates reads
 
 \begin{equation}
-\mathbf H^f_{\alpha\beta}  = \mathbf {U^\dagger}_{}
+H^f_{\alpha\beta}  = U^\dagger_{\alpha i} H^m_{ij} U_{j\beta}.
 \end{equation}
+
+
+
+\subsection{Survival Probability}
+
+
+The neutrino states at any time can be written as
+
+\begin{equation}
+\ket{\Psi(t)}  = X_1 \ket{\nu_1 } e^{-i E_1 t} X_2 \ket{ \nu_2 } e^{-i E_2 t},
+\end{equation}
+
+where $X_1$ and $X_2$ are the initial conditions which are determined using the neutrino initial states.
+
+
+
+
 
 
 
