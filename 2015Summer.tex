@@ -139,13 +139,47 @@ The neutrino states at any time can be written as
 
 where $X_1$ and $X_2$ are the initial conditions which are determined using the neutrino initial states.
 
+Survival probalility is the squrare of the projection on an flavor eigenstate,
+
+\begin{equation}
+P_{\alpha}(t) = \lvert \braket{\nu_{\alpha}}{\Psi(t)} \rvert^2.
+\end{equation}
+
+The calculation of this expression requires our knowledge of the relation between mass eigenstates and flavor eigenstates which we have already found out.
+
+Recall that the transformation between flavor and mass states is
+
+\begin{equation}
+\ket{\nu_i} = U^{-1}_{i\alpha} \ket{\nu_\alpha},
+\end{equation}
+
+which leads to the inner product of mass eigenstates and flavor eigenstates,
+
+\begin{align}
+\braket{\nu_\alpha}{\nu_i} &= \bra{\nu_\alpha} U^{-1}_{i\beta} \ket{\nu_\beta} \\
+& = U^{-1}_{i\beta}\delta_{\alpha\beta} \\
+7 = U^{-1}_{i\alpha}.
+\end{align}
+
+
+The survival probability becomes
+
+\begin{align*}
+P_\alpha (t) &= \lvert \braket{\nu_\alpha}{ X_1 \ket{\nu_1 } e^{-i E_1 t} X_2 \ket{ \nu_2 } e^{-i E_2 t} }  \rvert^2 \\
+& = \lvert  X_1 e^{-i E_1 t} \braket{\nu_\alpha}{\ket{\nu_1} } + X_2 e^{-i E_2 t} \braket{ \nu_\alpha }{ \nu_2 } \rvert^2 \\
+& = \lvert \sum_i X_i e^{-i E_i t} U^{-1}_{i \alpha}  \rvert ^2 \\
+& = \sum_i X_1^* e^{iE_i t} U^{\dagger *}_{i\alpha} \sum_i X_i e^{-i E_i t} U^\dagger_{i \alpha} \\
+& = \lvert X_1 \rvert^2 U^{\dagger *}_{1\alpha} U^\dagger_{1\alpha} + \lvert X_2 \rvert^2 U^{\dagger *}_{2\alpha} U^\dagger_{2\alpha}  + X_1^* X_2 U^{\dagger *}_{1\alpha} U^\dagger_{2\alpha} e^{i E_1 t - i E_2 t} + X_2^* X_1 U^{\dagger *}_{2\alpha} U^\dagger_{1\alpha} e^{i E_2 t - i E_1 t}
+\end{align*}
 
 
 
 
 
 
-\subsection{2 Flavor States}
+
+
+\subsection{Two Flavor States}
 
 
 For 2 flavor neutrinos the Hamiltonian in the representation of propagation states,
@@ -195,7 +229,7 @@ where $\alpha$ is for the flavor eigenstates and $i$ is for the mass eigenstates
 
 
 
-\subsection{3 Flavor States}
+\subsection{Three Flavor States}
 
 
 
