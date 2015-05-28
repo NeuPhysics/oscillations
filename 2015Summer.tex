@@ -1,3 +1,4 @@
+%!TEX program = pdflatex
 \documentclass{tufte-handout}
 %\geometry{showframe}% for debugging purposes -- displays the margins
 
@@ -30,9 +31,9 @@
 % code highlighting
 \usepackage{listings}
 
-\usepackage{minted}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+% \usepackage{minted}
+% \usepackage[utf8]{inputenc}
+% \usepackage[english]{babel}
 
 % Provides paragraphs of dummy text
 
@@ -134,7 +135,7 @@ H^f_{\alpha\beta}  = U^\dagger_{\alpha i} H^m_{ij} U_{j\beta}.
 The neutrino states at any time can be written as
 
 \begin{equation}
-\ket{\Psi(t)}  = X_1 \ket{\nu_1 } e^{-i E_1 t} X_2 \ket{ \nu_2 } e^{-i E_2 t},
+\ket{\Psi(t)}  = X_1 \ket{\nu_1 } e^{-i E_1 t}+ X_2 \ket{ \nu_2 } e^{-i E_2 t},
 \end{equation}
 
 where $X_1$ and $X_2$ are the initial conditions which are determined using the neutrino initial states.
@@ -173,9 +174,7 @@ P_\alpha (t) &= \lvert \braket{\nu_\alpha}{ X_1 \ket{\nu_1 } e^{-i E_1 t} X_2 \k
 \end{align*}
 
 
-
-
-
+$U^{\dagger *}_{i\alpha}$ stands for the $i$th row and the $\alpha$th column of the matrix $U^{\dagger *}$. 
 
 
 
@@ -212,7 +211,7 @@ The flavor eigenstate is a mixing of the propagation eigenstates,
 \begin{pmatrix}
 \nu_a \\ \nu_b \end{pmatrix} = 
 \begin{pmatrix} \cos\theta_v & \sin\theta_v \\ -\sin\theta_v  & \cos\theta_v
-\end{pmatrix} \begin{pmatrix}  \nu_a \\ \nu_b
+\end{pmatrix} \begin{pmatrix}  \nu_1 \\ \nu_2
 \end{pmatrix}
 \end{equation}
 
@@ -220,17 +219,59 @@ The flavor eigenstate is a mixing of the propagation eigenstates,
 Denote the rotation matrix using $\mathbf U$, the transofmation can be written as
 
 \begin{equation}
-\ket{\nu_{\alpha}} = \mathbf U_{\alpha i} \ket{i},
+\ket{\nu_{\alpha}} = \mathbf U_{\alpha i} \ket{\nu_i},
 \end{equation}
 
 where $\alpha$ is for the flavor eigenstates and $i$ is for the mass eigenstates.
 
+The survival probability has been derived in previous section, which is the projection of propagation states onto flavor states.
+
+For arbitary initial condition,
+
+\begin{align}
+    \Psi(0)= A \ket{\nu_a} + B \ket{\nu_b}, 
+\end{align}
+
+which can be rewritten into a matrix form,
+
+\begin{align}
+    \Psi(t=0)i = \begin{pmatrix}
+    A & B 
+\end{pmatrix}\begin{pmatrix}
+    \ket{\nu_a} \\
+    \ket{\nu_b} 
+\end{pmatrix}
+\end{pmatrix}
+
+
+
+To write down the projection, the relation
+
+\begin{align}
+    \begin{pmatrix}
+        \nu_a \\
+        \nu_b
+    \end{pmatrix} = \begin{pmatrix}
+        \cos\theta_v & \sin\theta_v \\ -\sin\theta_v  & \cos\theta_v
+\end{pmatrix} \begin{pmatrix}  \nu_1 \\ \nu_2
+\end{pmatrix}
+\end{align}
+
+is needed. The inverse transformation is
+
+\begin{align}
+\begin{pmatrix}
+    \nu_1 \\
+    \nu_2
+\end{pmatrix} = 
+\end{align}
 
 
 
 
 \subsection{Three Flavor States}
 
+For three flavor neutrinos, the oscillations matrix is 3 by 3. To find it, I can do more about something.
 
 
 
