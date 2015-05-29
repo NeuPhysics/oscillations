@@ -1,7 +1,7 @@
 Notes - 2015 Summer
 =====================
 
-
+**I'll be travelling in the following week and have no access to internet. So I'll just read the book and the papers.**
 
 Here are the notes for my summer work.
 
