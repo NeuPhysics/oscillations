@@ -229,19 +229,19 @@ The survival probability has been derived in previous section, which is the proj
 For arbitary initial condition,
 
 \begin{align}
-    \Psi(0)= A \ket{\nu_a} + B \ket{\nu_b}, 
+    \Psi(t=0)= A \ket{\nu_a} + B \ket{\nu_b}, 
 \end{align}
 
 which can be rewritten into a matrix form,
 
 \begin{align}
-    \Psi(t=0)i = \begin{pmatrix}
+    \Psi(t=0) = \begin{pmatrix}
     A & B 
 \end{pmatrix}\begin{pmatrix}
-    \ket{\nu_a} \\
-    \ket{\nu_b} 
+    \nu_a \\
+    \nu_b 
 \end{pmatrix}
-\end{pmatrix}
+\end{align}
 
 
 
@@ -257,17 +257,77 @@ To write down the projection, the relation
 \end{pmatrix}
 \end{align}
 
-is needed. The inverse transformation is
+is needed. BTW, the inverse transformation is the transpose of $\mathbf U$ since $\mathbf U$ is unitary, thus we have the relation,
 
 \begin{align}
 \begin{pmatrix}
     \nu_1 \\
     \nu_2
-\end{pmatrix} = 
+\end{pmatrix} = \begin{pmatrix}
+\cos\theta_v & -\sin\theta_v \\
+\sin\theta_v & \cos\theta_v
+\end{pmatrix} \begin{pmatrix}
+    \nu_a \\
+    \nu_b
+\end{pmatrix}
 \end{align}
 
+Thus in the state can be written as
 
+\begin{align}
+    \Psi(t=0) = \begin{pmatrix}
+        A & B 
+    \end{pmatrix} \begin{pmatrix}
+        \cos\theta_v & \sin\theta_v \\
+        -\sin\theta_v & \cos\theta_v 
+    \end{pmatrix}\begin{pmatrix}
+        \nu_1 \\
+        \nu_2
+    \end{pmatrix}.
+\end{align}
 
+At any $t$, the state is
+
+\begin{align}
+    \Psi(t) &= \begin{pmatrix}
+        A \cos\theta_v - B \sin\theta_v & A\sin\theta_v + B \cos\theta_v
+    \end{pmatrix} \begin{pmatrix}
+        \nu_1 e^{-i E_1 t}\\
+        \nu_2 e^{-i E_2 t}
+    \end{pmatrix} \\
+    & = \begin{pmatrix}
+        (A \cos\theta_v - B \sin\theta_v) e^{-iE_1 t} & (A\sin\theta_v + B \cos\theta_v
+        ) e^{-iE_2t}\end{pmatrix} \begin{pmatrix}
+        \nu_1 \\
+        \nu_2
+    \end{pmatrix}
+\end{align}
+
+The survival probability which is projection on a flavor state is written as
+
+\begin{equation}
+    P(\nu_\alpha,t) = \braket{\nu_\alpha}{\Psi(t)}.
+\end{equation}
+
+The survival probability for $\nu_a$ and $\nu_b$ are
+
+\begin{align*}
+    P(\nu_a,t) & = \braket{\nu_a}{\Psi(t)} \\
+    & = \bra{\nu_a}\left(   \(A \cos\theta_v - B \sin\theta_v) e^{-iE_1 t} \ket{\nu_1} +  (A\sin\theta_v + B \cos\theta_v
+    ) e^{-iE_2t} \ket{\nu_2} \right) \\
+    & = \left( \cos\theta_v \bra{\nu_1} + \sin\theta_v \bra{\nu_2} \right)  \left(   (\(A \cos\theta_v - B \sin\theta_v) e^{-iE_1 t} \ket{\nu_1} +  (A\sin\theta_v + B \cos\theta_v
+    ) e^{-iE_2t} \ket{\nu_2} \right)
+\end{align*}
+
+THis is simple since the transformation matrix is real.
+
+Applying the condition that the propagation eigenstates are orthonormal, the survival probability is
+
+\begin{align*}
+    P(\nu_a,t) & = \cos\theta_v (A\cos\theta_v -B\sin\theta_v) e^{-iE_1t} + \sin\theta_v(A\sin\theta_v + B \cos\theta_v)  
+\end{align*}
+
+{\bf To be simplified.}
 
 \subsection{Three Flavor States}
 
