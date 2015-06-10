@@ -378,13 +378,47 @@ P(\nu_a, L) = 1 -  \sin^2 (2\theta_v) \sin^2 \left( \frac{\Delta m^2 L}{4E} \rig
 \end{itemize}
 
 
+\subsection{Density Matrix}
+
+This problem can be solved using density matrix $\rho$ and Von Neumann equation
+
+\begin{equation}
+i \partial_t \rho = [H,\rho].
+\end{equation}
+
+
+The initial condition for this equation is
+
+\begin{align*}
+\rho(t=0) &= (A \ket{\nu_a} + B \ket{\nu_b} )(A^* \bra{\nu_a} + B^* \bra{\nu_b} ) \\
+& = A A^* \ket{\nu_a}\bra{\nu_a} + B B^* \ket{\nu_b}\bra{\nu_b} + A B^* \ket{\nu_a}\bra{\nu_b} + A^* B \ket{\nu_b} \bra{\nu_a} .
+\end{align*}
+
+To calculate the propagation of the states, we need the Hamiltonian matrix in flavor basis.
+
+
 
 
 
 
 \subsection{Three Flavor States}
 
-For three flavor neutrinos, the oscillations matrix is 3 by 3. To find it, I can do more about something.
+For three flavor neutrinos, the oscillations matrix is 3 by 3 which is called the PMNS matrix.
+
+\begin{equation}
+\mathbf U = \begin{pmatrix}
+U_{11} & U_{12} & U_{13} \\
+U_{21} & U_{22} & U_{23} \\
+U_{31} & U_{32} & U_{33}
+\end{pmatrix}.
+\end{equation}
+
+The survival probability is given by the same derivation as the 2 flavor example.
+
+
+
+
+
 
 
 
