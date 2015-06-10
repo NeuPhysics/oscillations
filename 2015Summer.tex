@@ -335,14 +335,51 @@ In a special limit that $E_1=E_2=E$, the probability becomes
     P(\nu_a,t) = \lvert A\rvert^2 
 \end{equation}
 
-which is the same as initial prbability since there is no mixing at all.
+which is the same as initial probability since there is no mixing at all.
 
 There are two kinds of initial conditions.
 
 \begin{itemize}
     \item
+    The neutrinos are all in $\nu_a$ state initially, which means $A=1, B=0$. The survival probability simplifies to
+    \begin{align*}
+    P(\nu_a,t) & = \lvert \cos^2\theta_v e^{-iE_1t} + \sin^2\theta_v e^{-iE_2t} \rvert^2  \\
+    & = \lvert \cos^2\theta_v e^{-i(E_1 - E_2) t} + \sin^2\theta_v \rvert^2
+    \end{align*}
+    
+    As we have already discussed, $E_1-E_2 = \frac{m_1^2 - m_2^2}{2p^2}$ assuming the neutrinos have the same momentum. \footnote{And here is a question.} Using the notation $\Delta \, m^2 = m_1^2 - m_2^2$ and the approximation that $E\approx p$, the survival probability can be rewritten as
+    \begin{align*}
+    P(\nu_a,t) & = \cos^4\theta_v + \sin^4\theta_v + \cos^2\theta_v \sin^2\theta_v \left( e^{-i \Delta m^2 t/E} + e^{i \Delta m^2 t/E} \right) \\
+    & = 1 - 2\cos^2\theta_v \sin^2\theta_v + 2\cos^2\theta_v \sin^2\theta_v \cos\left( \frac{\Delta m^2 t}{2E}\right) \\
+    & = 1 - 2\cos^2\theta_v \sin^2\theta_v \left( 1 - \cos\left( \frac{\Delta m^2 t}{2E} \right)  \right) \\
+    & = 1 - 4 \cos^2\theta_v \sin^2\theta_v \sin^2 \left( \frac{\Delta m^2 t}{4E} \right) \\
+    & = 1 - \sin^2(2\theta_v) \sin^2 \left( \frac{\Delta m^2 t}{4E} \right)
+    \end{align*}
+    
+    
+We always assuming that in the region of interest, all neutrinos are travelling with the same speed, i.e., the speed of light $c=1$. \footnote{which is not true obviously} Time is related to distance, $L = t$. Survival probability at distance $L$ is
+
+\begin{equation}
+P(\nu_a, L) = 1 -  \sin^2 (2\theta_v) \sin^2 \left( \frac{\Delta m^2 L}{4E} \right)
+\end{equation}
+    
     \item
+    The neutrinos are all in $\nu_b$ state initially. Equivalently, we have $A=0, B = 1$. Survival probability is
+    
+    \begin{align*}
+    P(\nu_a,t) & = \lvert -\sin\theta_v \cos\theta_v e^{-iE_1t} + \sin\theta_v \cos\theta_v e^{-iE_2t}  \rvert^2 \\
+    & = \sin^2\theta_v \cos^2\theta_v \lvert e^{-i(E_1 - E_2)t} - 1 \rvert^2 \\
+    & = \sin^2\theta_v \cos^2\theta_v \left(  1 +1 - e^{-i \Delta m^2 t/2E} -  e^{i \Delta m^2 t/2E}  \right) \\
+    & = 2 \sin^2\theta_v \cos^2\theta_v \left( 1- \cos\left( \frac{\Delta m^2 t}{2E} \right) \right) \\
+    & = \sin^2 ( 2\theta_v ) \sin^2\left( \frac{\Delta m^2 t}{4E}  \right) \\
+    &  = \sin^2 ( 2\theta_v ) \sin^2\left( \frac{\Delta m^2 L}{4E}  \right)
+    \end{align*}
+    
 \end{itemize}
+
+
+
+
 
 
 \subsection{Three Flavor States}
