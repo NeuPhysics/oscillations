@@ -306,13 +306,13 @@ At any $t$, the state is
 The survival probability which is projection on a flavor state is written as
 
 \begin{equation}
-    P(\nu_\alpha,t) = \braket{\nu_\alpha}{\Psi(t)}.
+    P(\nu_\alpha,t) = \lvert \braket{\nu_\alpha}{\Psi(t)} \rvert^2.
 \end{equation}
 
-The survival probability for $\nu_a$ and $\nu_b$ are
+The survival amplitude for $\nu_a$ is
 
 \begin{align*}
-    P(\nu_a,t) & = \braket{\nu_a}{\Psi(t)} \\
+    &\phantom{=}\braket{\nu_a}{\Psi(t)} \\
     & = \bra{\nu_a}\left(   \(A \cos\theta_v - B \sin\theta_v) e^{-iE_1 t} \ket{\nu_1} +  (A\sin\theta_v + B \cos\theta_v
     ) e^{-iE_2t} \ket{\nu_2} \right) \\
     & = \left( \cos\theta_v \bra{\nu_1} + \sin\theta_v \bra{\nu_2} \right)  \left(   (\(A \cos\theta_v - B \sin\theta_v) e^{-iE_1 t} \ket{\nu_1} +  (A\sin\theta_v + B \cos\theta_v
@@ -324,10 +324,26 @@ THis is simple since the transformation matrix is real.
 Applying the condition that the propagation eigenstates are orthonormal, the survival probability is
 
 \begin{align*}
-    P(\nu_a,t) & = \cos\theta_v (A\cos\theta_v -B\sin\theta_v) e^{-iE_1t} + \sin\theta_v(A\sin\theta_v + B \cos\theta_v)  
+    P(\nu_a,t) & = \lvert \braket{\nu_a}{\Psi(t)}\rvert^2 \\
+    & = \lvert \cos\theta_v (A\cos\theta_v -B\sin\theta_v) e^{-iE_1t} + \sin\theta_v(A\sin\theta_v + B \cos\theta_v) e^{-iE_2t} \rvert^2\\
+    & =\lvert ( A \cos^2\theta_v - B \sin\theta_v \cos\theta_v ) e^{-iE_1t} + ( A \sin^2\theta_v + B \sin\theta_v \cos\theta_v )e^{-iE_2t} \rvert^2
 \end{align*}
 
-{\bf To be simplified.}
+In a special limit that $E_1=E_2=E$, the probability becomes
+
+\begin{equation}
+    P(\nu_a,t) = \lvert A\rvert^2 
+\end{equation}
+
+which is the same as initial prbability since there is no mixing at all.
+
+There are two kinds of initial conditions.
+
+\begin{itemize}
+    \item
+    \item
+\end{itemize}
+
 
 \subsection{Three Flavor States}
 
