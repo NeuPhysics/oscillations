@@ -316,7 +316,7 @@ The survival amplitude for $\nu_a$ is
     & = \bra{\nu_a}\left(   \(A \cos\theta_v - B \sin\theta_v) e^{-iE_1 t} \ket{\nu_1} +  (A\sin\theta_v + B \cos\theta_v
     ) e^{-iE_2t} \ket{\nu_2} \right) \\
     & = \left( \cos\theta_v \bra{\nu_1} + \sin\theta_v \bra{\nu_2} \right)  \left(   (\(A \cos\theta_v - B \sin\theta_v) e^{-iE_1 t} \ket{\nu_1} +  (A\sin\theta_v + B \cos\theta_v
-    ) e^{-iE_2t} \ket{\nu_2} \right)
+    ) e^{-i E_2 t} \ket{\nu_2} \right)
 \end{align*}
 
 THis is simple since the transformation matrix is real.
@@ -396,8 +396,53 @@ The initial condition for this equation is
 
 To calculate the propagation of the states, we need the Hamiltonian matrix in flavor basis.
 
+This can be done by finding out how the Hamiltonian matrix transforms from one basis to another.
 
-{\bf Written in the notebook. To be fully worked out.}
+Using propagation basis,
+
+\begin{equation}
+i\partial_t \ket{\Psi_p} = H_p \ket{\Psi_p}.
+\end{equation}
+
+The states are $\ket{\Psi} = \mathbf{U} \ket{\Psi_p} $ in flavor basis, which means we could plug in $\ket{\Psi_p} = \mathbf{U^T}\ket{\Psi}$.
+
+\begin{equation*}
+i\partial_t \mathbf{U^T} \ket{\Psi} = H_p \mathbf{U^T} \ket{\Psi}.
+\end{equation*}
+
+Since $\mathbf{U}\mathbf{U^T}=\mathbf{I}$, we have a clean result by multiplying through the equation by $\mathbf{U}$.
+
+\begin{equation*}
+i\partial_t \ket{\Psi} = \mathbf{U} H_p \mathbf{U^T} \ket{\Psi}.
+\end{equation*}
+
+So we define $H = \mathbf{U}H_p \mathbf{U^T}$ as the Hamiltonian matrix in flavor basis, which is
+
+\begin{equation}
+H = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \Delta m^2 \cos 2\theta & \Delta^2 m \sin 2\theta \\  \Delta m^2 \sin 2\theta & \Delta^2 m\cos 2\theta \end{pmatrix}.
+\end{equation}
+
+Since identity matrix only shifts the eigenvalues we are only interested in the second term, thus the Hamiltonian we are going to use is
+
+\begin{equation}
+H = \frac{\Delta m^2}{4E} \begin{pmatrix}
+\cos 2\theta &  -  \sin 2\theta \\  - \sin 2\theta & - \cos 2\theta
+\end{pmatrix}.
+\end{equation}
+
+The equation of motion becomes
+
+\begin{equation}
+i \partial_t \begin{pmatrix}
+u(t) \\ v(t)
+\end{pmatrix} = \frac{\Delta m^2}{4E} \begin{pmatrix}
+\cos 2\theta &  -  \sin 2\theta \\  - \sin 2\theta & - \cos 2\theta
+\end{pmatrix} \begin{pmatrix}
+u(t) \\ v(t)
+\end{pmatrix}
+\end{equation}
+
+To solve this we need the eigenvalues and eigenvectors of the Hamiltonian matrix.
 
 
 
