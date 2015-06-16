@@ -463,6 +463,117 @@ P(\nu_e,L) &= 1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 L}{4E} \right) .
 \subsection{Numerical Results for 2 Flavor Oscillations}
 
 
+To solve a set of first order differential equations, I need the determinant of coefficient matrix. For 2 flavor neutrino oscillations,
+
+\begin{equation*}
+\partial_t \begin{pmatrix}
+u(t) \\ v(t)
+\end{pmatrix} = - i \frac{\Delta m^2}{4E} \begin{pmatrix}
+\cos 2\theta &  -  \sin 2\theta \\  - \sin 2\theta & - \cos 2\theta
+\end{pmatrix} \begin{pmatrix}
+u(t) \\ v(t)
+\end{pmatrix}.
+\end{equation*}
+
+To find the solutions I need the eigenvalues $\lambda$ I need to find the determinant
+
+\begin{align*}
+&\det \left( - i\frac{\Delta m^2}{4E} \begin{pmatrix}
+\cos 2\theta &  -  \sin 2\theta \\  - \sin 2\theta & - \cos 2\theta
+\end{pmatrix} - \lambda \mathbf{I} \right) \\
+=& \begin{vmatrix}
+-i \frac{\Delta m^2}{4E} \cos 2\theta - \lambda & i \frac{\Delta m^2}{4E} \sin 2\theta \\
+i \frac{\Delta m^2}{4E} \sin 2\theta & i \frac{\Delta m^2}{4E} \cos 2\theta - \lambda
+\end{vmatrix} .
+\end{align*}
+
+By defining $\lambda' = \lambda/(-i \Delta m^2 / 4E)$, the determinant is
+
+\begin{align*}
+- \left( \frac{\Delta m^2}{4E} \right)^2   ( (\cos 2\theta - \lambda')(-\cos 2\theta - \lambda') - \sin 2\theta \sin 2\theta ) .
+\end{align*}
+
+The eigenvalues are the solutions to
+
+\begin{align*}
+- \left( \frac{\Delta m^2}{4E} \right)^2   ( (\cos 2\theta - \lambda')(-\cos 2\theta - \lambda') - \sin^2 2\theta \sin 2\theta ) =0 ,
+\end{align*}
+
+whose solution is
+
+\begin{equation*}
+\lambda' = \pm 1.
+\end{equation*}
+
+
+With the solutions
+
+\begin{equation*}
+\lambda = \pm i \frac{\Delta m^2}{4E},
+\end{equation*}
+
+the eigenvectors can also be solved.
+
+\begin{align*}
+\begin{pmatrix}
+\cos 2\theta - 1 &  -  \sin 2\theta \\  - \sin 2\theta & - \cos 2\theta -1 
+\end{pmatrix} \begin{pmatrix}
+\eta_1 \\ \eta_2
+\end{pmatrix} = \begin{pmatrix}
+0 \\ 0
+\end{pmatrix}
+\end{align*}
+
+gives us $\eta_2 = -\tan \theta \eta_1$, which means the eigenvectors are
+
+\begin{equation}
+\begin{pmatrix}
+1 \\ -\tan\theta
+\end{pmatrix} , \begin{pmatrix}
+1 \\ \cot \theta
+\end{pmatrix}.
+\end{equation}
+
+The general solution of the first order differential equations is
+
+\begin{align*}
+\begin{pmatrix}
+1 \\ -\tan\theta
+\end{pmatrix} e^{-i \Delta m^2 t/ 4E } \\
+\begin{pmatrix}
+1 \\ \cot \theta
+\end{pmatrix} e^{i  \Delta m^2 t/ 4E }.
+\end{align*}
+
+Initial condition is 
+
+\begin{equation*}
+\begin{pmatrix}
+1 \\ 0
+\end{pmatrix},
+\end{equation*}
+
+and it determines the final solution
+
+\begin{align*}
+& \cos^2\theta \begin{pmatrix}
+1 \\ -\tan\theta
+\end{pmatrix} e^{-i \Delta m^2 t/ 4E } + \sin^2\theta
+\begin{pmatrix}
+1 \\ \cot \theta
+\end{pmatrix} e^{i  \Delta m^2 t/ 4E } \\
+= & \begin{pmatrix}
+\cos^2\theta \\ -\sin\theta \cos\theta
+\end{pmatrix} e^{-i \Delta m^2 t/ 4E } +
+\begin{pmatrix}
+ \sin^2\theta \\ \sin\theta \cos \theta
+\end{pmatrix} e^{i  \Delta m^2 t/ 4E } 
+\end{align*}
+
+
+
+
+
 
 
 
