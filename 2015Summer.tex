@@ -462,13 +462,22 @@ To solve this we need the eigenvalues and eigenvectors of the Hamiltonian matrix
 
 Suppose the neutrinos are prepared in electron flavor initially, the survival probability of electron flavor neutrinos is calculated using the result I get previously.
 
-Electron neutrinos are the lighter ones, then I have ${}_a = {}_e$ and denote ${}_b={}_x$.
+Electron neutrinos are the lighter ones, then I have ${}_a = {}_e$ and denote ${}_b={}_x$. \footnote{In the small mixing angle limit, 
+\begin{equation*}
+\begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 & \theta \\ -\theta  & 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+\end{equation*}
+
+which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate  $\nu_1$ . By $\nu_1$ we mean the state with energy  $\frac{ \delta m^2 }{4E}$ in vacuum.
+}
 
 The survival probability for electron neutrinos is
 
 \begin{align*}
 P(\nu_e,L) &= 1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 L}{4E} \right) .
 \end{align*}
+
+
+
 
 
 
@@ -663,6 +672,24 @@ The equation of motion is simply the von Neumann equation
 \begin{equation}
 i \partial_t \rho = \left[ H , \rho\right]
 \end{equation}
+
+
+\subsection{Analytic Solution}
+
+
+This Hamiltonian can be rewritten into a simple form using Pauli matrices,
+
+\begin{align*}
+\mathbf H &= \frac{ \delta m^2 }{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
+& = \left(\frac{\Delta}{2} -\frac{ \delta m^2 }{4E} \cos 2\theta\right) \mathbf {\sigma_3 } + \frac{ \delta m^2 }{4E} \sin 2\theta \mathbf{\sigma_1}.
+\end{align*}
+
+To solve the equation of motion, this matrix should be diagonalized and its eigenvalues and eigenvectors should be identified. Since we have this Pauli matrices form, this can be done easily.
+
+
+
+
+
 
 
 
