@@ -347,7 +347,7 @@ There are two kinds of initial conditions.
     & = \lvert \cos^2\theta_v e^{-i(E_1 - E_2) t} + \sin^2\theta_v \rvert^2
     \end{align*}
     
-    As we have already discussed, $E_1-E_2 = \frac{m_1^2 - m_2^2}{2p^2}$ assuming the neutrinos have the same momentum. \footnote{And here is a question.} Using the notation $\Delta \, m^2 = m_1^2 - m_2^2$ and the approximation that $E\approx p$, the survival probability can be rewritten as
+    As we have already discussed, $E_1-E_2 = \frac{m_1^2 - m_2^2}{2p}$ assuming the neutrinos have the same momentum. \footnote{And here is a question.} Using the notation $\Delta \, m^2 = m_1^2 - m_2^2$ and the approximation that $E\approx p$, the survival probability can be rewritten as
     \begin{align*}
     P(\nu_a,t) & = \cos^4\theta_v + \sin^4\theta_v + \cos^2\theta_v \sin^2\theta_v \left( e^{-i \Delta m^2 t/E} + e^{i \Delta m^2 t/E} \right) \\
     & = 1 - 2\cos^2\theta_v \sin^2\theta_v + 2\cos^2\theta_v \sin^2\theta_v \cos\left( \frac{\Delta m^2 t}{2E}\right) \\
@@ -418,9 +418,21 @@ i\partial_t \ket{\Psi} = \mathbf{U} H_p \mathbf{U^T} \ket{\Psi}.
 
 So we define $H = \mathbf{U}H_p \mathbf{U^T}$ as the Hamiltonian matrix in flavor basis, which is
 
+
 \begin{equation}
 H = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \Delta m^2 \cos 2\theta & \Delta^2 m \sin 2\theta \\  \Delta m^2 \sin 2\theta & \Delta^2 m\cos 2\theta \end{pmatrix}.
 \end{equation}
+
+The derivation of this is
+
+\begin{align*}
+\mathbf H_{\alpha} & = \mathbf U \hat H_j  \mathbf U^T \\
+& =  \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix} \left( p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2 & 0 \\ 0 & m_2^2 \end{pmatrix} \right)   \begin{pmatrix}  \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \\
+& = p \mathbf I + \frac{1}{2p} \begin{pmatrix} \cos^2\theta m_1^2 + \sin^2\theta m_2^2 & -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 \\ -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 & \sin^2\theta m_1^2 + \cos^2\theta m_2^2 \end{pmatrix} \\
+& = p \mathbf I + \frac{1}{2p} \begin{pmatrix} m_1^2 - \delta^2 m \sin^2\theta & -\frac{1}{2}\sin 2\theta  \delta m^2  \\ -\frac{1}{2}\sin 2\theta  \delta m^2  & m_2^2+ \delta m^2 \sin^2\theta \end{pmatrix} \\
+& = p \mathbf I + \frac{1}{2p} \left( \frac{1}{2}(m_1^2+m_2^2) \mathbf I -   \frac{1}{2}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix} \right) \\
+& = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix}
+\end{align*}
 
 Since identity matrix only shifts the eigenvalues we are only interested in the second term, thus the Hamiltonian we are going to use is
 
@@ -571,9 +583,14 @@ and it determines the final solution
 \end{align*}
 
 
+The survival probability of electron neutrino is
 
+\begin{align*}
+P &= \lvert \cos^2\theta e^{-i \Delta m^2 t/4E} + \sin^2\theta e^{i\Delta m^2 t/4E} \rvert^2 \\
+& = \lvert \cos^2 \theta e^{-i \Delta m^2 t/2E} + \sin^2 \theta \rvert ^2 ,
+\end{align*}
 
-
+which gets back to the result we had using the previous method.
 
 
 
@@ -599,10 +616,53 @@ The survival probability is given by the same derivation as the 2 flavor example
 
 
 
-\section{Oscillations in Dense Medium}
+\section{Oscillations in Matter}
 
 
+The Hamiltonian should be determined first. We have already derived the Hamiltonian for vacuum oscillation,
 
+\begin{equation*}
+H_v=\frac{ \delta m^2 }{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix},
+\end{equation*}
+
+
+where we would like to define a new matrix,
+
+\begin{equation*}
+\mathbf B = \frac{1}{2}\begin{pmatrix}  -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix},
+\end{equation*}
+
+
+so that the vacuum Hamiltonian can be written as
+
+\begin{equation*}
+H_v = \frac{ \delta m^2 }{2E}\mathbf B.
+\end{equation*}
+
+The effect of matter, adds an extra term to this vacuum Hamiltonian which makes the electron population weighs more,
+
+\begin{equation*}
+H_m = \sqrt{2}G_F n_e L.
+\end{equation*}
+
+Here we have
+
+\begin{equation*}
+L = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}.
+\end{equation*}
+
+
+Without emphasizing the self-interaction of the neutrinos, the Hamiltonian to be used is
+
+\begin{equation}
+H = H_v + H_m.
+\end{equation}
+
+The equation of motion is simply the von Neumann equation
+
+\begin{equation}
+i \partial_t \rho = \left[ H , \rho\right]
+\end{equation}
 
 
 
