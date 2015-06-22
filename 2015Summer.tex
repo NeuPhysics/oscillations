@@ -686,7 +686,60 @@ This Hamiltonian can be rewritten into a simple form using Pauli matrices,
 
 To solve the equation of motion, this matrix should be diagonalized and its eigenvalues and eigenvectors should be identified. Since we have this Pauli matrices form, this can be done easily.
 
+To see this effect quantitively, we need to diagonalize this Hamiltonian (Can we actually diagonalize the equation of motion? NO!). Equivalently, we can rewrite it in the basis of mass eigenstates  $\{\ket{\nu_L(x)}, \ket{\nu_H(x)}\}$ ,
 
+\begin{align*}
+\ket{\nu_L(x)} &= \cos\theta(x) \ket{\nu_e} - \sin\theta(x) \ket{\nu_\mu} \\
+\ket{\nu_H(x)} & =  \sin\theta(x) \ket{\nu_e} - \cos\theta(x) \ket{\nu_\mu}.
+\end{align*}
+
+
+This new rotation in matrix form is
+
+\begin{align*}
+\begin{pmatrix} \ket{\nu_L(x)} \\ \ket{\nu_H(x)} \end{pmatrix} &= \begin{pmatrix} \cos \theta(x) & -\sin\theta(x) \\ \sin\theta(x) & \cos\theta(x) \end{pmatrix} \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix} \\
+& = \mathbf{U^{-1}_x } \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix} .
+\end{align*}
+
+
+
+To diagonalize it, we need to multiply on both sides the rotation matrix and its inverse, as we have done in the vacuum case,
+
+
+\begin{equation}
+\mathbf {H_{xd}} = \mathbf{U_x^{-1}} \mathbf H \mathbf {U_x}.
+\end{equation}
+
+The second step is to set the off diagonal elements to zero. By solving the equations we can find the  $\sin 2\theta(x)$ and  $\cos 2\theta(x)$ .
+
+\begin{align*}
+\mathbf{H_{xd}} &= \mathbf{U^{-1}_x} \left( A_1 \mathbf{\sigma_1} + A_3 \mathbf{\sigma_3} \right) \mathbf{ U_x } \\
+& = \begin{pmatrix} A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) & A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x) \\ A_3 \sin 2\theta(x) + A_1\cos 2\theta(x) &  - A_3 \cos 2\theta(x) + A_1 \sin 2\theta(x) \end{pmatrix},
+\end{align*}
+
+where
+
+\begin{align*}
+A_3 &  = \frac{\Delta}{2} - \frac{\delta^2 m}{4E}\cos 2\theta \\
+A_1 & =  \frac{\delta^2 m}{4E} \sin 2\theta.
+\end{align*}
+
+Set the off-diagonal elements to zero,
+
+\begin{equation*}
+A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x)  = 0
+\end{equation*}
+
+So the solutions are
+
+\begin{align*}
+\sin 2\theta(x) & = \frac{A_1}{\sqrt{A_1^2 + A_3^2}} \\
+\cos 2\theta(x) & = \frac{-A_3}{\sqrt{A_1^2+A_3^2}}.
+\end{align*}
+
+This diagonalize the Hamiltonian LOCALLY. It's not possible to diagonalize the Hamiltonian globally if the electron number density is not a constant.
+
+The point is, for equation of motion, we have a differentiation with respect to position  x ! So even we diagonalize the Hamiltonian, the equation of motion won't be diagonalized. An extra matrix will occur on the LHS and revert the diagonalization the Hamiltonian on RHS.
 
 
 
