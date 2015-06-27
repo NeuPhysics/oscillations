@@ -801,8 +801,52 @@ where
 The only part inside $\mathbf{U_x(x)}$ that is space dependent is the number density of the electrons $n(x)$. {\bf{Thus we know immediately that the Hamiltonian is diagonalized if the number density is constant.}} \footnote{But even the electrons density is constant, the oscillation is different.}
 
 
-As we said before, 
+%% As we said before, % I forgot what was that.
 
+\subsection{Solar Density Profile}
+
+
+The solar density profile can be determined using simple gravitational theory and nuclear physics models.
+
+The mass contained in a spherical shell $dr$ is
+
+\begin{equation}
+    dm = 4\pi r \rho dr ,
+\end{equation}
+
+which is assuming spherical symmetry.
+
+The gravitational potential for each unit of mass can generate force as gravitational attraction, which is
+
+\begin{equation*}
+    \frac{dv}{dr} = \frac{G m}{^2}.
+\end{equation*}
+
+The balance between pressure and gravity shows that
+
+\begin{equation*}
+    \frac{dv}{dr} \rho + \frac{dp}{dr} = 0.
+\end{equation*}
+
+The result of these relations is a rather intuitive relation between density and pressure, which is not solvable until we find another relation between them.
+
+\begin{equation*}
+    \frac{1}{r^2} \frac{d}{dr} \left( \frac{r^2}{\rho} \frac{dp}{dr} \right) = -4\pi G\rho.
+\end{equation*}
+
+To be simple, we will use Eddington model to solve the density profile, which gives us the relation
+
+\begin{equation*}
+    p = K \rho^{4/3},
+\end{equation*}
+
+
+where 
+\begin{equation*}
+    K = \left(  \left( \frac{k}{m_p} \frac{3}{\alpha} \frac{\beta}{\mu^4(1-\beta)^4}  \right)^4  \right)^{1/3}.
+\end{equation*}
+
+Combining the two relations between density and pressure, we can find the density profile with respect to radius.
 
 
 
