@@ -798,7 +798,56 @@ where
 \mathbf{H_x} = \mathbf{H_{xd}} - i \mathbf{U_x^{-1}} ( \partial_x \mathbf{U_x} ).
 \end{equation*}
 
-The only part inside $\mathbf{U_x(x)}$ that is space dependent is the number density of the electrons $n(x)$. {\bf{Thus we know immediately that the Hamiltonian is diagonalized if the number density is constant.}} \footnote{But even the electrons density is constant, the oscillation is different.}
+The only part inside $\mathbf{U_x(x)}$ that is space dependent is the number density of the electrons $n(x)$. {\bf{Thus we know immediately that the Hamiltonian is diagonalized if the number density is constant.}} \footnote{But even the electrons density is constant, the oscillation is different.}\footnote{\bf It would be nice to find the expression of $\mathbf{U_x}$ in order to play with the matter effect.}\footnote{In a two level system, suppose the Hamiltonian is
+
+\begin{equation*}
+H_2 = H_{d2} + P_{2},
+\end{equation*}
+
+where 
+
+\begin{align*}
+H_{d2} & = \begin{pmatrix}
+E_1 & 0 \\
+0 & E_2
+\end{pmatrix} \\
+P_{2} & = \begin{pmatrix}
+0 & W(r) \\
+W^*(r) & 0 
+\end{pmatrix}
+\end{align*}
+
+are the diagonalized Hamiltonian and the perturbation.
+
+The diagonalized Hamiltonian will result in a system with two levels which are constant as a function of $r$, however the perturbation term provides the $r$ dependent term which will cause a $r$ dependent eigen energies.
+}
+
+
+
+\subsection{Constant Electron Number Density}
+
+Suppose we have an environment with constant electron number density, the term $- i \mathbf{U_x^{-1}} ( \partial_x \mathbf{U_x} )$ goes away. All we have is the diagonalized new Hamiltonian $\mathbf{H_{xd}}$ and the eigenvalues are easily obtained which are
+
+\begin{align*}
+ E_1 &= A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) \\ 
+ E_2 & = - A_3 \cos 2\theta(x) + A_1 \sin 2\theta(x) .
+\end{align*}
+
+The final result for these two eigenvalues are
+
+\begin{align*}
+E_1 &= -\sqrt{A_1^2 + A_3^2} \\
+E_2 &= \sqrt{A_1^2 + A_3^2},
+\end{align*}
+
+where
+
+\begin{equation*}
+A_1^2 + A_3^2 = \frac{\Delta^2 + \omega^2 }{4} - \frac{\Delta \omega }{2} \cos 2\theta_v.
+\end{equation*}
+
+
+There are two special cases. The first case is $\cos 2\theta_v=0$ while the other one is $\cos 2\theta_v = 1$ which leads to $\sqrt{A_1^2+A_3^2} = \lvert\frac{\Delta - \omega}{2} \rvert$ and the two energies becomes $\frac{\Delta - \omega}{2}$ and $\frac{\omega - \Delta}{2} $.\footnote{This means the matter effect in this constant profile situation determines the difference between the eigenenergies.}
 
 
 %% As we said before, % I forgot what was that.
@@ -850,9 +899,14 @@ Combining the two relations between density and pressure, we can find the densit
 
 
 
+
+
+
 \subsection{Solar Electron Number Density}
 
 The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
+
+
 
 
 
