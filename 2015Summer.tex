@@ -695,12 +695,12 @@ in which the $\partial_t$ operator is actually $\partial_x$ since we always assu
 This Hamiltonian can be rewritten into a simple form using Pauli matrices,
 
 \begin{align*}
-\mathbf H &= \frac{ \Delta m^2 }{4E} \left( -\cos 2\theta_v \mathbf {\sigma_3 } + \sin 2\theta_v \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
-& = \left(\frac{\Delta}{2} -\frac{ \Delta m^2 }{4E} \cos 2\theta_v \right) \mathbf {\sigma_3 } + \frac{ \Delta m^2 }{4E} \sin 2\theta_v \mathbf{\sigma_1} \\
-& = \left(\frac{\Delta}{2} -\frac{ \omega }{2} \cos 2\theta_v \right) \mathbf {\sigma_3 } + \frac{ \omega }{2} \sin 2\theta_v \mathbf{\sigma_1},
+\mathbf H &= \frac{ \Delta m^2 }{4E} \left( -\cos 2\theta_v \boldsymbol {\sigma}_3  + \sin 2\theta_v \boldsymbol{\sigma}_1 \right)  {\color{red} + \frac{\Delta}{2} \boldsymbol{\sigma}_3 } \\
+& = \left(\frac{\Delta}{2} -\frac{ \Delta m^2 }{4E} \cos 2\theta_v \right) \boldsymbol{\sigma}_3  + \frac{ \Delta m^2 }{4E} \sin 2\theta_v \boldsymbol{\sigma}_1 \\
+& = \left(\frac{\Delta}{2} -\frac{ \omega }{2} \cos 2\theta_v \right) \boldsymbol{\sigma}_3  + \frac{ \omega }{2} \sin 2\theta_v \boldsymbol{\sigma}_1,
 \end{align*}
 
-where $\Delta = \sqrt{2} G_F n(x) $ and $n(x)$ is the number density of the elctrons.
+where $\Delta = \sqrt{2} G_F n(x) $ and $n(x)$ is the number density of the electrons.
 
 To solve the equation of motion, this matrix should be diagonalized and its eigenvalues and eigenvectors should be identified. Since we have this Pauli matrices form, this can be done easily.
 
@@ -722,7 +722,7 @@ This new rotation in matrix form is
 
 \begin{align*}
 \begin{pmatrix} \ket{\nu_L(x)} \\ \ket{\nu_H(x)} \end{pmatrix} &= \begin{pmatrix} \cos \theta(x) & -\sin\theta(x) \\ \sin\theta(x) & \cos\theta(x) \end{pmatrix} \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix} \\
-& = \mathbf{U^{-1}_x } \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix} .
+& = \mathbf{U^{-1}_m } \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix} .
 \end{align*}
 
 
@@ -730,22 +730,22 @@ This new rotation in matrix form is
 To diagonalize it, we need to multiply on both sides the rotation matrix and its inverse, as we have done in the vacuum case,
 
 
-\begin{equation}
-\mathbf {H_{xd}} = \mathbf{U_x^{-1}} \mathbf H \mathbf {U_x}.
-\end{equation}
+\begin{equation*}
+\mathbf {H_{md}} = \mathbf{U_m^{-1}} \mathbf H \mathbf {U_m}.
+\end{equation*}
 
 The second step is to set the off diagonal elements to zero. By solving the equations we can find the  $\sin 2\theta(x)$ and  $\cos 2\theta(x)$ . \footnote{Just remember that $\Delta = \sqrt{2}G_F n(x)$ is a function of position.}
 
 \begin{align*}
-\mathbf{H_{xd}} &= \mathbf{U^{-1}_x} \left( A_1 \mathbf{ \sigma_1 } + A_3 \mathbf{\sigma_3} \right) \mathbf{ U_x } \\
+\mathbf{H_{md}} &= \mathbf{U^{-1}_m} \left( A_1 \boldsymbol{ \sigma}_1  + A_3 \boldsymbol{\sigma}_3 \right) \mathbf{ U_m } \\
 & = \begin{pmatrix} A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) & A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x) \\ A_3 \sin 2\theta(x) + A_1\cos 2\theta(x) &  - A_3 \cos 2\theta(x) + A_1 \sin 2\theta(x) \end{pmatrix},
 \end{align*}
 
 where
 
 \begin{align*}
-A_3 &  = \frac{\Delta}{2} - \frac{\delta^2 m}{4E}\cos 2\theta_v \\
-A_1 & =  \frac{\delta^2 m}{4E} \sin 2\theta_v.
+A_3 &  = \frac{\Delta}{2} - \frac{\delta^2 m}{4E}\cos 2\theta_v = \frac{\Delta}{2} - \frac{\omega}{2} \cos 2\theta_v \\
+A_1 & =  \frac{\delta^2 m}{4E} \sin 2\theta_v = \frac{\omega}{2}\sin 2\theta_v.
 \end{align*}
 
 Set the off-diagonal elements to zero,
@@ -771,34 +771,34 @@ As  $\Delta \to \infty$ ,  we have $A_3\to \infty$ and  $\sin 2\theta(x)$ vanish
 Now we can obtain an approximate solution by using this approximate diagonalization. This idea is
 
 \begin{equation*}
-i \partial_x \Psi_x(x) = \mathbf{Extra Matrix From LHS}\cdot \mathbf H_{xd} \Psi_x(x),
+i \partial_x \Psi_m(x) = \mathbf{Extra Matrix From LHS}\cdot \mathbf H_{md} \Psi_m(x),
 \end{equation*}
 
-where the $\mathbf{Extra Matrix From LHS}$ comes from the fact that changing from flavor basis $\Psi(x)$ to heavy-light basis $\Psi_x(x)$ using $\mathbf {U_x}$
+where the $\mathbf{Extra Matrix From LHS}$ comes from the fact that changing from flavor basis $\Psi(x)$ to heavy-light basis $\Psi_m(x)$ using $\mathbf {U_m}$
 
 \begin{equation*}
-i\partial_x (\mathbf{U_x} \Psi_x(x)) = H ( \mathbf{U_x} \Psi_x(x) )
+i\partial_x (\mathbf{U_m} \Psi_m(x)) = H ( \mathbf{U_m} \Psi_m(x) )
 \end{equation*}
 
 only returns
 
 \begin{equation*}
-i\partial_x \Psi_x(x) = \mathbf{H_{xd} } \Psi_x(x) - i \mathbf{U_x^{-1}} ( \partial_x \mathbf{U_x} ) \Psi_x(x).
+i\partial_x \Psi_m(x) = \mathbf{H_{md} } \Psi_m(x) - i \mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) \Psi_m(x).
 \end{equation*}
 
 Combining the two terms on RHS,
 
 \begin{equation*}
-i\partial_x \Psi_x(x) = \mathbf{H_x} \Psi_x(x),
+i\partial_x \Psi_m(x) = \mathbf{H_m} \Psi_m(x),
 \end{equation*}
 
-where 
+where
 
 \begin{equation*}
-\mathbf{H_x} = \mathbf{H_{xd}} - i \mathbf{U_x^{-1}} ( \partial_x \mathbf{U_x} ).
+\mathbf{H_m} = \mathbf{H_{md}} - i \mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ).
 \end{equation*}
 
-The only part inside $\mathbf{U_x(x)}$ that is space dependent is the number density of the electrons $n(x)$. {\bf{Thus we know immediately that the Hamiltonian is diagonalized if the number density is constant.}} \footnote{But even the electrons density is constant, the oscillation is different.}\footnote{\bf It would be nice to find the expression of $\mathbf{U_x}$ in order to play with the matter effect.}\footnote{In a two level system, suppose the Hamiltonian is
+The only part inside $\mathbf{U_m(x)}$ that is space dependent is the number density of the electrons $n(x)$. {\bf{Thus we know immediately that the Hamiltonian is diagonalized if the number density is constant.}}\footnote{But even the electrons density is constant, the oscillation is different.}\footnote{\bf It would be nice to find the expression of $\mathbf{U_m}$ in order to play with the matter effect.}\footnote{In a two level system, suppose the Hamiltonian is
 
 \begin{equation*}
 H_2 = H_{d2} + P_{2},
@@ -826,7 +826,7 @@ The diagonalized Hamiltonian will result in a system with two levels which are c
 
 \subsection{Constant Electron Number Density}
 
-Suppose we have an environment with constant electron number density, the term $- i \mathbf{U_x^{-1}} ( \partial_x \mathbf{U_x} )$ goes away. All we have is the diagonalized new Hamiltonian $\mathbf{H_{xd}}$ and the eigenvalues are easily obtained which are
+Suppose we have an environment with constant electron number density, the term $- i \mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} )$ goes away. All we have is the diagonalized new Hamiltonian $\mathbf{H_{md}}$ and the eigenvalues are easily obtained which are
 
 \begin{align*}
  E_1 &= A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) \\ 
@@ -847,12 +847,120 @@ A_1^2 + A_3^2 = \frac{\Delta^2 + \omega^2 }{4} - \frac{\Delta \omega }{2} \cos 2
 \end{equation*}
 
 
-There are two special cases. The first case is $\cos 2\theta_v=0$ while the other one is $\cos 2\theta_v = 1$ which leads to $\sqrt{A_1^2+A_3^2} = \lvert\frac{\Delta - \omega}{2} \rvert$ and the two energies becomes $\frac{\Delta - \omega}{2}$ and $\frac{\omega - \Delta}{2} $.\footnote{This means the matter effect in this constant profile situation determines the difference between the eigenenergies.}
+There are two special cases. The first case is $\cos 2\theta_v=0$ while the other one is $\cos 2\theta_v = 1$ which leads to $\sqrt{A_1^2+A_3^2} = \lvert\frac{\Delta - \omega}{2} \rvert$ and the two energies becomes $\frac{\Delta - \omega}{2}$ and $\frac{\omega - \Delta}{2} $.\footnote{This means the matter effect in this constant profile situation determines the difference between the eigen energies.}
+
+
+As for the survival probability, the result has the same form as the vacuum case, which is
+
+\begin{equation*}
+P_x(\nu_e,L) = 1 - \sin^2(2\theta_m)\sin^2\left( \frac{\omega L}{2} \right) ,
+\end{equation*}
+
+where $\theta_m = \theta(x)$ is the effective mixing angle which in fact doesn't depend on $x$ if the matter profile is constant.\footnote{The term $\sin 2\theta_m$ has been derived previously.
+\begin{equation*}
+\sin 2\theta(x)  = \frac{\omega\sin 2\theta_v}{\sqrt{ \omega^2+\Delta^2 - 2 \omega \Delta\cos 2\theta_v }}.
+\end{equation*}
+}
+
+
+
+
+
+
+
+
+\subsection{Adiabatic Limit}
+
+
+
+In some astrophysical environments the electron number density changes very slowly which means the term $\mathbf{U_m^{-1}} \partial_x \mathbf{U_m} $ is much smaller than $\mathbf{H_{md}}$. By intuition we would expect that this term could be dropped to the lowest order. However to verify that we need to check the Taylor expansion of this gradient term which requires the general form of $\mathbf{U_m}$.
+
+
+Before we actually do the expansion, make the quantities dimensionless would greatly help us.
+
+\begin{align*}
+\sin 2\theta(x)  &= \frac{\sin 2\theta_v}{\sqrt{ \left(\frac{\Delta}{\omega} \right)^2+1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v }} \\
+\cos 2\theta(x)&= \frac{ \cos 2\theta_v - \frac{\Delta}{\omega} }{ \left( \frac{\Delta}{\omega} \right)^2  +1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v  }.
+\end{align*}
+
+Define $\hat\Delta = \frac{\Delta}{\omega}$, which represents the matter interaction strength compared to the vacuum oscillation.
+
+\begin{align*}
+\sin 2\theta(x)  &= \frac{\sin 2\theta_v}{\sqrt{ \hat\Delta ^2+1 - 2 \hat\Delta \cos 2\theta_v }} \\
+\cos 2\theta(x)&= \frac{ \cos 2\theta_v - \hat\Delta  }{ \hat\Delta ^2  +1 - 2 \hat\Delta \cos 2\theta_v  }.
+\end{align*}
+
+
+
+\begin{align*}
+\sin\theta(x) & = \frac{\csc \left(2 \theta _v\right) \sqrt{\hat{\Delta }-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}  }{\sqrt{2} \sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}} \\
+&\sqrt{\frac{-\hat{\Delta }-\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1} \sqrt{\sin ^2\left(2 \theta _v\right) \left(\frac{1}{\hat{\Delta }-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}-\frac{1}{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}\right)+1}+\cos \left(2 \theta _v\right)}{\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}}} \\
+&\left(\hat{\Delta }-\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1} \sqrt{\sin ^2\left(2 \theta _v\right) \left(\frac{1}{\hat{\Delta }-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}-\frac{1}{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}\right)+1}-\cos \left(2 \theta _v\right)\right) \\
+\cos\theta(x)& = \frac{\sqrt{\frac{-\hat{\Delta }-\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1} \sqrt{\sin ^2\left(2 \theta _v\right) \left(\frac{1}{\hat{\Delta }-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}-\frac{1}{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}\right)+1}+\cos \left(2 \theta _v\right)}{\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}}}}{\sqrt{2}}
+\end{align*}
+
+
+This is extremely complicated if we take the derivative with respect to $x$. So we apply Taylor expansion.\footnote{The $i$s are there makes sure that $-i\partial_x \mathbf{U_m}(x)$ is real.}
+
+\begin{align*}
+\frac{d \sin \theta(x)}{dx} &= \frac{\sin \theta(x)}{d\hat\Delta}\frac{d\hat\Delta}{dx} \\
+& = i \frac{d\hat\Delta}{dx} \left(  \frac{1}{2}\cos^2\theta_v\sin\theta_v +  \frac{1}{8} \cos^2\theta_v ( 14-9\cos 2\theta_v + \cos 4\theta_v  ) \sin \theta_v \hat\Delta + \mathcal{O} ( \hat \Delta )^2 \right) \\
+\frac{d\cos\theta(x)}{dx} & = \frac{d\cos\theta(x)}{d\hat\Delta}\frac{d\hat\Delta}{dx} \\
+& = i \frac{d\hat\Delta}{dx}\left(  \frac{3}{4} \sin\theta_v \sin 2\theta_v - \frac{1}{8} ( (-6+47\cos 2\theta_v - \cos 4\theta_v) \cot^2\theta_v  (-\sin^3\theta_v) ) \hat \Delta + \mathcal{O}(\hat \Delta)^2  \right)
+\end{align*}
+
+There is nothing in the coefficients that prohibits us from using the lowest order that $\frac{d\hat\Delta}{dx}\ll 1$ since the Taylor series has finite values.
+
+Solving the adiabatic limit is just the same as the constant limit but $\theta(x)$ is not constant which ensures changing energies. What would be interesting is the behavior of energies as the density profile is slowing changing.
+
+
+
+
+
+
+
+
+\subsection{First Order Approximation}
+
+
+In principle we could use Taylor expansion of $\mathbf{U_m}$ to find the series of the derivatives of $\cos\theta(x)$ and $\sin\theta(x)$, however it doesn't looks like the easy way. Now we go back to find the Taylor expansion of the Hamiltonian which only involves the expression $\sin 2\theta(x)$ and $\cos 2\theta(x)$.
+
+The series of them are
+
+\begin{align*}
+\sin 2\theta(x) & = \sin 2\theta_v + \left( \cos 2\theta_v \sin 2\theta_v - \frac{1}{2}\sin 2\theta_v \right)\hat\Delta + \mathcal{O}(\hat\Delta)^2 \\
+\cos 2\theta(x) & = \cos 2\theta_v + \left( \cos^2 2\theta_v - 1 \right) \hat \Delta + \mathcal{O}(\hat\Delta)^2 .
+\end{align*}
+
+
+
+
+
+
+
+
+
+The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 %% As we said before, % I forgot what was that.
 
 \subsection{Decapitated - Solar Density Profile}
+
 
 
 The solar density profile can be determined using simple gravitational theory and nuclear physics models.
@@ -896,20 +1004,6 @@ where
 \end{equation*}
 
 Combining the two relations between density and pressure, we can find the density profile with respect to radius.
-
-
-
-
-
-
-\subsection{Solar Electron Number Density}
-
-The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
-
-
-
-
-
 
 
 
