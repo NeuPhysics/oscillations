@@ -906,16 +906,25 @@ This is extremely complicated if we take the derivative with respect to $x$. So 
 \frac{d \sin \theta(x)}{dx} &= \frac{\sin \theta(x)}{d\hat\Delta}\frac{d\hat\Delta}{dx} \\
 & = i \frac{d\hat\Delta}{dx} \left(  \frac{1}{2}\cos^2\theta_v\sin\theta_v +  \frac{1}{8} \cos^2\theta_v ( 14-9\cos 2\theta_v + \cos 4\theta_v  ) \sin \theta_v \hat\Delta + \mathcal{O} ( \hat \Delta )^2 \right) \\
 \frac{d\cos\theta(x)}{dx} & = \frac{d\cos\theta(x)}{d\hat\Delta}\frac{d\hat\Delta}{dx} \\
-& = i \frac{d\hat\Delta}{dx}\left(  \frac{3}{4} \sin\theta_v \sin 2\theta_v - \frac{1}{8} ( (-6+47\cos 2\theta_v - \cos 4\theta_v) \cot^2\theta_v  (-\sin^3\theta_v) ) \hat \Delta + \mathcal{O}(\hat \Delta)^2  \right)
+& = i \frac{d\hat\Delta}{dx}\left(  \frac{3}{4} \sin\theta_v \sin 2\theta_v + \frac{1}{8} ( (-6+47\cos 2\theta_v - \cos 4\theta_v) \cos^2\theta_v  \sin\theta_v)  \hat \Delta + \mathcal{O}(\hat \Delta)^2  \right)
 \end{align*}
 
 There is nothing in the coefficients that prohibits us from using the lowest order that $\frac{d\hat\Delta}{dx}\ll 1$ since the Taylor series has finite values.
 
 Solving the adiabatic limit is just the same as the constant limit but $\theta(x)$ is not constant which ensures changing energies. What would be interesting is the behavior of energies as the density profile is slowing changing.
 
+\begin{align*}
+E_1 & = -\frac{\omega}{2}\sqrt{\hat\Delta^2 + 1 - 2 \hat\Delta  \cos 2\theta_v} \\
+E_2 & = \frac{\omega}{2}\sqrt{\hat\Delta^2 + 1 - 2 \hat\Delta  \cos 2\theta_v}.
+\end{align*}
+
+When the term $\hat\Delta$ is very small $1-2\hat\Delta\cos 2\theta_v$ will dominate and the whole term decreases. On the other hand as $\hat\Delta$ becomes large, $\hat\Delta^2$ will dominate and the whole term grows.
 
 
-
+\begin{marginfigure}
+\includegraphics{assets/mswEnergyLevels}
+\caption{Energy Levels for MSW effect. We have the up-down symmetry since we shifted the energy by a constant to remove the identity matrix in the Hamiltonian.}
+\end{marginfigure}
 
 
 
