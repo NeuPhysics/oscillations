@@ -5151,7 +5151,7 @@ g7jXf+w2+yBBrX3OWfduBkF3Kw1ff5Rgd/5Co7Z+BlvP7hqw/SzBxKZnQ4fJ
 }, Open  ]]
 },
 WindowSize->{1247, 743},
-WindowMargins->{{11, Automatic}, {Automatic, 0}},
+WindowMargins->{{-6, Automatic}, {Automatic, 0}},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 2014)",
@@ -5211,13 +5211,13 @@ Cell[120145, 2484, 2014, 54, 56, "Output"],
 Cell[122162, 2540, 2150, 58, 56, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[124349, 2603, 1393, 42, 77, "Input"],
-Cell[125745, 2647, 1350, 38, 57, "Output"],
-Cell[127098, 2687, 962, 28, 42, "Output"]
+Cell[124349, 2603, 1393, 42, 96, "Input"],
+Cell[125745, 2647, 1350, 38, 71, "Output"],
+Cell[127098, 2687, 962, 28, 52, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[128097, 2720, 203, 6, 35, "Input"],
-Cell[128303, 2728, 99, 2, 35, "Output"]
+Cell[128097, 2720, 203, 6, 43, "Input"],
+Cell[128303, 2728, 99, 2, 43, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[128439, 2735, 856, 22, 36, "Input"],
@@ -5230,7 +5230,7 @@ Cell[156864, 3298, 6357, 115, 298, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[163258, 3418, 434, 14, 36, "Input"],
-Cell[163695, 3434, 56942, 1007, 466, "Output"]
+Cell[163695, 3434, 56942, 1007, 287, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[220674, 4446, 1232, 39, 142, "Input"],

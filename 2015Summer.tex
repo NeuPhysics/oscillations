@@ -887,7 +887,7 @@ Define $\hat\Delta = \frac{\Delta}{\omega}$, which represents the matter interac
 
 \begin{align*}
 \sin 2\theta(x)  &= \frac{\sin 2\theta_v}{\sqrt{ \hat\Delta ^2+1 - 2 \hat\Delta \cos 2\theta_v }} \\
-\cos 2\theta(x)&= \frac{ \cos 2\theta_v - \hat\Delta  }{ \hat\Delta ^2  +1 - 2 \hat\Delta \cos 2\theta_v  }.
+\cos 2\theta(x)&= \frac{ \cos 2\theta_v - \hat\Delta  }{ \sqrt{\hat\Delta ^2  +1 - 2 \hat\Delta \cos 2\theta_v } }.
 \end{align*}
 
 
@@ -909,7 +909,7 @@ This is extremely complicated if we take the derivative with respect to $x$. So 
 & = i \frac{d\hat\Delta}{dx}\left(  \frac{3}{4} \sin\theta_v \sin 2\theta_v + \frac{1}{8} ( (-6+47\cos 2\theta_v - \cos 4\theta_v) \cos^2\theta_v  \sin\theta_v)  \hat \Delta + \mathcal{O}(\hat \Delta)^2  \right)
 \end{align*}
 
-There is nothing in the coefficients that prohibits us from using the lowest order that $\frac{d\hat\Delta}{dx}\ll 1$ since the Taylor series has finite values.
+There is nothing in the coefficients that prohibits us from using the lowest order that $\frac{d\hat\Delta /dx}{\text{Energy Differences Between Two Energy Levels}}\ll 1$ since the Taylor series has finite values.
 
 Solving the adiabatic limit is just the same as the constant limit but $\theta(x)$ is not constant which ensures changing energies. What would be interesting is the behavior of energies as the density profile is slowing changing.
 
@@ -925,6 +925,70 @@ When the term $\hat\Delta$ is very small $1-2\hat\Delta\cos 2\theta_v$ will domi
 \includegraphics{assets/mswEnergyLevels}
 \caption{Energy Levels for MSW effect. We have the up-down symmetry since we shifted the energy by a constant to remove the identity matrix in the Hamiltonian.}
 \end{marginfigure}
+
+
+The survival probability would be
+
+\begin{equation*}
+P_x(\nu_e,L) = 1 - \sin^2(2\theta (x))\sin^2\left( \frac{\omega L}{2} \right) .
+\end{equation*}
+
+
+Before we move on to higher order corrections, it would be nice to understand this phenomenon.
+
+
+\begin{itemize}
+\item
+The vacuum oscillation length can be extracted from vacuum oscillation survival probability. It is $L_v = \frac{2\pi}{\omega}$.
+\item
+In this problem we have another energy scale which is the interaction, $\Delta$. Here we can define another characteristic length $l_m = \frac{2\pi}{\Delta}$.
+\item 
+MSW resonance happens when the two character lengths are matching to each other. Another way to put it is that the the term $\sin 2\theta(x)$ is minimized so that we have the smallest gap which leads to math $\hat\Delta = \cos 2\theta_v$. Equivalently this is the relation
+\begin{equation*}
+l_0 = l_m\cos 2\theta_v.
+\end{equation*}
+\item
+At resonance, we have
+\begin{align*}
+\cos 2\theta(x) &= 1 \\
+\sin 2\theta(x) &= 0.
+\end{align*}
+
+This is max mixing of the states which means that at the resonance point
+
+\begin{equation*}
+\begin{pmatrix} \nu_L(x_{reso}) \\ \nu_H(x_{reso}) \end{pmatrix} = \frac{\sqrt{2}}{2}\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix}\nu_e \\ \nu_x \end{pmatrix}
+\end{equation*}
+
+\item
+
+Resonance conditions corresponds to a resonance density which is given by
+
+\begin{equation*}
+n_e(x) = \frac{\omega}{\sqrt{2}G_F } \cos 2\theta_v \equiv n_0(E,\Delta m^2) \cos 2\theta_v,
+\end{equation*}
+
+where $n_0(E,\Delta m^2)$ is a characteristic number density which depends on the energy mixing angles and $\Delta m^2$ of the neutrinos.
+
+
+\item
+One should notice that to get back to the vacuum oscillation survival probability which means $\sin^2 2\theta(x) = \sin^2 2\theta_v $ we have\footnote{\bf I should check if this is still true in 3 flavor neutrino scenario. This could be interesting if it is respected in 3 flavor neutrino oscillations.}
+
+\begin{equation*}
+\hat\Delta^2 + 1 - 2\hat\Delta \cos 2\theta_v = 1,
+\end{equation*}
+
+which leads to
+
+\begin{equation*}
+\hat\Delta = 0 \quad\text{or}\quad 2\cos 2\theta_v .
+\end{equation*}
+
+The first condition is trivial which corresponds to vacuum however the second condition $\Delta = 2\cos 2\theta_v \omega$ means the interaction oscillation length is doubled compared to resonance point.
+
+{\bf{Nevertheless, we should always remember to check what survival probability the expression is describing. Here we have survival probability for $\nu_L(x)$. At $n(x)\to 0$ the oscillation becomes vacuum oscillation.}}
+
+\end{itemize}
 
 
 
