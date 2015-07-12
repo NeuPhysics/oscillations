@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    260734,       5238]
-NotebookOptionsPosition[    258221,       5152]
-NotebookOutlinePosition[    258609,       5169]
-CellTagsIndexPosition[    258566,       5166]
+NotebookDataLength[    276286,       5769]
+NotebookOptionsPosition[    273307,       5670]
+NotebookOutlinePosition[    273695,       5687]
+CellTagsIndexPosition[    273652,       5684]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1429,7 +1429,8 @@ Cell[BoxData[
           SubscriptBox["\[Theta]", "v"]}], "]"}], "/", 
         RowBox[{"Sqrt", "[", 
          RowBox[{
-          OverscriptBox["\[CapitalDelta]", "^"], "+", "1", "-", 
+          SuperscriptBox[
+           OverscriptBox["\[CapitalDelta]", "^"], "2"], "+", "1", "-", 
           RowBox[{"2", 
            OverscriptBox["\[CapitalDelta]", "^"], " ", 
            RowBox[{"Cos", "[", 
@@ -1464,7 +1465,7 @@ Cell[BoxData[
   3.644726136280204*^9, 3.644726169326981*^9}, {3.6447272106237926`*^9, 
   3.644727239197414*^9}, {3.644727304641588*^9, 3.644727348480356*^9}, {
   3.644727487067925*^9, 3.644727525769993*^9}, {3.644728693131535*^9, 
-  3.644728705146172*^9}}],
+  3.644728705146172*^9}, {3.6456449766588287`*^9, 3.645644977032782*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -1474,13 +1475,14 @@ Cell[BoxData[
      RowBox[{"c", "\[Rule]", 
       FractionBox[
        SqrtBox[
-        FractionBox[
-         RowBox[{
-          RowBox[{"Cos", "[", 
-           RowBox[{"2", " ", 
-            SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
-          OverscriptBox["\[CapitalDelta]", "^"], "-", 
+        RowBox[{"-", 
+         FractionBox[
           RowBox[{
+           RowBox[{"-", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+           OverscriptBox["\[CapitalDelta]", "^"], "+", 
            SqrtBox[
             RowBox[{"1", "-", 
              RowBox[{"2", " ", 
@@ -1489,114 +1491,7 @@ Cell[BoxData[
                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
              SuperscriptBox[
-              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-           SqrtBox[
-            RowBox[{"1", "+", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
-                FractionBox["1", 
-                 RowBox[{"1", "+", 
-                  OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                FractionBox["1", 
-                 RowBox[{"1", "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                  SuperscriptBox[
-                   OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-              " ", 
-              SuperscriptBox[
-               RowBox[{"Sin", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-         SqrtBox[
-          RowBox[{"1", "-", 
-           RowBox[{"2", " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{"2", " ", 
-              SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-            OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-           SuperscriptBox[
-            OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]], 
-       SqrtBox["2"]]}], ",", 
-     RowBox[{"s", "\[Rule]", 
-      RowBox[{
-       FractionBox["1", 
-        RowBox[{
-         SqrtBox["2"], " ", 
-         SqrtBox[
-          RowBox[{"1", "-", 
-           RowBox[{"2", " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{"2", " ", 
-              SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-            OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-           SuperscriptBox[
-            OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}]], 
-       RowBox[{
-        RowBox[{"Csc", "[", 
-         RowBox[{"2", " ", 
-          SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-        SqrtBox[
-         RowBox[{"1", "+", 
-          OverscriptBox["\[CapitalDelta]", "^"], "-", 
-          RowBox[{"2", " ", 
-           RowBox[{"Cos", "[", 
-            RowBox[{"2", " ", 
-             SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-           OverscriptBox["\[CapitalDelta]", "^"]}]}]], " ", 
-        SqrtBox[
-         FractionBox[
-          RowBox[{
-           RowBox[{"Cos", "[", 
-            RowBox[{"2", " ", 
-             SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
-           OverscriptBox["\[CapitalDelta]", "^"], "-", 
-           RowBox[{
-            SqrtBox[
-             RowBox[{"1", "-", 
-              RowBox[{"2", " ", 
-               RowBox[{"Cos", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-              SuperscriptBox[
-               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-            SqrtBox[
-             RowBox[{"1", "+", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 FractionBox["1", 
-                  RowBox[{"1", "+", 
-                   OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                 FractionBox["1", 
-                  RowBox[{"1", "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                   SuperscriptBox[
-                    OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-               " ", 
-               SuperscriptBox[
-                RowBox[{"Sin", "[", 
-                 RowBox[{"2", " ", 
-                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
+              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
           SqrtBox[
            RowBox[{"1", "-", 
             RowBox[{"2", " ", 
@@ -1605,15 +1500,21 @@ Cell[BoxData[
                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
             SuperscriptBox[
-             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"-", 
+             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]}]], 
+       SqrtBox["2"]]}], ",", 
+     RowBox[{"s", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"Csc", "[", 
+          RowBox[{"2", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
            RowBox[{"Cos", "[", 
             RowBox[{"2", " ", 
-             SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
-          OverscriptBox["\[CapitalDelta]", "^"], "-", 
-          RowBox[{
+             SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
+           OverscriptBox["\[CapitalDelta]", "^"], "+", 
            SqrtBox[
             RowBox[{"1", "-", 
              RowBox[{"2", " ", 
@@ -1622,48 +1523,49 @@ Cell[BoxData[
                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
              SuperscriptBox[
-              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-           SqrtBox[
-            RowBox[{"1", "+", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
-                FractionBox["1", 
-                 RowBox[{"1", "+", 
-                  OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                FractionBox["1", 
-                 RowBox[{"1", "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                  SuperscriptBox[
-                   OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-              " ", 
-              SuperscriptBox[
-               RowBox[{"Sin", "[", 
+              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], " ", 
+         SqrtBox[
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+             OverscriptBox["\[CapitalDelta]", "^"], "+", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               RowBox[{"2", " ", 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"2", " ", 
+                  SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+                OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+               SuperscriptBox[
+                OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
+            SqrtBox[
+             RowBox[{"1", "-", 
+              RowBox[{"2", " ", 
+               RowBox[{"Cos", "[", 
                 RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-         ")"}]}]}]}]}], "}"}], ",", 
+                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+              SuperscriptBox[
+               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]}]]}], 
+        SqrtBox["2"]]}]}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"c", "\[Rule]", 
       RowBox[{"-", 
        FractionBox[
         SqrtBox[
-         FractionBox[
-          RowBox[{
-           RowBox[{"Cos", "[", 
-            RowBox[{"2", " ", 
-             SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
-           OverscriptBox["\[CapitalDelta]", "^"], "-", 
+         RowBox[{"-", 
+          FractionBox[
            RowBox[{
+            RowBox[{"-", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+            OverscriptBox["\[CapitalDelta]", "^"], "+", 
             SqrtBox[
              RowBox[{"1", "-", 
               RowBox[{"2", " ", 
@@ -1672,130 +1574,7 @@ Cell[BoxData[
                  SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
                OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
               SuperscriptBox[
-               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-            SqrtBox[
-             RowBox[{"1", "+", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 FractionBox["1", 
-                  RowBox[{"1", "+", 
-                   OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                 FractionBox["1", 
-                  RowBox[{"1", "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                   SuperscriptBox[
-                    OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-               " ", 
-               SuperscriptBox[
-                RowBox[{"Sin", "[", 
-                 RowBox[{"2", " ", 
-                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-          SqrtBox[
-           RowBox[{"1", "-", 
-            RowBox[{"2", " ", 
-             RowBox[{"Cos", "[", 
-              RowBox[{"2", " ", 
-               SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-             OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-            SuperscriptBox[
-             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]], 
-        SqrtBox["2"]]}]}], ",", 
-     RowBox[{"s", "\[Rule]", 
-      RowBox[{
-       FractionBox["1", 
-        RowBox[{
-         SqrtBox["2"], " ", 
-         SqrtBox[
-          RowBox[{"1", "-", 
-           RowBox[{"2", " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{"2", " ", 
-              SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-            OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-           SuperscriptBox[
-            OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}]], 
-       RowBox[{
-        RowBox[{"Csc", "[", 
-         RowBox[{"2", " ", 
-          SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-        SqrtBox[
-         RowBox[{"1", "+", 
-          OverscriptBox["\[CapitalDelta]", "^"], "-", 
-          RowBox[{"2", " ", 
-           RowBox[{"Cos", "[", 
-            RowBox[{"2", " ", 
-             SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-           OverscriptBox["\[CapitalDelta]", "^"]}]}]], " ", 
-        SqrtBox[
-         FractionBox[
-          RowBox[{
-           RowBox[{"Cos", "[", 
-            RowBox[{"2", " ", 
-             SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
-           OverscriptBox["\[CapitalDelta]", "^"], "-", 
-           RowBox[{
-            SqrtBox[
-             RowBox[{"1", "-", 
-              RowBox[{"2", " ", 
-               RowBox[{"Cos", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-              SuperscriptBox[
-               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-            SqrtBox[
-             RowBox[{"1", "+", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 FractionBox["1", 
-                  RowBox[{"1", "+", 
-                   OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                 FractionBox["1", 
-                  RowBox[{"1", "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                   SuperscriptBox[
-                    OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-               " ", 
-               SuperscriptBox[
-                RowBox[{"Sin", "[", 
-                 RowBox[{"2", " ", 
-                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-          SqrtBox[
-           RowBox[{"1", "-", 
-            RowBox[{"2", " ", 
-             RowBox[{"Cos", "[", 
-              RowBox[{"2", " ", 
-               SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-             OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-            SuperscriptBox[
-             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"Cos", "[", 
-           RowBox[{"2", " ", 
-            SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
-          OverscriptBox["\[CapitalDelta]", "^"], "+", 
-          RowBox[{
+               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
            SqrtBox[
             RowBox[{"1", "-", 
              RowBox[{"2", " ", 
@@ -1804,35 +1583,57 @@ Cell[BoxData[
                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
              SuperscriptBox[
-              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-           SqrtBox[
-            RowBox[{"1", "+", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
-                FractionBox["1", 
-                 RowBox[{"1", "+", 
-                  OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                FractionBox["1", 
-                 RowBox[{"1", "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                  SuperscriptBox[
-                   OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-              " ", 
-              SuperscriptBox[
-               RowBox[{"Sin", "[", 
+              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]}]], 
+        SqrtBox["2"]]}]}], ",", 
+     RowBox[{"s", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"Csc", "[", 
+         RowBox[{"2", " ", 
+          SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", 
+            SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
+          OverscriptBox["\[CapitalDelta]", "^"], "+", 
+          SqrtBox[
+           RowBox[{"1", "-", 
+            RowBox[{"2", " ", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+             OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+            SuperscriptBox[
+             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], " ", 
+        SqrtBox[
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+            OverscriptBox["\[CapitalDelta]", "^"], "+", 
+            SqrtBox[
+             RowBox[{"1", "-", 
+              RowBox[{"2", " ", 
+               RowBox[{"Cos", "[", 
                 RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-         ")"}]}]}]}]}], "}"}], ",", 
+                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+              SuperscriptBox[
+               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+             SuperscriptBox[
+              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]}]]}], 
+       SqrtBox["2"]]}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"c", "\[Rule]", 
@@ -1845,43 +1646,15 @@ Cell[BoxData[
             RowBox[{"2", " ", 
              SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
            OverscriptBox["\[CapitalDelta]", "^"], "+", 
-           RowBox[{
-            SqrtBox[
-             RowBox[{"1", "-", 
-              RowBox[{"2", " ", 
-               RowBox[{"Cos", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-              SuperscriptBox[
-               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-            SqrtBox[
-             RowBox[{"1", "+", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 FractionBox["1", 
-                  RowBox[{"1", "+", 
-                   OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                 FractionBox["1", 
-                  RowBox[{"1", "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                   SuperscriptBox[
-                    OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-               " ", 
-               SuperscriptBox[
-                RowBox[{"Sin", "[", 
-                 RowBox[{"2", " ", 
-                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+             SuperscriptBox[
+              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
           SqrtBox[
            RowBox[{"1", "-", 
             RowBox[{"2", " ", 
@@ -1894,31 +1667,11 @@ Cell[BoxData[
         SqrtBox["2"]]}]}], ",", 
      RowBox[{"s", "\[Rule]", 
       RowBox[{"-", 
-       RowBox[{
-        FractionBox["1", 
-         RowBox[{
-          SqrtBox["2"], " ", 
-          SqrtBox[
-           RowBox[{"1", "-", 
-            RowBox[{"2", " ", 
-             RowBox[{"Cos", "[", 
-              RowBox[{"2", " ", 
-               SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-             OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-            SuperscriptBox[
-             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}]], 
+       FractionBox[
         RowBox[{
          RowBox[{"Csc", "[", 
           RowBox[{"2", " ", 
            SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-         SqrtBox[
-          RowBox[{"1", "+", 
-           OverscriptBox["\[CapitalDelta]", "^"], "-", 
-           RowBox[{"2", " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{"2", " ", 
-              SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-            OverscriptBox["\[CapitalDelta]", "^"]}]}]], " ", 
          SqrtBox[
           FractionBox[
            RowBox[{
@@ -1926,43 +1679,15 @@ Cell[BoxData[
              RowBox[{"2", " ", 
               SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
             OverscriptBox["\[CapitalDelta]", "^"], "+", 
-            RowBox[{
-             SqrtBox[
-              RowBox[{"1", "-", 
-               RowBox[{"2", " ", 
-                RowBox[{"Cos", "[", 
-                 RowBox[{"2", " ", 
-                  SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-               SuperscriptBox[
-                OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-             SqrtBox[
-              RowBox[{"1", "+", 
-               RowBox[{
-                RowBox[{"(", 
-                 RowBox[{
-                  FractionBox["1", 
-                   RowBox[{"1", "+", 
-                    OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                    RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                  FractionBox["1", 
-                   RowBox[{"1", "-", 
-                    RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                    SuperscriptBox[
-                    OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-                " ", 
-                SuperscriptBox[
-                 RowBox[{"Sin", "[", 
-                  RowBox[{"2", " ", 
-                   SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
+            SqrtBox[
+             RowBox[{"1", "-", 
+              RowBox[{"2", " ", 
+               RowBox[{"Cos", "[", 
+                RowBox[{"2", " ", 
+                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+              SuperscriptBox[
+               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
            SqrtBox[
             RowBox[{"1", "-", 
              RowBox[{"2", " ", 
@@ -1979,44 +1704,16 @@ Cell[BoxData[
              RowBox[{"2", " ", 
               SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
            OverscriptBox["\[CapitalDelta]", "^"], "+", 
-           RowBox[{
-            SqrtBox[
-             RowBox[{"1", "-", 
-              RowBox[{"2", " ", 
-               RowBox[{"Cos", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-              SuperscriptBox[
-               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-            SqrtBox[
-             RowBox[{"1", "+", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 FractionBox["1", 
-                  RowBox[{"1", "+", 
-                   OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                 FractionBox["1", 
-                  RowBox[{"1", "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                   SuperscriptBox[
-                    OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-               " ", 
-               SuperscriptBox[
-                RowBox[{"Sin", "[", 
-                 RowBox[{"2", " ", 
-                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-          ")"}]}]}]}]}]}], "}"}], ",", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+             SuperscriptBox[
+              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}]}], 
+        SqrtBox["2"]]}]}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"c", "\[Rule]", 
@@ -2028,43 +1725,15 @@ Cell[BoxData[
            RowBox[{"2", " ", 
             SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
           OverscriptBox["\[CapitalDelta]", "^"], "+", 
-          RowBox[{
-           SqrtBox[
-            RowBox[{"1", "-", 
-             RowBox[{"2", " ", 
-              RowBox[{"Cos", "[", 
-               RowBox[{"2", " ", 
-                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-             SuperscriptBox[
-              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-           SqrtBox[
-            RowBox[{"1", "+", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
-                FractionBox["1", 
-                 RowBox[{"1", "+", 
-                  OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                FractionBox["1", 
-                 RowBox[{"1", "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                  SuperscriptBox[
-                   OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-              " ", 
-              SuperscriptBox[
-               RowBox[{"Sin", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
+          SqrtBox[
+           RowBox[{"1", "-", 
+            RowBox[{"2", " ", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+             OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+            SuperscriptBox[
+             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
          SqrtBox[
           RowBox[{"1", "-", 
            RowBox[{"2", " ", 
@@ -2076,31 +1745,11 @@ Cell[BoxData[
             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]], 
        SqrtBox["2"]]}], ",", 
      RowBox[{"s", "\[Rule]", 
-      RowBox[{
-       FractionBox["1", 
-        RowBox[{
-         SqrtBox["2"], " ", 
-         SqrtBox[
-          RowBox[{"1", "-", 
-           RowBox[{"2", " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{"2", " ", 
-              SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-            OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-           SuperscriptBox[
-            OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}]], 
+      FractionBox[
        RowBox[{
         RowBox[{"Csc", "[", 
          RowBox[{"2", " ", 
           SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-        SqrtBox[
-         RowBox[{"1", "+", 
-          OverscriptBox["\[CapitalDelta]", "^"], "-", 
-          RowBox[{"2", " ", 
-           RowBox[{"Cos", "[", 
-            RowBox[{"2", " ", 
-             SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-           OverscriptBox["\[CapitalDelta]", "^"]}]}]], " ", 
         SqrtBox[
          FractionBox[
           RowBox[{
@@ -2108,43 +1757,15 @@ Cell[BoxData[
             RowBox[{"2", " ", 
              SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
            OverscriptBox["\[CapitalDelta]", "^"], "+", 
-           RowBox[{
-            SqrtBox[
-             RowBox[{"1", "-", 
-              RowBox[{"2", " ", 
-               RowBox[{"Cos", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-              SuperscriptBox[
-               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-            SqrtBox[
-             RowBox[{"1", "+", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 FractionBox["1", 
-                  RowBox[{"1", "+", 
-                   OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                 FractionBox["1", 
-                  RowBox[{"1", "-", 
-                   RowBox[{"2", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                   SuperscriptBox[
-                    OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-               " ", 
-               SuperscriptBox[
-                RowBox[{"Sin", "[", 
-                 RowBox[{"2", " ", 
-                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+             SuperscriptBox[
+              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
           SqrtBox[
            RowBox[{"1", "-", 
             RowBox[{"2", " ", 
@@ -2161,49 +1782,21 @@ Cell[BoxData[
             RowBox[{"2", " ", 
              SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
           OverscriptBox["\[CapitalDelta]", "^"], "+", 
-          RowBox[{
-           SqrtBox[
-            RowBox[{"1", "-", 
-             RowBox[{"2", " ", 
-              RowBox[{"Cos", "[", 
-               RowBox[{"2", " ", 
-                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-             SuperscriptBox[
-              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-           SqrtBox[
-            RowBox[{"1", "+", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{
-                FractionBox["1", 
-                 RowBox[{"1", "+", 
-                  OverscriptBox["\[CapitalDelta]", "^"], "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-                FractionBox["1", 
-                 RowBox[{"1", "-", 
-                  RowBox[{"2", " ", 
-                   RowBox[{"Cos", "[", 
-                    RowBox[{"2", " ", 
-                    SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-                   OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-                  SuperscriptBox[
-                   OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], 
-              " ", 
-              SuperscriptBox[
-               RowBox[{"Sin", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-         ")"}]}]}]}]}], "}"}]}], "}"}]], "Output",
+          SqrtBox[
+           RowBox[{"1", "-", 
+            RowBox[{"2", " ", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+             OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+            SuperscriptBox[
+             OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}]}], 
+       SqrtBox["2"]]}]}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.644725463475473*^9, 3.644725511126974*^9}, 
    3.644725573653459*^9, 3.644726086568664*^9, {3.6447261417661867`*^9, 
    3.6447261697745113`*^9}, 3.644727256688978*^9, 3.6447273662631607`*^9, 
    3.6447275453575287`*^9, 3.6447278901263657`*^9, {3.6447287041895227`*^9, 
-   3.644728719517165*^9}}]
+   3.644728719517165*^9}, 3.645644986125269*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2222,13 +1815,14 @@ Cell[BoxData[{
 Cell[BoxData[
  FractionBox[
   SqrtBox[
-   FractionBox[
-    RowBox[{
-     RowBox[{"Cos", "[", 
-      RowBox[{"2", " ", 
-       SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
-     OverscriptBox["\[CapitalDelta]", "^"], "-", 
+   RowBox[{"-", 
+    FractionBox[
      RowBox[{
+      RowBox[{"-", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", 
+         SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+      OverscriptBox["\[CapitalDelta]", "^"], "+", 
       SqrtBox[
        RowBox[{"1", "-", 
         RowBox[{"2", " ", 
@@ -2237,115 +1831,7 @@ Cell[BoxData[
            SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
          OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
         SuperscriptBox[
-         OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-      SqrtBox[
-       RowBox[{"1", "+", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           FractionBox["1", 
-            RowBox[{"1", "+", 
-             OverscriptBox["\[CapitalDelta]", "^"], "-", 
-             RowBox[{"2", " ", 
-              RowBox[{"Cos", "[", 
-               RowBox[{"2", " ", 
-                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-              OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-           FractionBox["1", 
-            RowBox[{"1", "-", 
-             RowBox[{"2", " ", 
-              RowBox[{"Cos", "[", 
-               RowBox[{"2", " ", 
-                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-             SuperscriptBox[
-              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], " ", 
-         SuperscriptBox[
-          RowBox[{"Sin", "[", 
-           RowBox[{"2", " ", 
-            SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-    SqrtBox[
-     RowBox[{"1", "-", 
-      RowBox[{"2", " ", 
-       RowBox[{"Cos", "[", 
-        RowBox[{"2", " ", 
-         SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-       OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-      SuperscriptBox[
-       OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]], 
-  SqrtBox["2"]]], "Output",
- CellChangeTimes->{{3.644728663551962*^9, 3.644728671601552*^9}, 
-   3.644728719774851*^9, 3.644728881389673*^9}],
-
-Cell[BoxData[
- RowBox[{
-  FractionBox["1", 
-   RowBox[{
-    SqrtBox["2"], " ", 
-    SqrtBox[
-     RowBox[{"1", "-", 
-      RowBox[{"2", " ", 
-       RowBox[{"Cos", "[", 
-        RowBox[{"2", " ", 
-         SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-       OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-      SuperscriptBox[
-       OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}]], 
-  RowBox[{
-   RowBox[{"Csc", "[", 
-    RowBox[{"2", " ", 
-     SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-   SqrtBox[
-    RowBox[{"1", "+", 
-     OverscriptBox["\[CapitalDelta]", "^"], "-", 
-     RowBox[{"2", " ", 
-      RowBox[{"Cos", "[", 
-       RowBox[{"2", " ", 
-        SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-      OverscriptBox["\[CapitalDelta]", "^"]}]}]], " ", 
-   SqrtBox[
-    FractionBox[
-     RowBox[{
-      RowBox[{"Cos", "[", 
-       RowBox[{"2", " ", 
-        SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
-      OverscriptBox["\[CapitalDelta]", "^"], "-", 
-      RowBox[{
-       SqrtBox[
-        RowBox[{"1", "-", 
-         RowBox[{"2", " ", 
-          RowBox[{"Cos", "[", 
-           RowBox[{"2", " ", 
-            SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-          OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-         SuperscriptBox[
-          OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-       SqrtBox[
-        RowBox[{"1", "+", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            FractionBox["1", 
-             RowBox[{"1", "+", 
-              OverscriptBox["\[CapitalDelta]", "^"], "-", 
-              RowBox[{"2", " ", 
-               RowBox[{"Cos", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-               OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-            FractionBox["1", 
-             RowBox[{"1", "-", 
-              RowBox[{"2", " ", 
-               RowBox[{"Cos", "[", 
-                RowBox[{"2", " ", 
-                 SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-               OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-              SuperscriptBox[
-               OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], " ", 
-          SuperscriptBox[
-           RowBox[{"Sin", "[", 
-            RowBox[{"2", " ", 
-             SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
+         OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
      SqrtBox[
       RowBox[{"1", "-", 
        RowBox[{"2", " ", 
@@ -2354,15 +1840,24 @@ Cell[BoxData[
           SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
         OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
        SuperscriptBox[
-        OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]], " ", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", 
+        OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]}]], 
+  SqrtBox["2"]]], "Output",
+ CellChangeTimes->{{3.644728663551962*^9, 3.644728671601552*^9}, 
+   3.644728719774851*^9, 3.644728881389673*^9, 3.645645117186883*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"Csc", "[", 
+     RowBox[{"2", " ", 
+      SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
       RowBox[{"Cos", "[", 
        RowBox[{"2", " ", 
-        SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
-     OverscriptBox["\[CapitalDelta]", "^"], "-", 
-     RowBox[{
+        SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
+      OverscriptBox["\[CapitalDelta]", "^"], "+", 
       SqrtBox[
        RowBox[{"1", "-", 
         RowBox[{"2", " ", 
@@ -2371,36 +1866,37 @@ Cell[BoxData[
            SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
          OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
         SuperscriptBox[
-         OverscriptBox["\[CapitalDelta]", "^"], "2"]}]], " ", 
-      SqrtBox[
-       RowBox[{"1", "+", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           FractionBox["1", 
-            RowBox[{"1", "+", 
-             OverscriptBox["\[CapitalDelta]", "^"], "-", 
-             RowBox[{"2", " ", 
-              RowBox[{"Cos", "[", 
-               RowBox[{"2", " ", 
-                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-              OverscriptBox["\[CapitalDelta]", "^"]}]}]], "-", 
-           FractionBox["1", 
-            RowBox[{"1", "-", 
-             RowBox[{"2", " ", 
-              RowBox[{"Cos", "[", 
-               RowBox[{"2", " ", 
-                SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-              OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
-             SuperscriptBox[
-              OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], " ", 
-         SuperscriptBox[
-          RowBox[{"Sin", "[", 
+         OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], ")"}], " ", 
+    SqrtBox[
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+        OverscriptBox["\[CapitalDelta]", "^"], "+", 
+        SqrtBox[
+         RowBox[{"1", "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+           OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+          SuperscriptBox[
+           OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]}], 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         RowBox[{"2", " ", 
+          RowBox[{"Cos", "[", 
            RowBox[{"2", " ", 
-            SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], 
-    ")"}]}]}]], "Output",
+            SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+         SuperscriptBox[
+          OverscriptBox["\[CapitalDelta]", "^"], "2"]}]]]}]]}], 
+   SqrtBox["2"]]}]], "Output",
  CellChangeTimes->{{3.644728663551962*^9, 3.644728671601552*^9}, 
-   3.644728719774851*^9, 3.644728881398674*^9}]
+   3.644728719774851*^9, 3.644728881389673*^9, 3.645645117193873*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2455,7 +1951,6 @@ Cell[BoxData[
  InterpretationBox[
   RowBox[{
    RowBox[{
-    FractionBox["1", "2"], " ", 
     SuperscriptBox[
      RowBox[{"Cos", "[", 
       SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
@@ -2472,7 +1967,7 @@ Cell[BoxData[
      OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 1, 1],
     Editable->False]}],
   SeriesData[
-   OverHat[$CellContext`\[CapitalDelta]], 0, {Rational[1, 2] Cos[
+   OverHat[$CellContext`\[CapitalDelta]], 0, {Cos[
        Subscript[$CellContext`\[Theta], $CellContext`v]]^2 (-Sin[
          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2]},
     0, 1, 1],
@@ -2480,13 +1975,12 @@ Cell[BoxData[
  CellChangeTimes->{{3.6447262456297894`*^9, 3.644726301839856*^9}, {
    3.6447263537130527`*^9, 3.644726362529999*^9}, 3.644727890455071*^9, 
    3.644728742840458*^9, 3.644729198565179*^9, {3.6447306120899563`*^9, 
-   3.6447306561336412`*^9}}],
+   3.6447306561336412`*^9}, 3.6456451217984877`*^9, 3.645645268729533*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{
    RowBox[{
-    FractionBox["1", "2"], " ", 
     SuperscriptBox[
      RowBox[{"Cos", "[", 
       SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
@@ -2496,19 +1990,17 @@ Cell[BoxData[
        RowBox[{"Sin", "[", 
         SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]]}], "+", 
    RowBox[{
-    FractionBox["1", "8"], " ", 
+    FractionBox["1", "2"], " ", 
     SuperscriptBox[
      RowBox[{"Cos", "[", 
       SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
     RowBox[{"(", 
-     RowBox[{"14", "-", 
-      RowBox[{"9", " ", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{"5", " ", 
        RowBox[{"Cos", "[", 
         RowBox[{"2", " ", 
-         SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
-      RowBox[{"Cos", "[", 
-       RowBox[{"4", " ", 
-        SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+         SubscriptBox["\[Theta]", "v"]}], "]"}]}]}], ")"}], " ", 
     SqrtBox[
      RowBox[{"-", 
       SuperscriptBox[
@@ -2523,48 +2015,44 @@ Cell[BoxData[
      OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
     Editable->False]}],
   SeriesData[
-   OverHat[$CellContext`\[CapitalDelta]], 0, {Rational[1, 2] Cos[
+   OverHat[$CellContext`\[CapitalDelta]], 0, {Cos[
        Subscript[$CellContext`\[Theta], $CellContext`v]]^2 (-Sin[
          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2], 
-    Rational[1, 8] Cos[
-       Subscript[$CellContext`\[Theta], $CellContext`v]]^2 (14 - 9 
-     Cos[2 Subscript[$CellContext`\[Theta], $CellContext`v]] + 
-     Cos[4 Subscript[$CellContext`\[Theta], $CellContext`v]]) (-Sin[
+    Rational[1, 2] Cos[
+       Subscript[$CellContext`\[Theta], $CellContext`v]]^2 (-1 + 
+     5 Cos[2 Subscript[$CellContext`\[Theta], $CellContext`v]]) (-Sin[
          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2]},
     0, 2, 1],
   Editable->False]], "Output",
  CellChangeTimes->{{3.6447262456297894`*^9, 3.644726301839856*^9}, {
    3.6447263537130527`*^9, 3.644726362529999*^9}, 3.644727890455071*^9, 
    3.644728742840458*^9, 3.644729198565179*^9, {3.6447306120899563`*^9, 
-   3.644730656140196*^9}}],
+   3.6447306561336412`*^9}, 3.6456451217984877`*^9, 3.6456452687345057`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{
+   RowBox[{"-", 
+    RowBox[{
+     RowBox[{"Cot", "[", 
+      SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "2"]}], ")"}], 
+      RowBox[{"3", "/", "2"}]]}]}], "-", 
    RowBox[{
-    FractionBox["3", "4"], " ", 
-    SqrtBox[
-     RowBox[{"-", 
-      SuperscriptBox[
-       RowBox[{"Sin", "[", 
-        SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]], " ", 
-    RowBox[{"Sin", "[", 
-     RowBox[{"2", " ", 
-      SubscriptBox["\[Theta]", "v"]}], "]"}]}], "-", 
-   RowBox[{
-    FractionBox["1", "8"], " ", 
+    FractionBox["1", "2"], " ", 
     RowBox[{"(", 
      RowBox[{
       RowBox[{"(", 
-       RowBox[{
-        RowBox[{"-", "6"}], "+", 
-        RowBox[{"47", " ", 
+       RowBox[{"1", "+", 
+        RowBox[{"5", " ", 
          RowBox[{"Cos", "[", 
           RowBox[{"2", " ", 
-           SubscriptBox["\[Theta]", "v"]}], "]"}]}], "-", 
-        RowBox[{"Cos", "[", 
-         RowBox[{"4", " ", 
-          SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}]}]}], ")"}], " ", 
       RowBox[{"Cot", "[", 
        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
       SuperscriptBox[
@@ -2583,12 +2071,11 @@ Cell[BoxData[
      OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
     Editable->False]}],
   SeriesData[
-   OverHat[$CellContext`\[CapitalDelta]], 0, {Rational[3, 4] (-Sin[
-         Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2] 
-    Sin[2 Subscript[$CellContext`\[Theta], $CellContext`v]], 
-    Rational[-1, 8] (-6 + 
-     47 Cos[2 Subscript[$CellContext`\[Theta], $CellContext`v]] - Cos[
-     4 Subscript[$CellContext`\[Theta], $CellContext`v]]) Cot[
+   OverHat[$CellContext`\[CapitalDelta]], 0, {-Cot[
+      Subscript[$CellContext`\[Theta], $CellContext`v]] (-Sin[
+         Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[3, 2], 
+    Rational[-1, 2] (1 + 
+     5 Cos[2 Subscript[$CellContext`\[Theta], $CellContext`v]]) Cot[
       Subscript[$CellContext`\[Theta], $CellContext`v]] (-Sin[
          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[3, 2]},
     0, 2, 1],
@@ -2596,7 +2083,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.6447262456297894`*^9, 3.644726301839856*^9}, {
    3.6447263537130527`*^9, 3.644726362529999*^9}, 3.644727890455071*^9, 
    3.644728742840458*^9, 3.644729198565179*^9, {3.6447306120899563`*^9, 
-   3.644730656144904*^9}}]
+   3.6447306561336412`*^9}, 3.6456451217984877`*^9, 3.645645268738409*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2610,7 +2097,8 @@ Cell[BoxData[{
       SubscriptBox["\[Theta]", "v"]}], "]"}], "/", 
     RowBox[{"Sqrt", "[", 
      RowBox[{
-      OverscriptBox["\[CapitalDelta]", "^"], "+", "1", "-", 
+      SuperscriptBox[
+       OverscriptBox["\[CapitalDelta]", "^"], "2"], "+", "1", "-", 
       RowBox[{"2", 
        OverscriptBox["\[CapitalDelta]", "^"], " ", 
        RowBox[{"Cos", "[", 
@@ -2620,6 +2108,7 @@ Cell[BoxData[{
     RowBox[{
      OverscriptBox["\[CapitalDelta]", "^"], ",", "0", ",", "1"}], "}"}]}], 
   "]"}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "Simplify"}], "\[IndentingNewLine]", 
  RowBox[{"Series", "[", 
   RowBox[{
    RowBox[{
@@ -2641,9 +2130,12 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{
      OverscriptBox["\[CapitalDelta]", "^"], ",", "0", ",", "1"}], "}"}]}], 
-  "]"}]}], "Input",
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "FullSimplify"}]}], "Input",
  CellChangeTimes->{{3.6447292291598473`*^9, 3.644729278760297*^9}, {
-  3.644729449523365*^9, 3.644729449906076*^9}}],
+  3.644729449523365*^9, 3.644729449906076*^9}, {3.6456448165059767`*^9, 
+  3.645644829293681*^9}, {3.645644872949308*^9, 3.6456448840115633`*^9}, {
+  3.6456449172564993`*^9, 3.645644947052083*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2652,21 +2144,12 @@ Cell[BoxData[
     RowBox[{"2", " ", 
      SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
    RowBox[{
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"-", 
-        FractionBox["1", "2"]}], " ", 
-       RowBox[{"Sin", "[", 
-        RowBox[{"2", " ", 
-         SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
-      RowBox[{
-       RowBox[{"Cos", "[", 
-        RowBox[{"2", " ", 
-         SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
-       RowBox[{"Sin", "[", 
-        RowBox[{"2", " ", 
-         SubscriptBox["\[Theta]", "v"]}], "]"}]}]}], ")"}], " ", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"2", " ", 
+      SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", " ", 
+      SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
     OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
    InterpretationBox[
     SuperscriptBox[
@@ -2678,12 +2161,42 @@ Cell[BoxData[
   SeriesData[
    OverHat[$CellContext`\[CapitalDelta]], 0, {
     Sin[2 Subscript[$CellContext`\[Theta], $CellContext`v]], 
-    Rational[-1, 2] Sin[2 Subscript[$CellContext`\[Theta], $CellContext`v]] + 
     Cos[2 Subscript[$CellContext`\[Theta], $CellContext`v]] 
-     Sin[2 Subscript[$CellContext`\[Theta], $CellContext`v]]}, 0, 2, 1],
+    Sin[2 Subscript[$CellContext`\[Theta], $CellContext`v]]}, 0, 2, 1],
   Editable->False]], "Output",
- CellChangeTimes->{3.644729249163945*^9, 3.644729279502293*^9, 
-  3.64472945106485*^9}],
+ CellChangeTimes->{
+  3.644729249163945*^9, 3.644729279502293*^9, 3.64472945106485*^9, {
+   3.645644818944537*^9, 3.6456448306341543`*^9}, {3.645644879551128*^9, 
+   3.645644884524705*^9}, {3.645644927568549*^9, 3.645644947592081*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"2", " ", 
+     SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"4", " ", 
+      SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+    Editable->False]}],
+  SeriesData[
+   OverHat[$CellContext`\[CapitalDelta]], 0, {
+    Sin[2 Subscript[$CellContext`\[Theta], $CellContext`v]], Rational[1, 2] 
+    Sin[4 Subscript[$CellContext`\[Theta], $CellContext`v]]}, 0, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{
+  3.644729249163945*^9, 3.644729279502293*^9, 3.64472945106485*^9, {
+   3.645644818944537*^9, 3.6456448306341543`*^9}, {3.645644879551128*^9, 
+   3.645644884524705*^9}, {3.645644927568549*^9, 3.645644947596801*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2712,23 +2225,1028 @@ Cell[BoxData[
     Cos[2 Subscript[$CellContext`\[Theta], $CellContext`v]], -1 + 
     Cos[2 Subscript[$CellContext`\[Theta], $CellContext`v]]^2}, 0, 2, 1],
   Editable->False]], "Output",
- CellChangeTimes->{3.644729249163945*^9, 3.644729279502293*^9, 
-  3.64472945106813*^9}]
+ CellChangeTimes->{
+  3.644729249163945*^9, 3.644729279502293*^9, 3.64472945106485*^9, {
+   3.645644818944537*^9, 3.6456448306341543`*^9}, {3.645644879551128*^9, 
+   3.645644884524705*^9}, {3.645644927568549*^9, 3.645644947600464*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"Cos", "[", 
+    RowBox[{"2", " ", 
+     SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", " ", 
+       SubscriptBox["\[Theta]", "v"]}], "]"}], "2"], " ", 
+    OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+    Editable->False]}],
+  SeriesData[
+   OverHat[$CellContext`\[CapitalDelta]], 0, {
+    Cos[2 Subscript[$CellContext`\[Theta], $CellContext`v]], -
+    Sin[2 Subscript[$CellContext`\[Theta], $CellContext`v]]^2}, 0, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{
+  3.644729249163945*^9, 3.644729279502293*^9, 3.64472945106485*^9, {
+   3.645644818944537*^9, 3.6456448306341543`*^9}, {3.645644879551128*^9, 
+   3.645644884524705*^9}, {3.645644927568549*^9, 3.645644947603981*^9}}]
 }, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Cos", "[", 
+   RowBox[{"2", " ", 
+    SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", " ", 
+      SubscriptBox["\[Theta]", "v"]}], "]"}], "2"], " ", 
+   OverscriptBox["\[CapitalDelta]", "^"]}]}]], "Input",
+ CellChangeTimes->{{3.645646831350093*^9, 3.645646855449833*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"(", 
-   RowBox[{"-", "1"}], ")"}], "^", 
-  RowBox[{"(", 
-   RowBox[{"3", "/", "2"}], ")"}]}]], "Input",
- CellChangeTimes->{{3.644730895487872*^9, 3.64473089972544*^9}}],
+ RowBox[{"solLZ", "=", 
+  RowBox[{
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"2", "c", " ", "s"}], " ", "\[Equal]", 
+       RowBox[{
+        RowBox[{"Sin", "[", 
+         RowBox[{"2", " ", 
+          SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+         OverscriptBox["\[CapitalDelta]", "^"]}]}]}], "&&", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"c", "^", "2"}], "-", 
+        RowBox[{"s", "^", "2"}]}], "==", " ", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", " ", 
+          SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"Sin", "[", 
+           RowBox[{"2", " ", 
+            SubscriptBox["\[Theta]", "v"]}], "]"}], "2"], " ", 
+         OverscriptBox["\[CapitalDelta]", "^"]}]}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"c", ",", "s"}], "}"}]}], "]"}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.644730895487872*^9, 3.64473089972544*^9}, {
+  3.645646766487421*^9, 3.645646863201353*^9}}],
 
 Cell[BoxData[
- RowBox[{"-", "\[ImaginaryI]"}]], "Output",
- CellChangeTimes->{3.644730900034298*^9}]
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"c", "\[Rule]", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["1", "2"]}], " ", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", 
+            SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"4", " ", 
+              SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"]}], "-", 
+         RowBox[{"2", " ", 
+          SqrtBox[
+           RowBox[{"1", "+", 
+            RowBox[{
+             SuperscriptBox[
+              OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}]]}]}], 
+     ",", 
+     RowBox[{"s", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"Csc", "[", 
+         RowBox[{"2", " ", 
+          SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"4", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+           OverscriptBox["\[CapitalDelta]", "^"]}], "-", 
+          RowBox[{"2", " ", 
+           SqrtBox[
+            RowBox[{"1", "+", 
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", 
+                RowBox[{"2", " ", 
+                 SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}]], " ", 
+        
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"4", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+           OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
+             SqrtBox[
+              RowBox[{"1", "+", 
+               RowBox[{
+                SuperscriptBox[
+                 OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+                SuperscriptBox[
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"2", " ", 
+                   SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}], 
+            ")"}]}]}], ")"}]}], 
+       RowBox[{"4", "+", 
+        RowBox[{"4", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+         OverscriptBox["\[CapitalDelta]", "^"]}]}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"c", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", 
+            SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"4", " ", 
+              SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"]}], "-", 
+         RowBox[{"2", " ", 
+          SqrtBox[
+           RowBox[{"1", "+", 
+            RowBox[{
+             SuperscriptBox[
+              OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}]]}]}], 
+     ",", 
+     RowBox[{"s", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"Csc", "[", 
+          RowBox[{"2", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+         SqrtBox[
+          RowBox[{
+           RowBox[{"2", " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"4", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+            OverscriptBox["\[CapitalDelta]", "^"]}], "-", 
+           RowBox[{"2", " ", 
+            SqrtBox[
+             RowBox[{"1", "+", 
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+               SuperscriptBox[
+                RowBox[{"Sin", "[", 
+                 RowBox[{"2", " ", 
+                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"4", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+            OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", 
+                SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
+              SqrtBox[
+               RowBox[{"1", "+", 
+                RowBox[{
+                 SuperscriptBox[
+                  OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"2", " ", 
+                    SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}], 
+             ")"}]}]}], ")"}]}], 
+        RowBox[{"4", "+", 
+         RowBox[{"4", " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", 
+            SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"]}]}]]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"c", "\[Rule]", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["1", "2"]}], " ", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"4", " ", 
+              SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
+            SqrtBox[
+             RowBox[{"1", "+", 
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+               SuperscriptBox[
+                RowBox[{"Sin", "[", 
+                 RowBox[{"2", " ", 
+                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}], 
+           ")"}]}]}]]}]}], ",", 
+     RowBox[{"s", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cot", "[", 
+           RowBox[{"2", " ", 
+            SubscriptBox["\[Theta]", "v"]}], "]"}], "-", 
+          RowBox[{
+           OverscriptBox["\[CapitalDelta]", "^"], " ", 
+           RowBox[{"Sin", "[", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Theta]", "v"]}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"Csc", "[", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+           SqrtBox[
+            RowBox[{"1", "+", 
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", 
+                RowBox[{"2", " ", 
+                 SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], ")"}],
+         " ", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"4", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+           OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
+             SqrtBox[
+              RowBox[{"1", "+", 
+               RowBox[{
+                SuperscriptBox[
+                 OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+                SuperscriptBox[
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"2", " ", 
+                   SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}], 
+            ")"}]}]}]]}], 
+       RowBox[{"2", "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+         OverscriptBox["\[CapitalDelta]", "^"]}]}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"c", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"4", " ", 
+              SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", 
+              SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
+            SqrtBox[
+             RowBox[{"1", "+", 
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+               SuperscriptBox[
+                RowBox[{"Sin", "[", 
+                 RowBox[{"2", " ", 
+                  SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}], 
+           ")"}]}]}]]}]}], ",", 
+     RowBox[{"s", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"Cot", "[", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+          RowBox[{
+           OverscriptBox["\[CapitalDelta]", "^"], " ", 
+           RowBox[{"Sin", "[", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Theta]", "v"]}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"Csc", "[", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+           SqrtBox[
+            RowBox[{"1", "+", 
+             RowBox[{
+              SuperscriptBox[
+               OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", 
+                RowBox[{"2", " ", 
+                 SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}]}], ")"}],
+         " ", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"4", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+           OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", 
+               SubscriptBox["\[Theta]", "v"]}], "]"}], "+", 
+             SqrtBox[
+              RowBox[{"1", "+", 
+               RowBox[{
+                SuperscriptBox[
+                 OverscriptBox["\[CapitalDelta]", "^"], "2"], " ", 
+                SuperscriptBox[
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"2", " ", 
+                   SubscriptBox["\[Theta]", "v"]}], "]"}], "2"]}]}]]}], 
+            ")"}]}]}]]}], 
+       RowBox[{"2", "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}], " ", 
+         OverscriptBox["\[CapitalDelta]", "^"]}]}]]}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.644730900034298*^9, 3.6456468684904633`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"s", "/.", "solLZ"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      OverscriptBox["\[CapitalDelta]", "^"], ",", "0", ",", "1"}], "}"}]}], 
+   "]"}], "//", "FullSimplify"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"c", "/.", "solLZ"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      OverscriptBox["\[CapitalDelta]", "^"], ",", "0", ",", "1"}], "}"}]}], 
+   "]"}], "//", "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.6456469118659077`*^9, 3.645646959545216*^9}, {
+  3.6456469896026173`*^9, 3.6456469928488092`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cot", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]]}], "+", 
+     RowBox[{
+      RowBox[{"Cot", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], "2"]}], ")"}], 
+       RowBox[{"3", "/", "2"}]], " ", 
+      OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+      SeriesData[
+       OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+      Editable->False]}],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {Cot[
+        Subscript[$CellContext`\[Theta], $CellContext`v]] (-Sin[
+           Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[1, 2], Cot[
+        Subscript[$CellContext`\[Theta], $CellContext`v]] (-Sin[
+           Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[3, 2]}, 0, 2, 1],
+    Editable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{
+       RowBox[{"Cot", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+       SqrtBox[
+        RowBox[{"-", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]]}]}], "-", 
+     RowBox[{
+      RowBox[{"Cot", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], "2"]}], ")"}], 
+       RowBox[{"3", "/", "2"}]], " ", 
+      OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+      SeriesData[
+       OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+      Editable->False]}],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {-Cot[
+        Subscript[$CellContext`\[Theta], $CellContext`v]] (-Sin[
+           Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[1, 2], -Cot[
+        Subscript[$CellContext`\[Theta], $CellContext`v]] (-Sin[
+           Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[3, 2]}, 0, 2, 1],
+    Editable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{
+       SqrtBox[
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "2"]], " ", 
+       RowBox[{"Tan", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}]}]}], "-", 
+     RowBox[{
+      RowBox[{"Cos", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+      SqrtBox[
+       SuperscriptBox[
+        RowBox[{"Cos", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], "2"]], " ", 
+      RowBox[{"Sin", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+      OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+      SeriesData[
+       OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+      Editable->False]}],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {-(Cos[
+          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2] 
+      Tan[
+        Subscript[$CellContext`\[Theta], $CellContext`v]], -Cos[
+        Subscript[$CellContext`\[Theta], $CellContext`v]] (Cos[
+          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2] 
+      Sin[
+        Subscript[$CellContext`\[Theta], $CellContext`v]]}, 0, 2, 1],
+    Editable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     RowBox[{
+      SqrtBox[
+       SuperscriptBox[
+        RowBox[{"Cos", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], "2"]], " ", 
+      RowBox[{"Tan", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"Cos", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+      SqrtBox[
+       SuperscriptBox[
+        RowBox[{"Cos", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], "2"]], " ", 
+      RowBox[{"Sin", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+      OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+      SeriesData[
+       OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+      Editable->False]}],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {(Cos[
+          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2] 
+      Tan[
+        Subscript[$CellContext`\[Theta], $CellContext`v]], Cos[
+        Subscript[$CellContext`\[Theta], $CellContext`v]] (Cos[
+          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2] 
+      Sin[
+        Subscript[$CellContext`\[Theta], $CellContext`v]]}, 0, 2, 1],
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{{3.64564692304653*^9, 3.645646960248294*^9}, 
+   3.645646993766871*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{
+     RowBox[{"-", 
+      SqrtBox[
+       RowBox[{"-", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]]}], "+", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cot", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], "2"]}], ")"}], 
+       RowBox[{"3", "/", "2"}]], " ", 
+      OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+      SeriesData[
+       OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+      Editable->False]}],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {-(-Sin[
+           Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[1, 2], Cot[
+         Subscript[$CellContext`\[Theta], $CellContext`v]]^2 (-Sin[
+           Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[3, 2]}, 0, 2, 1],
+    Editable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     SqrtBox[
+      RowBox[{"-", 
+       SuperscriptBox[
+        RowBox[{"Sin", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+       OverscriptBox["\[CapitalDelta]", "^"]}], 
+      RowBox[{"8", " ", 
+       SqrtBox[
+        RowBox[{"-", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]]}]], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+      SeriesData[
+       OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+      Editable->False]}],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {(-Sin[
+          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2],
+       Rational[1, 8] (-1 + 
+       Cos[4 Subscript[$CellContext`\[Theta], $CellContext`v]]) (-Sin[
+           Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[-1, 2]}, 0, 2, 1],
+    Editable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     RowBox[{"-", 
+      SqrtBox[
+       SuperscriptBox[
+        RowBox[{"Cos", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], "2"]]}], "+", 
+     RowBox[{
+      SqrtBox[
+       SuperscriptBox[
+        RowBox[{"Cos", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], "2"]], " ", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
+      OverscriptBox["\[CapitalDelta]", "^"]}], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+      SeriesData[
+       OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+      Editable->False]}],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {-(Cos[
+          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[1, 2], (Cos[
+          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2] 
+      Sin[
+         Subscript[$CellContext`\[Theta], $CellContext`v]]^2}, 0, 2, 1],
+    Editable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     SqrtBox[
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], "2"]], "+", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", " ", 
+           SubscriptBox["\[Theta]", "v"]}], "]"}]}], ")"}], " ", 
+       OverscriptBox["\[CapitalDelta]", "^"]}], 
+      RowBox[{"8", " ", 
+       SqrtBox[
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "2"]]}]], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        OverscriptBox["\[CapitalDelta]", "^"], "]"}], "2"],
+      SeriesData[
+       OverHat[$CellContext`\[CapitalDelta]], 0, {}, 0, 2, 1],
+      Editable->False]}],
+    SeriesData[
+     OverHat[$CellContext`\[CapitalDelta]], 0, {(Cos[
+         Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^Rational[1, 2], 
+      Rational[1, 8] (Cos[
+          Subscript[$CellContext`\[Theta], $CellContext`v]]^2)^
+       Rational[-1, 2] (-1 + 
+       Cos[4 Subscript[$CellContext`\[Theta], $CellContext`v]])}, 0, 2, 1],
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{{3.64564692304653*^9, 3.645646960248294*^9}, 
+   3.645646993976575*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], "-", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "^", "2"}], 
+        OverscriptBox["\[CapitalDelta]", "^"]}]}], ",", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"Sin", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}]}], "-", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "^", "2"}], 
+        RowBox[{"Sin", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], 
+        OverscriptBox["\[CapitalDelta]", "^"]}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], "+", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "^", "2"}], 
+        RowBox[{"Sin", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], 
+        OverscriptBox["\[CapitalDelta]", "^"]}]}], ",", 
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], "-", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}], 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "^", "2"}], 
+        OverscriptBox["\[CapitalDelta]", "^"]}]}]}], "}"}]}], "}"}], ".", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"Sin", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}]}], ",", 
+      RowBox[{"Cos", "[", 
+       SubscriptBox["\[Theta]", "v"], "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}]}], ",", 
+      RowBox[{"-", 
+       RowBox[{"Sin", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}]}]}], "}"}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", "//", "MatrixForm"}], "//", "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.6456501811460123`*^9, 3.645650418497305*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"Cos", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}]}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}]}], "-", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"], " ", 
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}]}]}], ")"}]}], "-", 
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "-", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", 
+            SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]}], ")"}]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"Sin", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}]}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}]}], "-", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"], " ", 
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}]}]}], ")"}]}], "+", 
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "-", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", 
+            SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]}], ")"}]}]}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"Sin", "[", 
+         SubscriptBox["\[Theta]", "v"], "]"}]}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "+", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"], " ", 
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}]}]}], ")"}]}], "-", 
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "-", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", 
+            SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]}], ")"}]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "+", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            SubscriptBox["\[Theta]", "v"], "]"}], "2"], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"], " ", 
+          RowBox[{"Sin", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}]}]}], ")"}]}], "-", 
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          SubscriptBox["\[Theta]", "v"], "]"}], "-", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+          OverscriptBox["\[CapitalDelta]", "^"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", 
+            SubscriptBox["\[Theta]", "v"], "]"}], "2"]}]}], ")"}]}]}]}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.645650401651124*^9, 3.6456504188699703`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+       OverscriptBox["\[CapitalDelta]", "^"], " ", 
+       RowBox[{"Sin", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}]}], "1"},
+     {
+      RowBox[{"-", "1"}], 
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}], " ", 
+       OverscriptBox["\[CapitalDelta]", "^"], " ", 
+       RowBox[{"Sin", "[", 
+        SubscriptBox["\[Theta]", "v"], "]"}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.645650401651124*^9, 3.64565041887632*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5196,49 +5714,62 @@ Cell[66698, 1183, 209, 4, 36, "Input"],
 Cell[66910, 1189, 12912, 223, 708, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[79859, 1417, 1895, 49, 84, "Input"],
-Cell[81757, 1468, 28944, 737, 1405, "Output"]
+Cell[79859, 1417, 1976, 50, 84, "Input"],
+Cell[81838, 1469, 12282, 329, 519, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[110738, 2210, 382, 9, 57, "Input"],
-Cell[111123, 2221, 1999, 56, 139, "Output"],
-Cell[113125, 2279, 4332, 123, 263, "Output"]
+Cell[94157, 1803, 382, 9, 57, "Input"],
+Cell[94542, 1814, 1074, 31, 126, "Output"],
+Cell[95619, 1847, 1788, 51, 126, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[117494, 2407, 1570, 44, 98, "Input"],
-Cell[119067, 2453, 1075, 29, 55, "Output"],
-Cell[120145, 2484, 2014, 54, 56, "Output"],
-Cell[122162, 2540, 2150, 58, 56, "Output"]
+Cell[97444, 1903, 1570, 44, 98, "Input"],
+Cell[99017, 1949, 1073, 28, 48, "Output"],
+Cell[100093, 1979, 1866, 50, 55, "Output"],
+Cell[101962, 2031, 2017, 54, 55, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[124349, 2603, 1393, 42, 96, "Input"],
-Cell[125745, 2647, 1350, 38, 71, "Output"],
-Cell[127098, 2687, 962, 28, 52, "Output"]
+Cell[104016, 2090, 1692, 47, 127, "Input"],
+Cell[105711, 2139, 1155, 30, 39, "Output"],
+Cell[106869, 2171, 1041, 27, 55, "Output"],
+Cell[107913, 2200, 1110, 30, 42, "Output"],
+Cell[109026, 2232, 1025, 27, 39, "Output"]
+}, Open  ]],
+Cell[110066, 2262, 377, 11, 39, "Input"],
+Cell[CellGroupData[{
+Cell[110468, 2277, 1227, 36, 59, "Input"],
+Cell[111698, 2315, 12857, 373, 613, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[128097, 2720, 203, 6, 43, "Input"],
-Cell[128303, 2728, 99, 2, 43, "Output"]
+Cell[124592, 2693, 632, 18, 70, "Input"],
+Cell[125227, 2713, 5467, 152, 92, "Output"],
+Cell[130697, 2867, 4907, 142, 140, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[128439, 2735, 856, 22, 36, "Input"],
-Cell[129298, 2759, 20286, 391, 1434, "Output"]
+Cell[135641, 3014, 2257, 69, 91, "Input"],
+Cell[137901, 3085, 4474, 130, 126, "Output"],
+Cell[142378, 3217, 1110, 31, 136, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[149621, 3155, 948, 25, 57, "Input"],
-Cell[150572, 3182, 6289, 114, 301, "Output"],
-Cell[156864, 3298, 6357, 115, 298, "Output"]
+Cell[143525, 3253, 856, 22, 36, "Input"],
+Cell[144384, 3277, 20286, 391, 1434, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[163258, 3418, 434, 14, 36, "Input"],
-Cell[163695, 3434, 56942, 1007, 287, "Output"]
+Cell[164707, 3673, 948, 25, 57, "Input"],
+Cell[165658, 3700, 6289, 114, 301, "Output"],
+Cell[171950, 3816, 6357, 115, 298, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[220674, 4446, 1232, 39, 142, "Input"],
-Cell[221909, 4487, 23642, 421, 163, "Output"]
+Cell[178344, 3936, 434, 14, 36, "Input"],
+Cell[178781, 3952, 56942, 1007, 287, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[245588, 4913, 866, 26, 92, "Input"],
-Cell[246457, 4941, 11748, 208, 755, "Output"]
+Cell[235760, 4964, 1232, 39, 142, "Input"],
+Cell[236995, 5005, 23642, 421, 163, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[260674, 5431, 866, 26, 92, "Input"],
+Cell[261543, 5459, 11748, 208, 755, "Output"]
 }, Open  ]]
 }
 ]

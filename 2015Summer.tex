@@ -63,9 +63,12 @@
 \noindent Notes for neutrino oscillations in vacuum and dense matter.
 \end{abstract}
 
+\tableofcontents
 
 
-Some symbols and definitions:
+
+\section{Symbols and Definitions}
+
 \begin{itemize}
 \item 
 $\Delta = \sqrt{2} G_F n(x) $
@@ -880,7 +883,7 @@ Before we actually do the expansion, make the quantities dimensionless would gre
 
 \begin{align*}
 \sin 2\theta(x)  &= \frac{\sin 2\theta_v}{\sqrt{ \left(\frac{\Delta}{\omega} \right)^2+1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v }} \\
-\cos 2\theta(x)&= \frac{ \cos 2\theta_v - \frac{\Delta}{\omega} }{ \left( \frac{\Delta}{\omega} \right)^2  +1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v  }.
+\cos 2\theta(x)&= \frac{ \cos 2\theta_v - \frac{\Delta}{\omega} }{ \sqrt{ \left( \frac{\Delta}{\omega} \right)^2  +1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v  }}.
 \end{align*}
 
 Define $\hat\Delta = \frac{\Delta}{\omega}$, which represents the matter interaction strength compared to the vacuum oscillation.
@@ -893,23 +896,21 @@ Define $\hat\Delta = \frac{\Delta}{\omega}$, which represents the matter interac
 
 
 \begin{align*}
-\sin\theta(x) & = \frac{\csc \left(2 \theta _v\right) \sqrt{\hat{\Delta }-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}  }{\sqrt{2} \sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}} \\
-&\sqrt{\frac{-\hat{\Delta }-\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1} \sqrt{\sin ^2\left(2 \theta _v\right) \left(\frac{1}{\hat{\Delta }-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}-\frac{1}{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}\right)+1}+\cos \left(2 \theta _v\right)}{\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}}} \\
-&\left(\hat{\Delta }-\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1} \sqrt{\sin ^2\left(2 \theta _v\right) \left(\frac{1}{\hat{\Delta }-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}-\frac{1}{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}\right)+1}-\cos \left(2 \theta _v\right)\right) \\
-\cos\theta(x)& = \frac{\sqrt{\frac{-\hat{\Delta }-\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1} \sqrt{\sin ^2\left(2 \theta _v\right) \left(\frac{1}{\hat{\Delta }-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}-\frac{1}{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}\right)+1}+\cos \left(2 \theta _v\right)}{\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}}}}{\sqrt{2}}
+\sin\theta(x) & = \frac{\csc \left(2 \theta _v\right) \sqrt{\frac{-\hat{\Delta }+\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}+\cos \left(2 \theta _v\right)}{\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}}} \left(\hat{\Delta }+\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}-\cos \left(2 \theta _v\right)\right)}{\sqrt{2}} \\
+\cos\theta(x)& = \frac{\sqrt{\frac{-\hat{\Delta }+\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}+\cos \left(2 \theta _v\right)}{\sqrt{\hat{\Delta }^2-2 \hat{\Delta } \cos \left(2 \theta _v\right)+1}}}}{\sqrt{2}}
 \end{align*}
 
 
 This is extremely complicated if we take the derivative with respect to $x$. So we apply Taylor expansion.\footnote{The $i$s are there makes sure that $-i\partial_x \mathbf{U_m}(x)$ is real.}
 
 \begin{align*}
-\frac{d \sin \theta(x)}{dx} &= \frac{\sin \theta(x)}{d\hat\Delta}\frac{d\hat\Delta}{dx} \\
-& = i \frac{d\hat\Delta}{dx} \left(  \frac{1}{2}\cos^2\theta_v\sin\theta_v +  \frac{1}{8} \cos^2\theta_v ( 14-9\cos 2\theta_v + \cos 4\theta_v  ) \sin \theta_v \hat\Delta + \mathcal{O} ( \hat \Delta )^2 \right) \\
+\frac{d \sin \theta(x)}{dx} &= \frac{d\sin \theta(x)}{d\hat\Delta}\frac{d\hat\Delta}{dx} \\
+& = i \frac{d\hat\Delta}{dx} \left(  -cos\theta_v\sin^2\theta_v -\frac{1}{2} ( (1+5\cos 2\theta_v) \cos\theta_v \sin^2\theta_v ) \hat\Delta + \mathcal{O}(\hat\Delta^2) \right) \\
 \frac{d\cos\theta(x)}{dx} & = \frac{d\cos\theta(x)}{d\hat\Delta}\frac{d\hat\Delta}{dx} \\
-& = i \frac{d\hat\Delta}{dx}\left(  \frac{3}{4} \sin\theta_v \sin 2\theta_v + \frac{1}{8} ( (-6+47\cos 2\theta_v - \cos 4\theta_v) \cos^2\theta_v  \sin\theta_v)  \hat \Delta + \mathcal{O}(\hat \Delta)^2  \right)
+& = i \frac{d\hat\Delta}{dx}\left( cos^2\theta_v\sin\theta_v + \frac{1}{2}\cos^2\theta_v(-1+5\cos 2\theta_v) \sin\theta_v \hat\Delta + \mathcal{O}(\hat\Delta^2) \right)
 \end{align*}
 
-There is nothing in the coefficients that prohibits us from using the lowest order that $\frac{d\hat\Delta /dx}{\text{Energy Differences Between Two Energy Levels}}\ll 1$ since the Taylor series has finite values.
+There is nothing in the coefficients that prohibits us from using the lowest order that $\frac{d\hat\Delta /dx}{\text{Energy Differences Between Two Energy Levels}}\ll 1$ since the Taylor series has finite values.\footnote{No singularities possible. I assumed that $\sin \theta_v >0$. }
 
 Solving the adiabatic limit is just the same as the constant limit but $\theta(x)$ is not constant which ensures changing energies. What would be interesting is the behavior of energies as the density profile is slowing changing.
 
@@ -927,10 +928,10 @@ When the term $\hat\Delta$ is very small $1-2\hat\Delta\cos 2\theta_v$ will domi
 \end{marginfigure}
 
 
-The survival probability would be
+The survival probability for the light neutrinos would be
 
 \begin{equation*}
-P_x(\nu_e,L) = 1 - \sin^2(2\theta (x))\sin^2\left( \frac{\omega L}{2} \right) .
+P_x(\nu_L,L) = 1 - \sin^2(2\theta (x))\sin^2\left( \frac{\omega L}{2} \right) .
 \end{equation*}
 
 
@@ -1001,19 +1002,75 @@ In principle we could use Taylor expansion of $\mathbf{U_m}$ to find the series 
 The series of them are
 
 \begin{align*}
-\sin 2\theta(x) & = \sin 2\theta_v + \left( \cos 2\theta_v \sin 2\theta_v - \frac{1}{2}\sin 2\theta_v \right)\hat\Delta + \mathcal{O}(\hat\Delta)^2 \\
-\cos 2\theta(x) & = \cos 2\theta_v + \left( \cos^2 2\theta_v - 1 \right) \hat \Delta + \mathcal{O}(\hat\Delta)^2 .
+\sin 2\theta(x) & = \sin 2\theta_v + \cos 2\theta_v \sin 2\theta_v \hat\Delta + \mathcal{O}(\hat\Delta)^2 \\
+\cos 2\theta(x) & = \cos 2\theta_v -\sin^2 2\theta_v \hat \Delta + \mathcal{O}(\hat\Delta)^2 .
+\end{align*}
+
+Notice that for small $\theta_v$ the first order can be neglected sine they are second or higher order small quantities.
+
+$\sin\theta(x)$ and $\cos\theta(x)$ can be found using these results.
+
+\begin{align*}
+\sin\theta(x) & = \sin \theta_v + \cos^2\theta_v \sin\theta_v \hat\Delta + \mathcal{O}(\hat\Delta^2) \\
+\cos\theta(x) & = \cos\theta_v - \cos\theta_v \sin^2\theta_v \hat\Delta + \mathcal{O}(\hat\Delta^2).
+\end{align*}
+
+To find out the solutions the explicit expression for $\mathbf{U_m}$ is required. The rotation matrix is
+
+\begin{align*}
+\mathbf{U_m} &= \begin{pmatrix} \cos \theta(x) & \sin\theta(x) \\ -\sin\theta(x) & \cos\theta(x) \end{pmatrix} \\
+&\approx \begin{pmatrix}
+\cos\theta_v - \cos\theta_v \sin^2\theta_v \hat\Delta &  \sin \theta_v + \cos^2\theta_v \sin\theta_v \hat\Delta \\
+-  \sin \theta_v - \cos^2\theta_v \sin\theta_v \hat\Delta & \cos\theta_v - \cos\theta_v \sin^2\theta_v \hat\Delta
+\end{pmatrix}.
+\end{align*}
+
+The derivative of this rotation matrix with respect to $x$ is
+
+\begin{align*}
+\partial_x \mathbf{U_m} & = \frac{d \hat\Delta}{dx} \begin{pmatrix}
+ - \cos\theta_v \sin^2\theta_v  &  \cos^2\theta_v \sin\theta_v  \\
+ - \cos^2\theta_v \sin\theta_v  &  - \cos\theta_v \sin^2\theta_v 
+\end{pmatrix}
 \end{align*}
 
 
+The effective potential is\footnote{This expression comes from the result of the first order approximation of $\sin\theta(x)$ and $\cos\theta(x)$.}
+
+\begin{align*}
+\mathbf{V_m} & = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) \\
+& = - i\sin\theta_v \cos\theta_v \frac{d\hat\Delta}{dx} \begin{pmatrix}
+\cos\theta_v\sin\theta_v \hat \Delta & 1 \\
+-1 & \cos\theta_v \sin\theta_v \hat\Delta 
+\end{pmatrix} .
+\end{align*}
+
+Since $\frac{d\hat\Delta}{dx} \hat\Delta$ is one order higher than $\hat\Delta$, the effective potential can be simplified to first order, which is
+
+\begin{align*}
+\mathbf{V_m} & = - i\sin\theta_v \cos\theta_v \frac{d\hat\Delta}{dx} \begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}.
+\end{align*}
+
+The equation of motion up to first order of $\hat\Delta$ becomes
+
+\begin{equation*}
+i\partial_x\ket{\Psi_m} = (\mathbf{H_{md}} + \mathbf{V_m})\ket{\Psi_m}.
+\end{equation*}
+
+We have already solved
+\begin{equation*}
+i\partial_x\ket{\Psi_m} = \mathbf{H_{md}} \ket{\Psi_m},
+\end{equation*}
+
+where the eigenstates are $\ket{\nu_L}$ and $\ket{\nu_H}$.
 
 
 
 
-
-
-
-The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
+%% The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
 
 
 
