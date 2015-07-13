@@ -1068,6 +1068,54 @@ i\partial_x\ket{\Psi_m} = \mathbf{H_{md}} \ket{\Psi_m},
 where the eigenstates are $\ket{\nu_L}$ and $\ket{\nu_H}$.
 
 
+In general we define
+
+\begin{equation*}
+v = -\sin\theta_v \cos\theta_v\frac{d\hat\Delta}{dx}
+\end{equation*}
+
+so that
+
+\begin{equation*}
+\mathbf{V_m} = \begin{pmatrix}
+0 & i v \\
+-i v & 0
+\end{pmatrix}.
+\end{equation*}
+
+The general solution to the equation we need to solve can be written as
+
+\begin{equation*}
+\ket{\Psi_m} = C_L(x) e^{-i\int \omega_{m1} dx} \ket{\nu_L} + C_H(x) e^{-i\int \omega_{m2} dx} \ket{\nu_H},
+\end{equation*}
+
+where
+
+\begin{align*}
+\omega_{m1} &= \frac{\Delta^2 + \omega^2}{4}-\frac{\Delta \omega}{2} \cos 2\theta_v  \\
+& = \omega^2\left( \frac{\hat\Delta^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v \right), \\
+\omega_{m2} & = - \omega_{m1}.
+\end{align*}
+
+Hamiltonian applied to this state results in
+
+\begin{align*}
+\mathbf{H_m} \ket{\Psi_m} =& \omega_{m1} C_L(x) e^{-i\int \omega_{m1}dx} \ket{\nu_L} -ivC_L(x) e^{-i\int \omega_{m1}dx}\ket{\nu_H} \\ &+\omega_{m2}C_H(x) e^{-i\int \omega_{m2}dx}\ket{\nu_H} + iv C_H(x) e^{-i\int \omega_{m2}dx}\ket{\nu_L}.
+\end{align*}
+
+Plug the state $\ket{\Psi_m}$ into the Schrödinger equation, we have
+
+\begin{align*}
+\dot C_L(x) &= v C_H(x) e^{ - i\int \delta \omega_m dx} \\
+\dot C_H(x) & = -v C_L(x) e^{i\int \delta\omega_m dx},
+\end{align*}
+
+in which $\delta\omega_m$ is defined as
+
+\begin{equation*}
+\delta \omega_m = \omega_{m2} - \omega_{m1}.
+\end{equation*}
+
 
 
 %% The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
