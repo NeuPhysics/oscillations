@@ -77,7 +77,7 @@ $\omega = \frac{\Delta m^2}{2E}$
 \end{itemize}
 
 
-
+\newpage
 
 \section{Vacuum Oscillations}
 
@@ -711,7 +711,7 @@ To see this effect quantitatively, we need to diagonalize this Hamiltonian (Can 
 
 \begin{align*}
 \ket{\nu_L(x)} &= \cos\theta(x) \ket{\nu_e} - \sin\theta(x) \ket{\nu_\mu} \\
-\ket{\nu_H(x)} & =  \sin\theta(x) \ket{\nu_e} - \cos\theta(x) \ket{\nu_\mu}.
+\ket{\nu_H(x)} & =  \sin\theta(x) \ket{\nu_e} + \cos\theta(x) \ket{\nu_\mu}.
 \end{align*}
 
 
@@ -1107,7 +1107,7 @@ Plug the state $\ket{\Psi_m}$ into the Schrödinger equation, we have
 
 \begin{align*}
 \dot C_L(x) &= v C_H(x) e^{ - i\int \delta \omega_m dx} \\
-\dot C_H(x) & = -v C_L(x) e^{i\int \delta\omega_m dx},
+\dot C_H(x) & = -v C_L(x) e^{i\int \delta\omega_m dx} ,
 \end{align*}
 
 in which $\delta\omega_m$ is defined as
@@ -1117,6 +1117,66 @@ in which $\delta\omega_m$ is defined as
 \end{equation*}
 
 
+The first order differential equations of $C_L(x)$ and $C_H(x)$ can be combined and produce a second order differential equation.
+
+\begin{equation*}
+\ddot C_L - \left(  \frac{\dot v}{v} - i\delta \omega_m \right) \dot C_L + v^2 C_L = 0.
+\end{equation*}
+
+In our linear approximation that $\frac{d\hat\Delta}{dx}$ is a constant.\footnote{We are assuming that $n(x)$ is linearly depending on $x$ which means $\hat\Delta$ is a linear function of $x$. Thus $\frac{d\hat\Delta}{dx}$ is a constant.} The equation simplifies to
+
+\begin{equation*}
+\ddot C_L + i\delta\omega_m \dot C_L + v^2 C_L = 0,
+\end{equation*}
+
+where $v=-\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx}$ is constant.
+
+Assuming one of the solutions is $e^{rx}$, we could insert it to the second order differential equation and get the characteristic equation,
+
+\begin{equation*}
+r^2 + i\delta \omega_m r + v^2 = 0,
+\end{equation*}
+
+which has two solutions
+
+\begin{align*}
+r_1 & =  i \frac{-\delta\omega_m + \sqrt{\delta\omega_m+ 4v^2} }{2} \\
+r_2 & = i\frac{-\delta\omega_m - \sqrt{\delta\omega_m+ 4v^2} }{2}.
+\end{align*}
+
+The solutions to $C_L(x)$ and $C_H(x)$ will be
+
+\begin{align*}
+C_L(x) & = c_1 e^{r_1 x} + c_2 e^{r_2 x} \\
+C_H(x) & = \left( c_1 e^{r_1 x} + c_2 e^{r_2 x} \right) \frac{ e^{ i\int \delta\omega_m dx } }{v} .
+\end{align*}
+
+These constants are determined by the initial condition. The state of the system at any $x$ is
+
+\begin{align*}
+\ket{\Psi_m(x)} = & \left( c_1 e^{r_1 x} + c_2 e^{r_2 x} \right) e^{-i\int_0^x \omega_{m1}(x') dx'} \ket{\nu_L}  \\
+& + \left( c_1 e^{r_1 x} + c_2 e^{r_2 x} \right) \frac{ e^{ i\int \delta\omega_m dx } }{v} e^{-i\int_0^x \omega_{m2}(x') dx'} \ket{\nu_H}.
+\end{align*}
+
+
+Suppose we have the initial condition as $\ket{\Psi_m(x=0)} = \ket{\nu_L}$, the system can jump to $\ket{\nu_H}$ since the state at arbitrary position $x$ is a mixing of the two states.\footnote{In fact this approximation is valid at the level crossing.} The rate of jumping is given by\cite{Vutha2010,Zener1932,Rubbmark1981}
+
+\begin{equation*}
+\Gamma = \frac{(2v )^2}{4\left( \frac{d\omega_m}{dx} \right)} = \frac{v^2}{\frac{d\omega_m}{dx}}.
+\end{equation*}
+
+
+The probability jumping to state $\ket{\nu_H}$ after the level crossing (at infinite $x$) is
+
+\begin{align*}
+P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) &= e^{-2\pi\Gamma} \\
+& = \exp\left( -2\pi \frac{v^2}{\frac{d\omega_m}{dx}} \right) \\
+& = \exp\left( -2\pi \frac{\left( -\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx}  \right)^2}{\frac{d\omega_m}{dx}} \right).
+\end{align*}
+
+The survival probability can be calculated by counting the probability left on the initial state.
+
+To be clear, if electron neutrinos are produced inside core of our sun, it will be the light state. Since the interaction with matter is very strong, it transfers to $\ket{\nu_L}$ with probability $P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) $ due to the gradient of the matter profile which works as the perturbation. Thus the final state will be a mixing of $\ket{\nu_L}$ and $\ket{\nu_H}$.
 
 %% The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
 
@@ -1185,6 +1245,11 @@ Combining the two relations between density and pressure, we can find the densit
 
 
 
+
+
+
+\bibliography{ref}
+\bibliographystyle{plainnat}
 
 
 \end{document}
