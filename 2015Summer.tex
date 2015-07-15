@@ -445,10 +445,12 @@ The derivation of this is
 \mathbf H_{\alpha} & = \mathbf U \hat H_j  \mathbf U^T \\
 & =  \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix} \left( p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2 & 0 \\ 0 & m_2^2 \end{pmatrix} \right)   \begin{pmatrix}  \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \\
 & = p \mathbf I + \frac{1}{2p} \begin{pmatrix} \cos^2\theta m_1^2 + \sin^2\theta m_2^2 & -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 \\ -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 & \sin^2\theta m_1^2 + \cos^2\theta m_2^2 \end{pmatrix} \\
-& = p \mathbf I + \frac{1}{2p} \begin{pmatrix} m_1^2 - \delta^2 m \sin^2\theta & -\frac{1}{2}\sin 2\theta  \delta m^2  \\ -\frac{1}{2}\sin 2\theta  \delta m^2  & m_2^2+ \delta m^2 \sin^2\theta \end{pmatrix} \\
-& = p \mathbf I + \frac{1}{2p} \left( \frac{1}{2}(m_1^2+m_2^2) \mathbf I -   \frac{1}{2}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix} \right) \\
-& = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix}
+& = p \mathbf I + \frac{1}{2p} \begin{pmatrix} m_1^2 - \Delta m^2 \sin^2\theta & -\frac{1}{2}\sin 2\theta  \Delta m^2  \\ -\frac{1}{2}\sin 2\theta  \Delta m^2  & m_2^2+ \Delta m^2 \sin^2\theta \end{pmatrix} \\
+& = p \mathbf I + \frac{1}{2p} \left( \frac{1}{2}(m_1^2+m_2^2) \mathbf I -   \frac{1}{2}\begin{pmatrix} - \Delta m^2 \cos 2\theta & \Delta^2 m \sin 2\theta \\  \Delta m^2 \sin 2\theta & \Delta^2 m\cos 2\theta \end{pmatrix} \right) \\
+& = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \Delta m^2 \cos 2\theta & \Delta^2 m \sin 2\theta \\  \Delta m^2 \sin 2\theta & \Delta^2 m\cos 2\theta \end{pmatrix}
 \end{align*}
+
+where $\Delta m^2 = m_1^2 - m_2^2$.
 
 Since identity matrix only shifts the eigenvalues we are only interested in the second term, thus the Hamiltonian we are going to use is
 
@@ -619,19 +621,131 @@ which gets back to the result we had using the previous method.
 
 
 
+This problem can also be solved using numerical methods. Here is a comparison between this analytical result and a numerical result.
+
+\begin{marginfigure}
+\includegraphics{assets/vacuumOsc}
+\caption{They overlap on all the range completely.}
+\end{marginfigure}
+
+
+
+
 \subsection{Three Flavor States}
 
 For three flavor neutrinos, the oscillations matrix is 3 by 3 which is called the PMNS matrix.
 
-\begin{equation}
+\begin{equation*}
 \mathbf U = \begin{pmatrix}
 U_{11} & U_{12} & U_{13} \\
 U_{21} & U_{22} & U_{23} \\
 U_{31} & U_{32} & U_{33}
+\end{pmatrix},
+\end{equation*}
+
+which acts on the mass eigenstates to give the flavor eigenstates, i.e.,
+
+\begin{equation*}
+\ket{\nu_\alpha}= \mathbf{U}\ket{\nu_i}.
+\end{equation*}
+
+
+
+
+In general, a rotation for 3D with a CP violation phase $\delta$ is
+
+% A new command that scales down the size of the matrix
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
+\begin{equation*}
+\mathbf{U} = \left(
+\scalemath{0.8}{
+\begin{array}{ccc}
+ \cos \left(\theta _{12}\right) \cos \left(\theta _{13}\right) & \cos \left(\theta _{13}\right) \sin \left(\theta _{12}\right) & e^{-i \delta _{\text{CP}}} \sin \left(\theta _{13}\right) \\
+ -\cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right)-e^{i \delta _{\text{CP}}} \cos \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right)-e^{i \delta _{\text{CP}}} \sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{13}\right) \sin \left(\theta _{23}\right) \\
+ \sin \left(\theta _{12}\right) \sin \left(\theta _{23}\right)-e^{i \delta _{\text{CP}}} \cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right) \sin \left(\theta _{13}\right) & -e^{i \delta _{\text{CP}}} \cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right)-\cos \left(\theta _{12}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{13}\right) \cos \left(\theta _{23}\right) \\
+\end{array}
+}
+\right).
+\end{equation*}
+
+
+However, with the CP violation phase $\delta$ this matrix is not unitary thus I'll choose $\delta=0$ for simplicity.\footnote{The effect of the phase can also be studied easily with the help of Mathematica.}
+
+Now the matrix becomes,
+
+
+\begin{equation*}
+\mathbf{U} = \left(
+\scalemath{0.8}{
+\begin{array}{ccc}
+ \cos \left(\theta _{12}\right) \cos \left(\theta _{13}\right) & \cos \left(\theta _{13}\right) \sin \left(\theta _{12}\right) & \sin \left(\theta _{13}\right) \\
+ -\cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right)-\cos \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right)-\sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{13}\right) \sin \left(\theta _{23}\right) \\
+ \sin \left(\theta _{12}\right) \sin \left(\theta _{23}\right)-\cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right) \sin \left(\theta _{13}\right) & -\cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right)-\cos \left(\theta _{12}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{13}\right) \cos \left(\theta _{23}\right) \\
+\end{array}
+}
+\right).
+\end{equation*}
+
+
+
+
+The survival probability is given by the same derivation as the 2 flavor example. First of all we need to find the Hamiltonian in flavor basis from the propagation Hamiltonian, which is 
+
+\begin{align*}
+\mathbf{H} &= \mathbf{U} \mathbf{H_p} \mathbf{U^{-1}} \\
+& = 
+\left(
+\scalemath{0.25}{
+\begin{array}{ccc}
+ \left(\cos ^2\left(\theta _{12}\right) m_1^2+\sin ^2\left(\theta _{12}\right) m_2^2\right) \cos ^2\left(\theta _{13}\right)+\sin ^2\left(\theta _{13}\right) m_3^2 & \frac{1}{2} \left(\cos \left(\theta _{13}\right) \cos \left(\theta _{23}\right) \sin \left(2 \theta _{12}\right) \left(m_2^2-m_1^2\right)+\sin \left(2 \theta _{13}\right) \sin \left(\theta _{23}\right) \left(-\cos ^2\left(\theta _{12}\right) m_1^2-\sin ^2\left(\theta _{12}\right) m_2^2+m_3^2\right)\right) & \frac{1}{2} \left(\cos \left(\theta _{13}\right) \sin \left(2 \theta _{12}\right) \sin \left(\theta _{23}\right) \left(m_1^2-m_2^2\right)+\cos \left(\theta _{23}\right) \sin \left(2 \theta _{13}\right) \left(-\cos ^2\left(\theta _{12}\right) m_1^2-\sin ^2\left(\theta _{12}\right) m_2^2+m_3^2\right)\right) \\
+ \frac{1}{2} \left(\cos \left(\theta _{13}\right) \cos \left(\theta _{23}\right) \sin \left(2 \theta _{12}\right) \left(m_2^2-m_1^2\right)+\sin \left(2 \theta _{13}\right) \sin \left(\theta _{23}\right) \left(-\cos ^2\left(\theta _{12}\right) m_1^2-\sin ^2\left(\theta _{12}\right) m_2^2+m_3^2\right)\right) & \left(\cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right)+\cos \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right)\right){}^2 m_1^2+\left(\cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right)-\sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right)\right){}^2 m_2^2+\cos ^2\left(\theta _{13}\right) \sin ^2\left(\theta _{23}\right) m_3^2 & \frac{1}{8} \left(4 \cos \left(2 \theta _{23}\right) \sin \left(2 \theta _{12}\right) \sin \left(\theta _{13}\right) \left(m_1^2-m_2^2\right)-2 \cos \left(2 \theta _{13}\right) \sin \left(2 \theta _{23}\right) \left(\cos ^2\left(\theta _{12}\right) m_1^2+\sin ^2\left(\theta _{12}\right) m_2^2-m_3^2\right)+\sin \left(2 \theta _{23}\right) \left(\left(3 \cos \left(2 \theta _{12}\right)-1\right) m_1^2-\left(3 \cos \left(2 \theta _{12}\right)+1\right) m_2^2+2 m_3^2\right)\right) \\
+ \frac{1}{2} \left(\cos \left(\theta _{13}\right) \sin \left(2 \theta _{12}\right) \sin \left(\theta _{23}\right) \left(m_1^2-m_2^2\right)+\cos \left(\theta _{23}\right) \sin \left(2 \theta _{13}\right) \left(-\cos ^2\left(\theta _{12}\right) m_1^2-\sin ^2\left(\theta _{12}\right) m_2^2+m_3^2\right)\right) & \frac{1}{8} \left(4 \cos \left(2 \theta _{23}\right) \sin \left(2 \theta _{12}\right) \sin \left(\theta _{13}\right) \left(m_1^2-m_2^2\right)-2 \cos \left(2 \theta _{13}\right) \sin \left(2 \theta _{23}\right) \left(\cos ^2\left(\theta _{12}\right) m_1^2+\sin ^2\left(\theta _{12}\right) m_2^2-m_3^2\right)+\sin \left(2 \theta _{23}\right) \left(\left(3 \cos \left(2 \theta _{12}\right)-1\right) m_1^2-\left(3 \cos \left(2 \theta _{12}\right)+1\right) m_2^2+2 m_3^2\right)\right) & \left(\cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right) \sin \left(\theta _{13}\right)-\sin \left(\theta _{12}\right) \sin \left(\theta _{23}\right)\right){}^2 m_1^2+\left(\cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right)+\cos \left(\theta _{12}\right) \sin \left(\theta _{23}\right)\right){}^2 m_2^2+\cos ^2\left(\theta _{13}\right) \cos ^2\left(\theta _{23}\right) m_3^2 \\
+\end{array}
+}
+\right)
+\end{align*}
+
+where 
+\begin{align*}
+\mathbf{H_p} = \begin{pmatrix}
+m_1^2 & 0 & 0 \\
+0 & m_2^2 & 0 \\
+0 & 0 & m_3^2
 \end{pmatrix}.
-\end{equation}
+\end{align*}
 
-The survival probability is given by the same derivation as the 2 flavor example.
+The next step is to define 
+
+\begin{align*}
+\Delta m_{12}^2 &= m_1^2 - m_2^2 \\
+\Delta m_{23}^2 &= m_2^2 - m_3^2 
+\end{align*}
+
+so that they simplifies the Hermitian Hamiltonian to
+
+\begin{equation*}
+\mathbf{H} = 
+\begin{pmatrix}
+H_{11} & H_{12} & H_{13} \\
+H_{21} & H_{22} & H_{23} \\
+H_{31} & H_{32} & H_{33}
+\end{pmatrix},
+\end{equation*}
+
+where \footnote{Haven't being copied from Mathematica code.}
+
+\begin{align*}
+H_{11} & = \cos^2\theta_{13}( m_2^2 - \sin^2\theta  \Delta m_{12}^2 ) + \sin^2\theta_{13} m_3^2 
+\end{align*}
+
+
+
+
+\begin{figure}
+\includegraphics{assets/vacOsc3Flavor}
+\caption{The overall shape is the same however they differ on small scales.}
+\end{figure}
 
 
 
@@ -640,6 +754,9 @@ The survival probability is given by the same derivation as the 2 flavor example
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Oscillations in Matter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Oscillations in Matter}
 
