@@ -1235,8 +1235,8 @@ The general solution to the equation we need to solve can be written as
 where
 
 \begin{align*}
-\omega_{m1} &= \frac{\Delta^2 + \omega^2}{4}-\frac{\Delta \omega}{2} \cos 2\theta_v  \\
-& = \omega^2\left( \frac{\hat\Delta^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v \right), \\
+\omega_{m1} &=-\sqrt{ \frac{\Delta^2 + \omega^2}{4}-\frac{\Delta \omega}{2} \cos 2\theta_v } \\
+& = -\omega \sqrt{\left( \frac{\hat\Delta^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v \right)} , \\
 \omega_{m2} & = - \omega_{m1}.
 \end{align*}
 
@@ -1321,19 +1321,97 @@ The survival probability can be calculated by counting the probability left on t
 
 To be clear, if electron neutrinos are produced inside core of our sun, it will be the light state. Since the interaction with matter is very strong, it transfers to $\ket{\nu_L}$ with probability $P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) $ due to the gradient of the matter profile which works as the perturbation. Thus the final state will be a mixing of $\ket{\nu_L}$ and $\ket{\nu_H}$.
 
+
+
+
+
+
+
+
+
+
+
+\subsection{Numerical Method and Results}
+
+
+
 %% The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
 
 
+To simplify the codes, I prefer to write down all quantities dimensionless. In this spirit, the Hamiltonian becomes
+
+\begin{equation*}
+\mathbf{H_md} = \begin{pmatrix}
+\omega_{m1} & 0 \\
+0 & \omega_{m2}
+\end{pmatrix} + \mathbf{V_m} \, ,
+\end{equation*}
+
+where 
+
+\begin{equation*}
+\omega_{m2} = - \omega_{m1} \equiv \omega_m = \omega \sqrt{\frac{\hat\Delta ^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v }
+\end{equation*}
+
+while the effective potential $\mathbf{V_m}$ is
+
+\begin{align*}
+\mathbf{V_m} & = - i \mathrm{U_m^{-1}}\partial_x \mathbf{U_m} \\
+& = - i \begin{pmatrix} \cos \theta(x) & -\sin\theta(x) \\ \sin\theta(x) & \cos\theta(x) \end{pmatrix} \partial_x \begin{pmatrix} \cos \theta(x) & \sin\theta(x) \\ -\sin\theta(x) & \cos\theta(x) \end{pmatrix} 
+\end{align*}
+
+in which
+
+\begin{align*}
+\sin 2\theta(x)  &= \frac{\sin 2\theta_v}{\sqrt{ \hat\Delta ^2+1 - 2 \hat\Delta \cos 2\theta_v }} \\
+\cos 2\theta(x)&= \frac{ \cos 2\theta_v - \hat\Delta  }{ \sqrt{\hat\Delta ^2  +1 - 2 \hat\Delta \cos 2\theta_v } }.
+\end{align*}
+
+and
+\begin{equation*}
+\hat\Delta = \frac{\sqrt{2}G_F n(x)}{\omega} \, .
+\end{equation*}
 
 
+To compare with the theory, the first order effective potential is
 
+\begin{align*}
+\mathbf{V_m} & = - i\sin\theta_v \cos\theta_v \frac{d\hat\Delta}{dx} \begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}\\
+& = -i \sin\theta_v\cos\theta_v \sqrt{2}\frac{G_F}{\omega} \frac{d n(\hat x)}{d\hat x} \frac{1}{R_S} \begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}.
+\end{align*}
 
+Now we could write down the dimensionless equation
 
+\begin{equation*}
+i \partial_{\hat x} \Psi(x) = ( R_S \mathbf{H_m} + R_S \mathbf{V_m} ) \Psi(x),
+\end{equation*}
 
+which becomes a matrix equation given a set of basis
 
-
-
-
+\begin{equation*}
+i \partial_{\hat x} \begin{pmatrix}
+\nu_L \\
+\nu_H
+\end{pmatrix} = \left(
+R_S \omega \begin{pmatrix}
+- \hat{\omega_m} & 0 \\
+0 & \hat{\omega_m}
+\end{pmatrix} - i \sin\theta_v\cos\theta_v \sqrt{2} \frac{G_F}{\omega} \frac{d n(\hat x)}{d\hat x} \begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}
+\right)  
+\begin{pmatrix}
+\nu_L \\
+\nu_H
+\end{pmatrix}
+\end{equation*}
 
 
 
