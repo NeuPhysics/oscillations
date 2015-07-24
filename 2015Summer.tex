@@ -31,6 +31,10 @@
 % code highlighting
 \usepackage{listings}
 
+% For url links
+\usepackage{hyperref}
+
+
 % \usepackage{minted}
 % \usepackage[utf8]{inputenc}
 % \usepackage[english]{babel}
@@ -1335,8 +1339,6 @@ To be clear, if electron neutrinos are produced inside core of our sun, it will 
 
 
 
-%% The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.
-
 
 To simplify the codes, I prefer to write down all quantities dimensionless. In this spirit, the Hamiltonian becomes
 
@@ -1416,6 +1418,77 @@ R_S \omega \begin{pmatrix}
 
 
 
+
+
+The solar electron number density from standard solar model is given in arXiv:astro-ph/001034.\footnote{Data from this work is listed \href{http://www.sns.ias.edu/~jnb/SNdata/sndata.html}{http://www.sns.ias.edu/~jnb/SNdata/sndata.html} while the data file is actually in this file here \href{http://www.sns.ias.edu/~jnb/SNdata/Export/BP2000/neordered.output}{http://www.sns.ias.edu/~jnb/SNdata/Export/BP2000/neordered.output} .}
+
+The data file\footnote{\href{http://www.sns.ias.edu/~jnb/SNdata/Export/BP2000/neordered.output}{http://www.sns.ias.edu/~jnb/SNdata/Export/BP2000/neordered.output} } is listed in units of $R_S$ and $\mathrm{cm}^{-3}$ while the density is actually $\log(n(x)/N_A)$ where $N_A$ is Avogadro number.
+
+Before any numerical calculations, I would like to do a simple analysis of the equation. First thing to do is to see if the second term in Hamiltonian is too small.
+
+The radius of the sun is about $R_S = 695800\mathrm{km}$ which can be approximated as\footnote{The conversion between SI and natrual untis is done by the relation $1\mathrm{fm}=1/0.2\mathrm{GeV}$.}
+
+\begin{equation*}
+R_S = 7\times 10^{23}\mathrm{fm}= \frac{7\times 10^{23} }{0.2 \mathrm{GeV} } = 3.5 \times 10^{24} \mathrm{GeV^{-1}} .
+\end{equation*}
+
+The frequency $\omega = \Delta m^2/2E$ is approximately
+
+\begin{equation*}
+\omega = \frac{10^{-4} \mathrm{eV^2}}{10^{-3}\mathrm{GeV}} = 10^{-19} \mathrm{GeV}.
+\end{equation*}
+
+Thus 
+
+\begin{equation*}
+R_S \omega \approx  10^5
+\end{equation*}
+
+
+Notice that the dimensionless frequency $\omega_m$ is
+
+\begin{equation*}
+\hat \omega_m  = \sqrt{\frac{\hat\Delta ^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v }.
+\end{equation*}
+
+In the situation of the sun, where $\hat\Delta \ll 1$\footnote{
+Put in the numbers,
+\begin{equation*}
+\hat\Delta \approx 10^{-19} \sim 10^{-11}
+\end{equation*}
+}, we keep the first order of this quanitity,
+
+\begin{align*}
+\hat \omega_m & = \sqrt{\frac{\hat\Delta ^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v } \\
+& = \frac{1}{2} - \frac{1}{2}\cos 2\theta_v \hat\Delta + \mathcal{O}(\hat\Delta)^3.
+\end{align*}
+
+
+
+
+The derivative of number density of the sun $\frac{d n(\hat x)}{d\hat x}$ is shown to be of the order $-10^{26} \mathrm{cm^{-3}}$\footnote{$1\mathrm{cm^{-3}} = 8\times 10^{-51}\mathrm{GeV^3} $ }, i.e.,
+
+\begin{equation*}
+\frac{d n(\hat x)}{d\hat x} \approx -10^{26} \mathrm{cm^{-3}} \approx -10^{-23} \mathrm{GeV^3}.
+\end{equation*}
+
+We also have
+
+\begin{equation*}
+\frac{G_F}{\omega} \approx \frac{10^{-5}\mathrm{GeV^{-2}}}{10^{-19}\mathrm{GeV}} = 10^{14} \mathrm{GeV^{-3}}
+\end{equation*}
+
+
+The second term is of order\footnote{$G_F=1.17\times 10^{-5}\mathrm{GeV^{-2}}$}
+
+\begin{align*}
+\frac{G_F}{\omega} \frac{d n(\hat x)}{d\hat x} & \approx - 10^{14}\mathrm{GeV^{-3}} \times 10^{-23} \mathrm{GeV^3} = 10^{-9}. 
+\end{align*}
+
+
+
+
+
 %% As we said before, % I forgot what was that.
 
 \subsection{Decapitated - Solar Density Profile}
@@ -1465,6 +1538,109 @@ where
 Combining the two relations between density and pressure, we can find the density profile with respect to radius.
 
 
+
+
+
+
+
+\section{Ternary Diagrams}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/1000-1}
+\caption{ 
+theta12 = 33.36/180*Pi;\newline
+theta13 = 8.66/180*Pi;\newline
+theta23 = 40/180*Pi;\newline
+deltacp = 0;\newline
+m1sq = 0.01;\newline
+m2sq = m1sq + 0.000079;\newline
+oneFourE = 100; 
+}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/1000-2}
+\caption{ Change theta12 to half \newline
+theta12 = 33.36/180*Pi*1/2;\newline
+theta13 = 8.66/180*Pi;\newline
+theta23 = 40/180*Pi;\newline
+deltacp = 0;\newline
+m1sq = 0.01;\newline
+m2sq = m1sq + 0.000079;\newline
+oneFourE = 100; 
+}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/1000-3}
+\caption{ Change theta13 to half\newline
+theta12 = 33.36/180*Pi;\newline
+theta13 = 8.66/180*Pi*1/2;\newline
+theta23 = 40/180*Pi;\newline
+deltacp = 0;\newline
+m1sq = 0.01;\newline
+m2sq = m1sq + 0.000079;\newline
+oneFourE = 100; 
+}
+\end{figure}
+
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/1000-4}
+\caption{ Change theta23 to half\newline
+theta12 = 33.36/180*Pi;\newline
+theta13 = 8.66/180*Pi;\newline
+theta23 = 40/180*Pi*1/2;\newline
+deltacp = 0;\newline
+m1sq = 0.01;\newline
+m2sq = m1sq + 0.000079;\newline
+oneFourE = 100; 
+}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/1000-3}
+\caption{ Increase $deltam2^2-deltam1^2$\newline
+theta12 = 33.36/180*Pi;\newline
+theta13 = 8.66/180*Pi;\newline
+theta23 = 40/180*Pi;\newline
+deltacp = 0;\newline
+m1sq = 0.01;\newline
+m2sq = m1sq + 0.000079*10;\newline
+oneFourE = 100; 
+}
+\end{figure}
+
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/1000-mu-1}
+\caption{ Starting from all $\nu_\mu$ \newline
+theta12 = 33.36/180*Pi;\newline
+theta13 = 8.66/180*Pi;\newline
+theta23 = 40/180*Pi;\newline
+deltacp = 0;\newline
+m1sq = 0.01;\newline
+m2sq = m1sq + 0.000079;\newline
+oneFourE = 100; 
+}
+\end{figure}
 
 
 
