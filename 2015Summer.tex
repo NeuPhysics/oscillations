@@ -1241,7 +1241,7 @@ where
 \begin{align*}
 \omega_{m1} &=-\sqrt{ \frac{\Delta^2 + \omega^2}{4}-\frac{\Delta \omega}{2} \cos 2\theta_v } \\
 & = -\omega \sqrt{\left( \frac{\hat\Delta^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v \right)} , \\
-\omega_{m2} & = - \omega_{m1}.
+\omega_{m2} & = - \omega_{m1} \equiv \frac{\omega_m}{2}.
 \end{align*}
 
 Hamiltonian applied to this state results in
@@ -1330,6 +1330,116 @@ To be clear, if electron neutrinos are produced inside core of our sun, it will 
 
 
 
+\subsection{General Discussion for Neutrinos Interacting with Matter}
+
+
+This part is a very general discussion of the matter effect.\cite{Parke1986}
+
+To work in flavor basis, we use the subscript ${}_{mf}$ to denote the flavor basis representation with mass effect. The equation of motion in flavor basis can be written down as\footnote{Writing down the dimensionless equation, I have 
+\begin{equation*}
+i \partial_{\hat x} \Psi_{mf} = \frac{R_S \omega}{2} ( (\hat\Delta - \cos 2\theta_v ) \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} )  \Psi_{mf} .
+\end{equation*}
+}
+
+\begin{equation*}
+i\partial_x \Psi_{mf}(x) = \mathbf{H_{mf}} \Psi_{mf}(x)
+\end{equation*}
+
+where 
+
+\begin{equation*}
+\mathbf{H_{mf}} =  \left(  \frac{\Delta}{2} -  \frac{\omega}{2} \cos 2\theta_v  \right) \boldsymbol{\sigma_3} + \frac{\omega}{2} \sin 2\theta_v \boldsymbol{\sigma_1}.
+\end{equation*}
+
+
+
+As we have seen in adiabatic situation, the states will stay in heavy and light states all along the evolution if the system starts from heavy or light state,
+
+\begin{align*}
+\ket{\nu_{a1}(x)} &= \exp(-i \int_0^x \frac{\omega_m(x)}{2} dx )  \ket{\nu_L(x)} \\
+\ket{\nu_{a2}(x)} &= \exp(i\int_0^x \frac{\omega_m(x)}{2} dx) \ket{\nu_H(x)},
+\end{align*}
+
+where the heavy and light states are defined in the adiabatic situation previously. {\color{blue}This is what happens before the passing through of the resonance.}
+
+
+However, when it comes to the non-adiabatic transitions, the evolution of the states will be the mixture of the heavy and light state since transitions occurs $\ket{\nu_{a1}}\to \ket{\nu_1(x)}$ and $\ket{\nu_{a2}}\to\ket{\nu_2(x)}$,
+
+\begin{align*}
+\ket{\nu_1(x)} &= a_L \exp(-i \int_{x_r}^x \omega_m(x')/2 dx' )  \ket{\nu_L(x)} + a_H \exp(i\int_{x_r}^x \omega_m(x')/2 dx') \ket{\nu_H(x)}  \\
+\ket{\nu_2(x)} &= b_L \exp(-i \int_{x_r}^x \omega_m(x')/2 dx' )  \ket{\nu_L(x)} + b_H \exp(i\int_{x_r}^x \omega_m(x')/2 dx') \ket{\nu_H(x)},
+\end{align*}
+
+
+where the relations between the constants are determined using the condition that $\ket{\nu_1(x)}$ and $\ket{\nu_2(x)}$ are orthonormal\footnote{\color{red}I don't have a good argument for this requirement.}, which leads to the conclusion that\footnote{It is easy to verify the results.}
+
+\begin{align*}
+b_L &= -a_H^* \\
+b_H &= a_L^* \\
+\lvert a_L \rvert^2 &=  - \lvert a_H \rvert^2 .
+\end{align*}
+
+
+Electron neutrinos are produced in a dense region as $\ket{\nu_e}$, which are partially transformed to other the other neutrinos due to matter and the resonance then it propagates as if it satisfies the adiabatic condition again. The initial state in terms of light and heavy state is\footnote{The relation between $\theta_m$ and $\theta_v$ is given by \begin{equation*}
+\omega_m\sin 2\theta_m =  \omega \sin 2\theta_v .
+\end{equation*}}
+
+\begin{equation*}
+\ket{\Psi_{m}(x_0)} = \ket{\nu_e}= \cos \theta_m(x_0) \ket{\nu_L(x_0)} + \sin \theta_m(x_0) \ket{\nu_H(x_0)}.
+\end{equation*}
+
+The final state right before the resonance is
+
+\begin{align*}
+\ket{\Psi_{m}(x_{r-})} = \cos\theta_m(x_{r-}) \exp\left( -i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx   \right) \ket{\nu_L(x_{r-})} + \sin\theta_m(x_{r-}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right) \ket{\nu_H(x_{r-})}
+\end{align*}
+
+
+After the resonance the state is described by the general jumping
+
+
+\begin{align*}
+\ket{\Psi_{m}(x)}= &  \cos\theta_m(x_r) \exp\left( -i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx   \right)  \left(  a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_L(x)}  + a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_H(x)}  \right)  \\
+& + \sin\theta_m(x_{r}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)  \left(  -a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_L(x)}  + a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_H(x)}  \right)
+\end{align*}
+
+
+in which the $x_{r-}$ is actually $x_r$ thus 
+
+\begin{align*}
+\ket{\Psi_{m}(x)}= &  \cos\theta_m(x_r) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right)  \left(  a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_L(x)}  + a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_H(x)}  \right)  \\
+& + \sin\theta_m(x_{r}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)  \left(  -a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_L(x)}  + a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_H(x)}  \right)
+\end{align*}
+
+
+To calculate the survival probability it is easier to use flavor basis, hence we have another form of $\ket{\Psi_m(x)}$ which is
+
+\begin{align*}
+\ket{\Psi_{m}(x)}= &  \left[ \cos\theta_m(x_r) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right)   a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+&  \left. - \sin\theta_m(x_{r}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)    a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' )  \right] \ket{\nu_L(x)}\\
+& + \left[  \cos\theta_m(x_r) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right) a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+& \left. + \sin\theta_m(x_{r}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)   a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right]  \ket{\nu_H(x)} \\
+=&  \left[ \cos\theta_m(x_r) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right)   a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+&  \left. - \sin\theta_m(x_{r}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)    a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' )  \right] ( \cos\theta_m(x)\ket{\nu_e} - \sin\theta_m(x)\ket{\nu_x} )\\
+& + \left[  \cos\theta_m(x_r) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right) a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+& \left. + \sin\theta_m(x_{r}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)   a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right] ( \sin\theta_m(x)\ket{\nu_e} + \cos\theta_m(x)\ket{\nu_x})
+\end{align*}
+
+
+Survival amplitude of electron neutrinos is given by\footnote{$\cos\theta_m$, $\sin\theta_m$ and $\omega_m$ are real but $a_L$ and $a_H$ are complex.}
+
+\begin{align*}
+&\braket{\Psi_m(0)}{\Psi_m(x)} \\
+= & \braket{\nu_e}{\Psi_m(x)}
+\end{align*}
+
+where the coefficients are
+
+
+
+
+
+
 
 
 
@@ -1352,7 +1462,7 @@ To simplify the codes, I prefer to write down all quantities dimensionless. In t
 where 
 
 \begin{equation*}
-\omega_{m2} = - \omega_{m1} \equiv \omega_m = \omega \sqrt{\frac{\hat\Delta ^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v }
+\omega_{m2} = - \omega_{m1} \equiv \frac{\omega_m}{2} = \omega \sqrt{\frac{\hat\Delta ^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v }
 \end{equation*}
 
 while the effective potential $\mathbf{V_m}$ is
@@ -1401,9 +1511,9 @@ i \partial_{\hat x} \begin{pmatrix}
 \nu_L \\
 \nu_H
 \end{pmatrix} = \left(
-R_S \omega \begin{pmatrix}
-- \hat{\omega_m} & 0 \\
-0 & \hat{\omega_m}
+\frac{R_S \omega}{2} \begin{pmatrix}
+- \hat{\omega}_m & 0 \\
+0 & \hat{\omega}_m
 \end{pmatrix} - i \sin\theta_v\cos\theta_v \sqrt{2} \frac{G_F}{\omega} \frac{d n(\hat x)}{d\hat x} \begin{pmatrix}
 0 & 1 \\
 -1 & 0
@@ -1448,7 +1558,7 @@ R_S \omega \approx  10^5
 Notice that the dimensionless frequency $\omega_m$ is
 
 \begin{equation*}
-\hat \omega_m  = \sqrt{\frac{\hat\Delta ^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v }.
+\hat \omega_m  = \sqrt{\hat\Delta ^2 + 1 - 2 \hat\Delta \cos 2\theta_v }.
 \end{equation*}
 
 In the situation of the sun, where $\hat\Delta \ll 1$\footnote{
