@@ -1486,56 +1486,101 @@ The second term is of order\footnote{$G_F=1.17\times 10^{-5}\mathrm{GeV^{-2}}$}
 \end{align*}
 
 
+So this means that I can not use the data from this paper since the data starts from too far away from the center.
 
+Another way of doing the estimation is to find the resonance density, which means a maximum mixing of the two states, as the diagonal elements disappears,\footnote{
+The Hamiltonian in flavor basis is
+\begin{align*}
+\mathbf H = \frac{\omega}{2} ( -\cos2\theta_v \sigma_3 + \sin 2\theta_v \sigma_1 )   {\color{red} + \frac{\Delta}{2} \boldsymbol{\sigma_3}}  {\color{green}+ \Delta \mathbf I}
+\end{align*}
+}
 
+\begin{align*}
+\Delta - \omega \cos 2\theta_v = 0.
+\end{align*}
 
-%% As we said before, % I forgot what was that.
-
-\subsection{Decapitated - Solar Density Profile}
-
-
-
-The solar density profile can be determined using simple gravitational theory and nuclear physics models.
-
-The mass contained in a spherical shell $dr$ is
-
-\begin{equation}
-    dm = 4\pi r^2 \rho dr ,
-\end{equation}
-
-which is assuming spherical symmetry.
-
-The gravitational potential for each unit of mass can generate force as gravitational attraction, which is
+By solving this equation, the number density of electrons should be of the order
 
 \begin{equation*}
-    \frac{dv}{dr} = \frac{G m}{r^2}.
-\end{equation*}
-
-The balance between pressure and gravity shows that
-
-\begin{equation*}
-    \frac{dv}{dr} \rho + \frac{dp}{dr} = 0.
-\end{equation*}
-
-The result of these relations is a rather intuitive relation between density and pressure, which is not solvable until we find another relation between them.
-
-\begin{equation*}
-    \frac{1}{r^2} \frac{d}{dr} \left( \frac{r^2}{\rho} \frac{dp}{dr} \right) = -4\pi G\rho.
-\end{equation*}
-
-To be simple, we will use Eddington model to solve the density profile, which gives us the relation
-
-\begin{equation*}
-    p = K \rho^{4/3},
+n \approx \frac{\omega}{G_F} \approx 10^{-14} \mathrm{GeV^3} .
 \end{equation*}
 
 
-where 
-\begin{equation*}
-    K = \left(  \left( \frac{k}{m_p} \frac{3}{\alpha} \frac{\beta}{\mu^4(1-\beta)^4}  \right)^4  \right)^{1/3}.
-\end{equation*}
+
+
+
+In terms of $\mathrm{cm^{-3}}$, the results would be $ 10^{36} \mathrm{cm^{-3}}$.
 
 Combining the two relations between density and pressure, we can find the density profile with respect to radius.
+
+
+
+
+
+\subsection{Numerical Calculations for Matter Effect in Flavor Basis}
+
+
+The previous method is somewhat more complicated in the calculations. Hence we work in flavor basis.
+
+
+The equation of motion in flavor basis is
+
+\begin{equation*}
+i\partial_x \Psi_{mf}(x) = \mathbf{H_{mf}} \Psi_{mf}(x)
+\end{equation*}
+
+where 
+
+\begin{equation*}
+\mathbf{H_{mf}} =  \left(  \frac{\Delta}{2} -  \frac{\omega}{2} \cos 2\theta_v  \right) \boldsymbol{\sigma_3} + \frac{\omega}{2} \sin 2\theta_v \boldsymbol{\sigma_1}.
+\end{equation*}
+
+Writing down the dimensionless equation, I have 
+
+\begin{equation*}
+i \partial_{\hat x} \Psi_{mf} = \frac{R_S \omega}{2} ( (\hat\Delta - \cos 2\theta_v ) \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} )  \Psi_{mf} .
+\end{equation*}
+
+
+As for the data of the sun I use a simple exponential distribution. The data is also from the paper by Bahcall which is shown in figure \ref{fig:solar-electron-dist}.
+
+
+\begin{marginfigure}
+\centering
+\includegraphics{assets/solar-electron-dist}
+\caption{Solar electron density from Bahcall. 
+Horizontal axis is the distance from the core of the sun normalized by the radius of the sun while the vertical axis is the number density of electrons in $\log_{10}(n/N_A)$.
+The best fit for the line is 
+$$ 2.3-4.3 \hat x .$$
+So the equation of the number density distribution is
+$$n = N_A 10^{2.3 - 4.3\hat x } .$$ }
+\label{fig:solar-electron-dist}
+\end{marginfigure}
+
+The model using just exponential is not accurate however it is enough to make the point in MSW resonance. {\color{red}Unfortunately, using this model the center density is still not enough for a MSW resonance.}
+
+{\color{red}Thus I choose to use an artificial sun which is dense enough for MSW resonance, in which the core density is $n(0) = 10^{-14}\mathrm{GeV}^{-3}$. The distribution is \begin{equation*}
+n =  10^{-14 - 4.3\hat x} \mathrm{GeV}^{-3}.
+\end{equation*}}
+
+
+The numerical results can be obtains by plugging this result into the differential equation solver. The result is shown in figure \ref{fig:numMSW-model-1}.
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/numMSW-model-1}
+\caption{Numerical results for electron flavor neutrino when the electron density profile is $10^{-14 - 4.3\hat x} \mathrm{GeV}^{-3}$.}
+\label{fig:numMSW-model-1}
+\end{figure}
+
+
+
+
+
+
+
 
 
 
@@ -1641,6 +1686,75 @@ m2sq = m1sq + 0.000079;\newline
 oneFourE = 100; 
 }
 \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% As we said before, % I forgot what was that.
+
+\subsection{Decapitated - Solar Density Profile}
+
+
+
+The solar density profile can be determined using simple gravitational theory and nuclear physics models.
+
+The mass contained in a spherical shell $dr$ is
+
+\begin{equation}
+    dm = 4\pi r^2 \rho dr ,
+\end{equation}
+
+which is assuming spherical symmetry.
+
+The gravitational potential for each unit of mass can generate force as gravitational attraction, which is
+
+\begin{equation*}
+    \frac{dv}{dr} = \frac{G m}{r^2}.
+\end{equation*}
+
+The balance between pressure and gravity shows that
+
+\begin{equation*}
+    \frac{dv}{dr} \rho + \frac{dp}{dr} = 0.
+\end{equation*}
+
+The result of these relations is a rather intuitive relation between density and pressure, which is not solvable until we find another relation between them.
+
+\begin{equation*}
+    \frac{1}{r^2} \frac{d}{dr} \left( \frac{r^2}{\rho} \frac{dp}{dr} \right) = -4\pi G\rho.
+\end{equation*}
+
+To be simple, we will use Eddington model to solve the density profile, which gives us the relation
+
+\begin{equation*}
+    p = K \rho^{4/3},
+\end{equation*}
+
+
+where 
+\begin{equation*}
+    K = \left(  \left( \frac{k}{m_p} \frac{3}{\alpha} \frac{\beta}{\mu^4(1-\beta)^4}  \right)^4  \right)^{1/3}.
+\end{equation*}
 
 
 
