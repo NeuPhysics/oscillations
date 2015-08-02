@@ -653,7 +653,15 @@ which acts on the mass eigenstates to give the flavor eigenstates, i.e.,
 \ket{\nu_\alpha}= \mathbf{U}\ket{\nu_i}.
 \end{equation*}
 
+where
 
+\begin{equation*}
+\mathbf{U} = \begin{pmatrix}
+U_{e1} & U_{e2} & U_{e3} \\
+U_{\mu 1} & U_{\mu 2} & U_{\mu 3}\\
+U_{\tau 1} & U_{\tau 2} & U_{\tau 3}
+\end{pmatrix}.
+\end{equation*}
 
 
 In general, a rotation for 3D with a CP violation phase $\delta$ is
@@ -972,6 +980,14 @@ are the diagonalized Hamiltonian and the perturbation.
 The diagonalized Hamiltonian will result in a system with two levels which are constant as a function of $r$, however the perturbation term provides the $r$ dependent term which will cause a $r$ dependent eigen energies.
 }
 
+
+
+{\color{red}In fact there are at least three different ways of solving this problem.
+\begin{itemize}
+\item Work in instantaneous eigenstates by writing down the general expression as we have done in this subsection.
+\item Work in flavor basis directly.
+\item Work in the vacuum mass eigenstates by transform the matter potential from flavor basis to vacuum mass basis.
+\end{itemize}}
 
 
 \subsection{Constant Electron Number Density}
@@ -1718,7 +1734,7 @@ Combining the two relations between density and pressure, we can find the densit
 \subsection{Numerical Calculations for Matter Effect in Flavor Basis}
 
 
-The previous method is somewhat more complicated in the calculations. Hence we work in flavor basis.
+The previous method is somewhat more complicated in the calculations. As we have mentioned, another method is that we start from working in flavor basis.
 
 
 The equation of motion in flavor basis is
@@ -1782,9 +1798,162 @@ The numerical results can be obtains by plugging this result into the differenti
 
 
 
+\begin{figure}
+\centering
+\includegraphics{assets/numericalMSW-model-lh.png}
+\caption{The fraction of electron flavor in a $\ket{\nu_L}$ or $\ket{\nu_H}$ state as the neutrino passing through the sun from the core. This clearly shows a conversion of neutrino flavor.}
+\label{fig:numericalMSW-model-lh}
+\end{figure}
 
 
 
+
+
+
+
+\subsection{Working in Vacuum Mass Eigenstates}
+
+The third method is to work in vacuum mass eigenstates.
+
+Vacuum part of the Hamiltonian is
+
+\begin{align*}
+\mathbf{H_{mvv}} = \frac{1}{2E} \begin{pmatrix}
+m_1^2 & 0 & 0 \\
+0 & m_2^2 & 0 \\
+0 & 0 & m_3^2
+\end{pmatrix}
+\end{align*}
+
+The matter interaction in flavor basis is
+
+\begin{align*}
+\mathbf{V_{mf}} = \sqrt{2}G_F n \mathrm{diag}{1,0,0}.
+\end{align*}
+
+Thus to work in vacuum mass eigenstates, we need a transformation
+
+\begin{align*}
+\mathbf{V_{mv}} = \mathbf{U^{-1}}\mathbf{V_{mf}} \mathbf{U}.
+\end{align*}
+
+Then the Hamiltonian becomes
+
+\begin{equation*}
+\mathbf{H_{m}} = \begin{pmatrix}
+\frac{m_1^2}{2E} + \Delta U_{e1}^2 & \Delta U_{e1} U_{e2} & \Delta U_{e1} U_{e3} \\
+\Delta U_{e2} U_{e1} & \frac{m_2^2}{2E} + \Delta U_{e2}^2 & \Delta U_{e2} U_{e3} \\
+\Delta U_{e3} U_{e1} & \Delta U_{e3} U_{e2} & \frac{m_3^2}{2E} + \Delta U_{e3}^2
+\end{pmatrix}
+\end{equation*}
+
+Trace of this Hamiltonian is $\mathrm{Tr}(\mathbf{H_m}) = \frac{m_1^2+m_2^2+m_3^2}{2E}+\Delta$. To find the traceless part, we can use the relation\ref{ohlsson2000}\footnote{arXiv:hep-ph/9910546}
+
+\begin{equation*}
+M = M_{traceless}+ \frac{1}{N} \mathrm{Tr}(M) I,
+\end{equation*}
+
+where $N$ is the rank.
+
+
+The traceless part of Hamiltonian becomes
+
+\begin{equation*}
+\mathbf{H_{m}} = \begin{pmatrix}
+\Delta U_{e1}^2 - \frac{1}{3}\Delta + \frac{1}{3}(\frac{m_1^2-m_2^2 + m_1^2-m_3^2}{2E}) & \Delta U_{e1}U_{e2} & \Delta U_{e1} U_{e3} \\
+\Delta U_{e2} U_{e1} & \Delta U_{e2}^2 -\frac{1}{3}\Delta + \frac{1}{3}\frac{m_2^2 - m_1^2+m_2^2-m_3^2}{2E} & \Delta U_{e2}U_{e3} \\
+\Delta U_{e1} U_{e3} & \Delta U_{e2} U_{e3} & \Delta U_{e3}^2 -\frac{1}{3} \Delta + \frac{1}{3} \frac{m_3^2 - m_1^2 + m_3^2-m_2^2 }{2E}
+\end{pmatrix}
+\end{equation*}
+
+Define the following quantities\footnote{However only two of them are linearly independent.}
+
+\begin{align*}
+\Delta m_{12}^2 & = m_2^2 - m_1^2 \\
+\Delta m_{23}^2 & = m_3^2 - m_2^2 \\
+\Delta m_{13}^2 & = m_3^2 - m_1^2.
+\end{align*}
+
+
+We define an energy scale related to the radius of the sun
+
+\begin{equation*}
+\epsilon_S = \frac{1}{R_S}.
+\end{equation*}
+
+The EoM can be written in a dimensionless manner,
+
+\begin{align*}
+i\partial_{\hat x} \Psi_{m} =  \begin{pmatrix}
+\hat\Delta U_{e1}^2 - \frac{1}{3}\hat\Delta + \frac{1}{3}(\frac{\Delta m_{12}^2 + \Delta m_{13}^2}{2E\epsilon_S}) & \hat\Delta U_{e1}U_{e2} & \hat\Delta U_{e1} U_{e3} \\
+\hat\Delta U_{e2} U_{e1} & \hat\Delta U_{e2}^2 -\frac{1}{3}\hat\Delta + \frac{1}{3}\frac{\Delta m_{12}^2 + \Delta m_{23}^2}{2E\epsilon_S} & \hat\Delta U_{e2}U_{e3} \\
+\hat\Delta U_{e1} U_{e3} & \hat\Delta U_{e2} U_{e3} & \hat\Delta U_{e3}^2 -\frac{1}{3} \hat\Delta + \frac{1}{3} \frac{\Delta m_{13}^2 + \Delta m_{23}^2 }{2E\epsilon_S} 
+\end{pmatrix},
+\end{align*}
+
+where $\hat\Delta = \Delta/\epsilon_S$.
+
+
+\subsection{Numerical Results of 3 Flavor}
+
+
+The parameters for this calculation in units of $GeV^{whatever}$ are
+
+\begin{align*}
+numDen2(x) &= 10^{-12 - 4.3 x} \\
+epSun &= 10^{-24}\\
+deltaH(x) &= \sqrt[2] G_F numDen2(x)/epSun\\
+deltam12sq &= 7.6\times 10^{-5}\times 10^{-18}\\
+deltam13sq &= 2.3\times 10^{-3}\times 10^{-18}\\
+deltam23sq &= deltam13sq - deltam12sq\\
+ene &= 10^{-3}
+\end{align*}
+
+For these parameters there is only resonance for $\Delta m_{13}^2+\Delta m_{23}^2$.
+
+\begin{figure}
+\centering
+\includegraphics{assets/numericalMSW3Flavor-normalization}
+\caption{Normalization factor as a function of distance.}
+\label{fig:numericalMSW3Flavor-normalization}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/numericalMSW3Flavor-probabilities.png}
+\caption{Probability for each flavor of neutrinos.}
+\label{fig:numericalMSW3Flavor-probabilities}
+\end{figure}
+
+
+
+Applying a number density function $numDen2(x) = 10^{-13 - 4.3 x}$ to the system, the small scale oscillations are revived,
+
+\begin{figure}
+\centering
+\includegraphics{assets/numericalMSW3Flavor-2-norm}
+\caption{Normalization of the states for numerical 3 flavor oscillation in the sun with density profile $10^{-13 - 4.3 x}$.}
+\label{fig:numericalMSW3Flavor-2-norm}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/numericalMSW3Flavor-2-probability}
+\caption{Numerical results for 3 flavor oscillation in the sun with density profile $10^{-13 - 4.3 x}$.}
+\label{fig:numericalMSW3Flavor-2-probability}
+\end{figure}
+
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/mass-1}
+\caption{Ternary diagram for MSW effect.}
+\label{fig:ternary-mass-1}
+\end{figure}
 
 
 
