@@ -484,6 +484,8 @@ To solve this we need the eigenvalues and eigenvectors of the Hamiltonian matrix
 
 Suppose the neutrinos are prepared in electron flavor initially, the survival probability of electron flavor neutrinos is calculated using the result I get previously.
 
+
+
 Electron neutrinos are the lighter ones, then I have ${}_a = {}_e$ and denote ${}_b={}_x$. \footnote{In the small mixing angle limit, 
 \begin{equation*}
 \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 & \theta \\ -\theta  & 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
@@ -492,12 +494,46 @@ Electron neutrinos are the lighter ones, then I have ${}_a = {}_e$ and denote ${
 which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate  $\nu_1$ . By $\nu_1$ we mean the state with energy  $\frac{ \delta m^2 }{4E}$ in vacuum.
 }
 
+
+In fact the dynamics of the system is very easily solved without dive into the math. Suppose we have $\ket{\nu_e}$ initially, which is
+
+\begin{equation*}
+\Psi(x=0)=\ket{\nu_e} = \cos \theta_v \ket{\nu_1} - \sin \theta_v \ket{\nu_2},
+\end{equation*}
+
+the state of the system at distance $x$ is directly written down
+
+\begin{align*}
+\Psi(x) &=  \cos \theta_v \ket{\nu_1} e^{-i E_1 x} - \sin \theta_v \ket{\nu_2} e^{-i E_2 x} \\
+&= e^{-i E_1 x}( \cos \theta_v \ket{\nu_1}  - \sin \theta_v \ket{\nu_2} e^{i(E_1 - E_2) x}).
+\end{align*}
+
+Since a global phase doesn't change the detection, we write the state as
+
+\begin{equation*}
+\Psi(x) =  \cos \theta_v \ket{\nu_1}  - \sin \theta_v \ket{\nu_2} e^{i(E_1 - E_2) x} .
+\end{equation*}
+
+Notice that the period of the expression is 
+\begin{equation*}
+l_v = \frac{2\pi}{E_1 - E_2} = - \frac{4\pi E}{\Delta m_{12}}.
+\end{equation*}
+
+
+Then the state becomes
+
+\begin{equation*}
+\Psi(x) =  \cos \theta_v \ket{\nu_1}  - \sin \theta_v \ket{\nu_2} e^{i2\pi x/l_v} .
+\end{equation*}
+
+
+
 The survival probability for electron neutrinos is
 
 \begin{align*}
-P(\nu_e,L) &= 1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 L}{4E} \right) .
+P(\nu_e,L) &= 1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 L}{4E} \right) \\
+&= 1- \frac{1}{2}\sin^2 2\theta_v \left(1- \cos\left( \frac{2\pi x}{l_v} \right) \right)
 \end{align*}
-
 
 
 
@@ -760,6 +796,22 @@ H_{11} & = \cos^2\theta_{13}( m_2^2 - \sin^2\theta  \Delta m_{12}^2 ) + \sin^2\t
 \end{figure}
 
 
+\begin{figure}
+\centering
+\includegraphics{assets/vacOscNormInvComp}
+\caption{Comparison of normal hierarchy and inverted hierarchy.}
+\label{fig:vacOscNormInvComp}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/vacOscNormInvComp-Invert12.png}
+\caption{Comparison of normal hierarchy and inverted hierarchy but with inverted $\Delta m_{12}^2$.}
+\label{fig:vacOscNormInvComp-Invert12}
+\end{figure}
+
 
 
 
@@ -790,6 +842,25 @@ Since the probability for differential flavors of neutrinos are represented in b
 \includegraphics{assets/vacOsc3FlavorTernary5000}
 %\caption{This plot shows the behavior of neutrino oscillations in the range [0,5000].}
 \end{marginfigure}
+
+
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/Inv-1000-1.png}
+\caption{Ternary diagrram for inverted hierarchy.}
+\label{fig:Inv-1000-1}
+\end{figure}
+
+
+
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -845,6 +916,50 @@ i \partial_t \rho = \left[ H , \rho\right],
 \end{equation}
 
 in which the $\partial_t$ operator is actually $\partial_x$ since we always assume neutrinos travel with speed of light $c$.
+
+A simple analysis before solving the system can be done rather easily. The characteristic length of the matter effect is
+
+\begin{equation*}
+l_m = \frac{2\pi}{\sqrt{2}G_F n} .
+\end{equation*}
+
+The importance of this length is that it is a result of refractive index which causes the velocity difference thus changes the relative phase between $\nu_e$ and $\nu_x$.\cite{wolfensteinprd1979}
+
+
+With the definition of oscillation length in matter, a comparison between this length and the vacuum oscillation length can be made. Choose $\Delta m_{21}^2=10^{-4}\times 10^{-18}\mathrm{GeV^{2}}$\footnote{Fermi constant is $G_F=1.17\times 10^{-5}\mathrm{GeV^{-2}}$.}, we have
+
+\begin{align*}
+l_v &= 4\times 10^{19}\pi \left( \frac{E}{10^{-3}} \right) \mathrm{GeV^{-1}} \\
+l_m &=  1.2\times 10^{19}\pi \left( \frac{10^{-14}}{n} \right) \mathrm{GeV^{-1}}
+\end{align*}
+
+The two lenght are equal if
+
+\begin{equation*}
+\left(\frac{10^{-14}}{n} \right) = 3.3 \left( \frac{E}{10^{-3}}\right)
+\end{equation*}
+
+More comparison can be found in figures \ref{fig:comparisonVacOscLengthMatterLength} and \ref{fig:lengthComparison}.
+
+\begin{figure}
+\centering
+\includegraphics{assets/comparisonVacOscLengthMatterLength}
+\caption{Comparison of the lengths}
+\label{fig:comparisonVacOscLengthMatterLength}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/lengthComparison}
+\caption{Comparison of the lengths}
+\label{fig:lengthComparison}
+\end{figure}
+
+
+
+
+
 
 
 \subsection{Analytic Solution}
@@ -915,16 +1030,32 @@ A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x)  = 0
 So the solutions are
 
 \begin{align*}
-\sin 2\theta(x) & = \frac{A_1}{\sqrt{A_1^2 + A_3^2}} \\
-\cos 2\theta(x) & = \frac{-A_3}{\sqrt{A_1^2+A_3^2}}.
+\sin 2\theta(x) & = \frac{A_1}{\sqrt{A_1^2 + A_3^2}}  \\
+& = \frac{\sin 2\theta_v}{\sqrt{\hat\Delta^2 + 1 - 2\hat\Delta \cos 2\theta_v}}\\
+\cos 2\theta(x) & = \frac{-A_3}{\sqrt{A_1^2+A_3^2}} \\
+& = \frac{- (\hat\Delta - \cos 2\theta_v )}{ \sqrt{\hat\Delta^2 + 1 - 2\hat\Delta \cos 2\theta_v} } ,
 \end{align*}
+
+where $\hat\Delta = \Delta/\omega$.
+
+
+
 
 This diagonalizes the Hamiltonian LOCALLY. \footnote{The point is, for equation of motion, we have a differentiation with respect to position  $x$ ! So even we diagonalize the Hamiltonian, the equation of motion won't be diagonalized. An extra matrix will occur on the LHS and revert the diagonalization the Hamiltonian on RHS.
 } It's not possible to diagonalize the Hamiltonian globally if the electron number density is not a constant.
 
+{\color{red}As for a qualitative analysis, matter effect can be a suppression or enhancement. $\sin 2\theta_v$ represents the amplitude of the survivable probability of one of the flavors since larger $\theta_v$ means more mixing between the two flavors. However matter changes the mixing angle according to the expression of $\sin 2\theta_m$, which is
+
+\begin{itemize}
+\item larger than $\sin 2\theta_v$ if $ 0 < \hat\Delta < 2\cos 2\theta_v$.
+\item smaller than $\sin 2\theta_v$ if $\hat\Delta > 2\cos 2\theta_v$.
+\end{itemize}
+
+A smaller $\sin2\theta$ means a smaller mixing. Matter can sometimes suppress the mixing while can also enhance the mixing.}
 
 
-As  $\Delta \to \infty$ ,  we have $A_3\to \infty$ and  $\sin 2\theta(x)$ vanishes. Thus the neutrino will stay on the defined light and heavy eigenstates if the interaction with matter is much larger than the vacuum energy. On the other hand, $\Delta \to 0$, everything gets back to the vacuum case.
+
+As  $\Delta \to \infty$ ,  we have $A_3\to \infty$ and  $\sin 2\theta(x)$ vanishes. The effective mixing angle $\theta_m$ becomes $\pi/2$ thus only a phase is added to first mass eigenstate, i.e., $\ket{\nu_e}=-\ket{\nu_1}$ and $\ket{\nu_x}=\ket{\nu_2}$. Thus the neutrino will stay on the defined light and heavy eigenstates if the interaction with matter is much larger than the vacuum energy. On the other hand, $\Delta \to 0$, everything gets back to the vacuum case.
 
 Now we can obtain an approximate solution by using this approximate diagonalization. This idea is
 
@@ -1019,8 +1150,10 @@ There are two special cases. The first case is $\cos 2\theta_v=0$ while the othe
 As for the survival probability, the result has the same form as the vacuum case, which is
 
 \begin{equation*}
-P_x(\nu_e,L) = 1 - \sin^2(2\theta_m)\sin^2\left( \frac{\omega L}{2} \right) ,
+P_x(\nu_e,L) = 1 - \sin^2(2\theta_m)\sin^2\left( \frac{\omega_m L}{2} \right) ,
 \end{equation*}
+
+
 
 where $\theta_m = \theta(x)$ is the effective mixing angle which in fact doesn't depend on $x$ if the matter profile is constant.\footnote{The term $\sin 2\theta_m$ has been derived previously.
 \begin{equation*}
@@ -1028,10 +1161,36 @@ where $\theta_m = \theta(x)$ is the effective mixing angle which in fact doesn't
 \end{equation*}
 }
 
+As an comparison, the vacuum result is
+
+\begin{equation*}
+P_x(\nu_e,L) = 1 - \sin^2(2\theta)\sin^2\left( \frac{\omega L}{2} \right) .
+\end{equation*}
+
+As the math tells us, $\sin^2 2\theta$ and $\sin^2 2\theta_m$ are the two terms that determines how much electron flavor is converted to the other flavor. The other parts determine the oscillation period.
+
+Recall that we have defined two characteristic lengths, $l_v$ and $l_m$. The overall oscillation length in matter becomes\footnote{We know that $\omega>0$ here since we have already determined the hierarchy for $m_1$ and $m_2$. How? There is a significant effect on the oscillations here if $\omega<0$!}
+
+\begin{align*}
+l &= \frac{2\pi}{\omega_m} \\
+& = \frac{2\pi}{\omega \sqrt{ \hat\Delta^2 + 1 - 2 \hat\Delta \cos 2\theta_v }} \\
+& = \frac{l_v}{ \sqrt{\left(\frac{l_v}{l_m} \right)^2 +1 - 2\frac{l_v}{l_m}\cos 2\theta_v  }}
+\end{align*}
+
+This expression shows exactly why the different length scales are important.
+
+\begin{itemize}
+\item  $\lvert \frac{l_v}{l_m} \rvert \ll 1 \Rightarrow l\to l_v$, matter effect is minimal.
+\item  $\lvert \frac{l_v}{l_m} \rvert \gg 1 \Rightarrow l\to 0 $, matter effect kills the oscillations.
+\item  $\lvert \frac{l_v}{l_m}\rvert \sim 1 \Rightarrow l\to \frac{l_v}{2\sin\theta_v}$, more interesting region.\footnote{Assume $\sin\theta_v>0$.} To linear approximation, \begin{equation*}
+l \approx \frac{l_v}{2\sin\theta_v} \left( 1 -  \frac{l_v/l_m - 1}{2} \right).
+\end{equation*} notice that at resonance \begin{equation*}
+l = \frac{l_v}{2\sin \theta_v}.
+\end{equation*}
+\end{itemize}
 
 
-
-
+Another important thing about these lengths is that $l_v$ is a function of energy which is that higher energy means longer oscillation length as shown in figure \ref{fig:comparisonVacOscLengthMatterLength} and \ref{fig:lengthComparison}. This is important because we can always find the a energy that is at resonance with the matter density, as long as the energy still makes sure the neutrinos are relativistic. So a spectral swap is possible.
 
 
 
@@ -1945,6 +2104,32 @@ Applying a number density function $numDen2(x) = 10^{-13 - 4.3 x}$ to the system
 \label{fig:numericalMSW3Flavor-2-probability}
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics{assets/numericalMSW3Flavor-vac-eigen-prob.png}
+\caption{Survival probabilities for different vacuum mass eigenstates for 3 flavor oscillation in the sun with density profile $10^{-13 - 4.3 x}$.}
+\label{fig:my_label}
+\end{figure}
+
+
+\begin{marginfigure}[10\baselineskip]
+\includegraphics{assets/numericalMSW3Flavor-Inst-Eigen-prob-1.png}
+\caption{Probability for the first instantaneous eigenstate for matter profile $10^{-13 - 4.3 x}$.}
+\label{fig:numericalMSW3Flavor-Inst-Eigen-prob-1}
+\end{marginfigure}
+
+
+\begin{marginfigure}[3\baselineskip]
+\includegraphics{assets/numericalMSW3Flavor-Inst-Eigen-prob-2.png}
+\caption{Probability for the second instantaneous eigenstate for matter profile $10^{-13 - 4.3 x}$.}
+\label{fig:numericalMSW3Flavor-Inst-Eigen-prob-2}
+\end{marginfigure}
+
+\begin{marginfigure}[3\baselineskip]
+\includegraphics{assets/numericalMSW3Flavor-Inst-Eigen-prob-3.png}
+\caption{Probability for the third instantaneous eigenstate for matter profile $10^{-13 - 4.3 x}$.}
+\label{fig:numericalMSW3Flavor-Inst-Eigen-prob-3}
+\end{marginfigure}
 
 
 
@@ -1954,6 +2139,42 @@ Applying a number density function $numDen2(x) = 10^{-13 - 4.3 x}$ to the system
 \caption{Ternary diagram for MSW effect.}
 \label{fig:ternary-mass-1}
 \end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/matter-vac-eigen-e-1.png}
+\caption{Ternary diagram for vacuum eigenstates}
+\label{fig:matter-vac-eigen-e-1}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/matter-inst-eigen-e-1.png}
+\caption{Ternary diagram for instantaneous eigenstates}
+\label{fig:matter-inst-eigen-e-1}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/numericalMSW3Flavor-minus14matter.png}
+\caption{Numerical results for 3 flavor oscillation in the sun with density profile $10^{-14 - 4.3 x}$.}
+\label{fig:numericalMSW3Flavor-minus14matter}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/matter-minus14-1.png}
+\caption{Ternary diagram for MSW effect with matter density profile $10^{-14 - 4.3 x}$.}
+\label{fig:ternary-mass-1}
+\end{figure}
+
 
 
 
