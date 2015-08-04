@@ -93,7 +93,17 @@ i\partial_t \ket{\Psi} = \mathbf H \ket{\Psi},
 
 where for relativistic neutrinos, the energy is\footnote{They all have the same momentum but different mass. The thing is we assume they have the same velocity since the mass is very small. To have an idea of the velocity difference, I can calculate the distance travelled by another neutrino in the frame of one neutrino.\newline
 Assuming the mass of a neutrino is 1eV with energy 10MeV, we will get a speed of $1-10^{-14}$c. This $10^{-14}$c will make a difference about $3\mu\mathrm{ m}$ in 1s.
-\newline {\bf To Be Discussed!} \newline Will decoherence happen due to this? For high energy neutrinos this won't be a problem however for low energy neutrinos this will definitely cause a problem for the wave function approach.Because the different mass eigenstates will decoherent gradually along the path.}
+\newline {\bf To Be Discussed!} \newline Will decoherence happen due to this? For high energy neutrinos this won't be a problem however for low energy neutrinos this will definitely cause a problem for the wave function approach.Because the different mass eigenstates will become decoherent gradually along the path.\newline
+A estimation of the decoherence length is\begin{equation*}
+l_{\mathrm{coh}}=\frac{v_g}{\Delta v_g}\sigma.
+\end{equation*}
+To obtain the relation,
+\begin{align*}
+\Delta x &= \lvert v_1 - v_2 \rvert t_{\mathrm{coh}}\\
+\frac{\hbar c}{\Delta E} & = \lvert \frac{m_1^2}{2E_1^2} - \frac{m_2^2}{2E_2^2} \rvert t_{\mathrm{coh}} \\
+\frac{\hbar c}{\Delta E} & = \frac{1}{2E}\lvert \Delta m_{12}^2 \rvert t_{\mathrm{coh}}
+\end{align*}
+}
 
 \begin{align*}
 \mathbf H^m &= \begin{pmatrix}\sqrt{p^2 + m_1^2} & 0 & 0 \\ 0& \sqrt{p^2 + m_2^2} & 0 \\ 0 & 0 & \sqrt{p^2 + m_3^2}  \end{pmatrix},
@@ -179,7 +189,7 @@ which leads to the inner product of mass eigenstates and flavor eigenstates,
 \begin{align}
 \braket{\nu_\alpha}{\nu_i} &= \bra{\nu_\alpha} U^{-1}_{i\beta} \ket{\nu_\beta} \\
 & = U^{-1}_{i\beta}\delta_{\alpha\beta} \\
-7 = U^{-1}_{i\alpha}.
+& = U^{-1}_{i\alpha}.
 \end{align}
 
 
@@ -1839,10 +1849,10 @@ Put in the numbers,
 
 
 
-The derivative of number density of the sun $\frac{d n(\hat x)}{d\hat x}$ is shown to be of the order $-10^{26} \mathrm{cm^{-3}}$\footnote{$1\mathrm{cm^{-3}} = 8\times 10^{-51}\mathrm{GeV^3} $ }, i.e.,
+The derivative of number density of the sun $\frac{d n(\hat x)}{d\hat x}$ is shown to be of the order $-10^{26} \mathrm{cm^{-3}}$\footnote{$1\mathrm{cm^{-3}} = 2\times 10^{-39}\mathrm{GeV^3} $ }, i.e.,
 
 \begin{equation*}
-\frac{d n(\hat x)}{d\hat x} \approx -10^{26} \mathrm{cm^{-3}} \approx -10^{-23} \mathrm{GeV^3}.
+\frac{d n(\hat x)}{d\hat x} \approx -10^{26} \mathrm{cm^{-3}} \approx -10^{-13} \mathrm{GeV^3}.
 \end{equation*}
 
 We also have
@@ -1930,11 +1940,11 @@ $$n = N_A 10^{2.3 - 4.3\hat x } .$$ }
 \label{fig:solar-electron-dist}
 \end{marginfigure}
 
-The model using just exponential is not accurate however it is enough to make the point in MSW resonance. {\color{red}Unfortunately, using this model the center density is still not enough for a MSW resonance.}
+The model using just exponential is not accurate however it is enough to make the point in MSW resonance.
 
-{\color{red}Thus I choose to use an artificial sun which is dense enough for MSW resonance, in which the core density is $n(0) = 10^{-14}\mathrm{GeV}^{-3}$. The distribution is \begin{equation*}
-n =  10^{-14 - 4.3\hat x} \mathrm{GeV}^{-3}.
-\end{equation*}}
+So I choose a solar model in which the core density is $n(0) = 10^{-13}\mathrm{GeV}^{3}$. The distribution is \begin{equation*}
+n =  10^{-13 - 4.3\hat x} \mathrm{GeV}^{3}.
+\end{equation*}
 
 
 The numerical results can be obtains by plugging this result into the differential equation solver. The result is shown in figure \ref{fig:numMSW-model-1}.
@@ -1944,14 +1954,14 @@ The numerical results can be obtains by plugging this result into the differenti
 \begin{figure}
 \centering
 \includegraphics{assets/numMSW-model-1}
-\caption{Numerical results for electron flavor neutrino when the electron density profile is $10^{-14 - 4.3\hat x} \mathrm{GeV}^{-3}$.}
+\caption{Numerical results for electron flavor neutrino when the electron density profile is $10^{-14 - 4.3\hat x} \mathrm{GeV}^{3}$.}
 \label{fig:numMSW-model-1}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{assets/numericalMSW-model-3}
-\caption{Numerical results for electron flavor neutrino probability and the other flavor neutrino probability when the electron density profile is $10^{-14 - 4.3\hat x} \mathrm{GeV}^{-3}$.}
+\caption{Numerical results for electron flavor neutrino probability and the other flavor neutrino probability when the electron density profile is $10^{-14 - 4.3\hat x} \mathrm{GeV}^{3}$.}
 \label{fig:numMSW-model-3}
 \end{figure}
 
@@ -1962,6 +1972,15 @@ The numerical results can be obtains by plugging this result into the differenti
 \includegraphics{assets/numericalMSW-model-lh.png}
 \caption{The fraction of electron flavor in a $\ket{\nu_L}$ or $\ket{\nu_H}$ state as the neutrino passing through the sun from the core. This clearly shows a conversion of neutrino flavor.}
 \label{fig:numericalMSW-model-lh}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{assets/numericalMSW-model-2flavor-minus13-1}
+\caption{Number density profile $n(\hat x) =  10^{-13 - 4.3\hat x}\mathrm{GeV^{3}}$.}
+\label{fig:numericalMSW-model-2flavor-minus13-1}
 \end{figure}
 
 
@@ -2070,6 +2089,31 @@ ene &= 10^{-3}
 
 For these parameters there is only resonance for $\Delta m_{13}^2+\Delta m_{23}^2$.
 
+A quick check over the different energy scales.
+
+\begin{itemize}
+\item Vacuum energy scales in normal hierarchy
+\begin{align*}
+\omega_{12}&= \frac{\Delta m_{12}^2}{2E} = 3.8\times 10^{-20}\mathrm{GeV}\\
+\omega_{13}&= \frac{\Delta m_{13}^2}{2E} = 1.7\times 10^{-18}\mathrm{GeV}\\
+\omega_{23}&= \frac{\Delta m_{23}^2}{2E} \approx \omega_{13}
+\end{align*}
+\item Matter related scale for density profile $10^{-14-4.3\hat x}$
+\begin{equation*}
+\Delta_1 = 1.6\times 10^{-19-4.3\hat x}\in [1.6\times 10^{-23.3},1.6\times 10^{-19}]
+\end{equation*}
+
+\item Matter related scale for density profile $10^{-13-4.3\hat x}$
+\begin{equation*}
+\Delta_1 = 1.6\times 10^{-18-4.3\hat x}\in [1.6\times 10^{-22.3},1.6\times 10^{-18}]
+\end{equation*}
+
+
+
+\end{itemize}
+
+
+
 \begin{figure}
 \centering
 \includegraphics{assets/numericalMSW3Flavor-normalization}
@@ -2104,6 +2148,15 @@ Applying a number density function $numDen2(x) = 10^{-13 - 4.3 x}$ to the system
 \label{fig:numericalMSW3Flavor-2-probability}
 \end{figure}
 
+
+\begin{marginfigure}[6\baselineskip]
+\centering
+\includegraphics{assets/numericalMSW3Flavor-minus14-Inst-Eigen-Energies.png}
+\caption{Eigenenergies for density profile $10^{-13 - 4.3 x}$.}
+\label{fig:numericalMSW3Flavor-minus14-Inst-Eigen-Energies}
+\end{marginfigure}
+
+
 \begin{figure}
 \centering
 \includegraphics{assets/numericalMSW3Flavor-vac-eigen-prob.png}
@@ -2112,20 +2165,20 @@ Applying a number density function $numDen2(x) = 10^{-13 - 4.3 x}$ to the system
 \end{figure}
 
 
-\begin{marginfigure}[10\baselineskip]
+\begin{marginfigure}[2\baselineskip]
 \includegraphics{assets/numericalMSW3Flavor-Inst-Eigen-prob-1.png}
 \caption{Probability for the first instantaneous eigenstate for matter profile $10^{-13 - 4.3 x}$.}
 \label{fig:numericalMSW3Flavor-Inst-Eigen-prob-1}
 \end{marginfigure}
 
 
-\begin{marginfigure}[3\baselineskip]
+\begin{marginfigure}[2\baselineskip]
 \includegraphics{assets/numericalMSW3Flavor-Inst-Eigen-prob-2.png}
 \caption{Probability for the second instantaneous eigenstate for matter profile $10^{-13 - 4.3 x}$.}
 \label{fig:numericalMSW3Flavor-Inst-Eigen-prob-2}
 \end{marginfigure}
 
-\begin{marginfigure}[3\baselineskip]
+\begin{marginfigure}[2\baselineskip]
 \includegraphics{assets/numericalMSW3Flavor-Inst-Eigen-prob-3.png}
 \caption{Probability for the third instantaneous eigenstate for matter profile $10^{-13 - 4.3 x}$.}
 \label{fig:numericalMSW3Flavor-Inst-Eigen-prob-3}
@@ -2139,6 +2192,14 @@ Applying a number density function $numDen2(x) = 10^{-13 - 4.3 x}$ to the system
 \caption{Ternary diagram for MSW effect.}
 \label{fig:ternary-mass-1}
 \end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{assets/ternary/mass-1-scatter.png}
+\caption{Ternary diagram for MSW effect.}
+\label{fig:ternary-mass-1-scatter}
+\end{figure}
+
 
 
 \begin{figure}
