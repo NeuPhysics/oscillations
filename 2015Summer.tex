@@ -83,7 +83,77 @@ $\omega = \frac{\Delta m^2}{2E}$
 
 \newpage
 
-\section{Vacuum Oscillations}
+
+\section{Interesting Topics}
+
+
+\subsection{Decoherence}
+
+Not really decoherence but in the view of wave packet formalism different propagation eigenstates will be far away from each other. 
+
+
+\subsection{Vacuum Oscillations 3 Flavor}
+
+The trick to solve the equations is to subtract the $\frac{m_1^2}{2E} \mathbf{I}$ from Hamiltonian in mass eigenbasis.
+
+\begin{align*}
+&\mathbf{H}- m_1\mathbf{I} \\
+=& \frac{1}{2E}\begin{pmatrix}
+m_1^2 & 0 & 0 \\
+0 & m_2^2 &  0\\
+0 & 0 & m_3^2
+\end{pmatrix} - m_1^2 \mathbf{I} \\
+=& \frac{1}{2E} \begin{pmatrix}
+0 & 0 & 0 \\
+0 & \Delta m_{12}^2 & 0 \\
+0 & 0 & \Delta m_{13}^2
+\end{pmatrix}
+\end{align*}
+
+For any kind of potential, do this first then add in the potentials. 
+
+Normal hierarchy and inverted hierarchy just changes the behavior of small scale oscillations. See caption of figure \ref{vacOsc3Flavor} for details.
+
+Invert hierarchy of $m_1$ and $m_2$ also doesn't change anything on average sense.
+
+
+\subsection{Matter}
+
+Oscillation length in calculations, equation \ref{eq:matter-oscillation-length} and \ref{overal-oscillation-length}.
+
+Then a discussion of the energy dependence of the vacuum oscillation length is shown in figures \ref{fig:comparisonVacOscLengthMatterLength} and \ref{fig:lengthComparison}.
+
+Matter effect can be a suppression or enhancement. See equation \ref{sin2thetaofx} and the discussion below.
+
+A general discussion of solving the problem is located at equation \ref{solving-matter-effect-general}. There are three different ways to solve it however the one begins with vacuum mass eigenbasis Hamiltonian is the best.
+
+
+To solve the solar problem, there are three stages.
+
+\begin{itemize}
+\item Region with very high number density which is above resonance: $\ket{\nu_e}$ projects onto instantaneous mass eigenstates then propagate adiabatically on these states.
+\item Region around resonance: transition from a instantaneous mass eigenstate to another happens.
+\item After the transition: stays on instantaneous mass eigenstates.
+\end{itemize}
+
+A general discussion is presented in subsection {\it{General Discussion for Neutrinos Interacting with Matter}}.
+
+\subsection{Ternary Diagrams}
+
+Hierarchy of $\Delta m_{13}$ changes the small oscillations, which can be seen clearly in ternary diagrams.
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Vacuum Oscillations %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vacuum Oscillations}\label{vacuum-oscillations}
 
 Schrodinger equation is
 
@@ -799,10 +869,13 @@ H_{11} & = \cos^2\theta_{13}( m_2^2 - \sin^2\theta  \Delta m_{12}^2 ) + \sin^2\t
 
 
 
+\subsection{Numerical Results for Vacuum 3 Flavor Oscillations} \label{numerical-results-for-vacuum-3-flavor-oscillations}
+
 
 \begin{figure}
-\includegraphics{assets/vacOsc3Flavor}
+\includegraphics{assets/vacOsc3Flavor.jpg}
 \caption{The overall shape is the same however they differ on small scales.}
+\label{vacOsc3Flavor}
 \end{figure}
 
 
@@ -933,9 +1006,9 @@ in which the $\partial_t$ operator is actually $\partial_x$ since we always assu
 
 A simple analysis before solving the system can be done rather easily. The characteristic length of the matter effect is
 
-\begin{equation*}
+\begin{equation}\label{eq:matter-oscillation-length}
 l_m = \frac{2\pi}{\sqrt{2}G_F n} .
-\end{equation*}
+\end{equation}
 
 The importance of this length is that it is a result of refractive index which causes the velocity difference thus changes the relative phase between $\nu_e$ and $\nu_x$.\cite{wolfensteinprd1979}
 
@@ -1043,12 +1116,12 @@ A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x)  = 0
 
 So the solutions are
 
-\begin{align*}
-\sin 2\theta(x) & = \frac{A_1}{\sqrt{A_1^2 + A_3^2}}  \\
-& = \frac{\sin 2\theta_v}{\sqrt{\hat\Delta^2 + 1 - 2\hat\Delta \cos 2\theta_v}}\\
-\cos 2\theta(x) & = \frac{-A_3}{\sqrt{A_1^2+A_3^2}} \\
+\begin{align}
+\sin 2\theta(x) & = \frac{A_1}{\sqrt{A_1^2 + A_3^2}} \nonumber \\
+& = \frac{\sin 2\theta_v}{\sqrt{\hat\Delta^2 + 1 - 2\hat\Delta \cos 2\theta_v}} \label{sin2thetaofx} \\
+\cos 2\theta(x) & = \frac{-A_3}{\sqrt{A_1^2+A_3^2}} \nonumber \\
 & = \frac{- (\hat\Delta - \cos 2\theta_v )}{ \sqrt{\hat\Delta^2 + 1 - 2\hat\Delta \cos 2\theta_v} } ,
-\end{align*}
+\end{align}
 
 where $\hat\Delta = \Delta/\omega$.
 
@@ -1073,9 +1146,9 @@ As  $\Delta \to \infty$ ,  we have $A_3\to \infty$ and  $\sin 2\theta(x)$ vanish
 
 Now we can obtain an approximate solution by using this approximate diagonalization. This idea is
 
-\begin{equation*}
-i \partial_x \Psi_m(x) = \mathbf{Extra Matrix From LHS}\cdot \mathbf H_{md} \Psi_m(x),
-\end{equation*}
+\begin{equation}
+i \partial_x \Psi_m(x) = \mathbf{Extra Matrix From LHS}\cdot \mathbf H_{md} \Psi_m(x)\label{solving-matter-effect-general},
+\end{equation}
 
 where the $\mathbf{Extra Matrix From LHS}$ comes from the fact that changing from flavor basis $\Psi(x)$ to heavy-light basis $\Psi_m(x)$ using $\mathbf {U_m}$
 
@@ -1131,8 +1204,37 @@ The diagonalized Hamiltonian will result in a system with two levels which are c
 \begin{itemize}
 \item Work in instantaneous eigenstates by writing down the general expression as we have done in this subsection.
 \item Work in flavor basis directly.
-\item Work in the vacuum mass eigenstates by transform the matter potential from flavor basis to vacuum mass basis.
+\item Work in the vacuum mass eigenstates by transform the matter potential from flavor basis to vacuum mass basis. Write down it in vacuum mass eigenbasis then add in the potential.
+
+\begin{align*}
+\mathbf{H_{vp}} + \mathbf{U^{-1}} \mathbf{V} \mathbf{U},
+\end{align*}
+
+where 
+
+\begin{align*}
+\mathbf{H_{vp}} = \frac{1}{2E}\begin{pmatrix}
+m_1^2 & 0 & 0 \\
+0 & m_2^2 & 0  \\
+0 & 0 & m_3^2
+\end{pmatrix},
+\end{align*}
+
+and 
+\begin{align*}
+\mathbf{V} = \begin{pmatrix}
+\sqrt{2}G_F n & 0 & 0 \\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{pmatrix}.
+\end{align*}
+
+The good thing of starting in this way is that we can eliminate one of the masses and only use mass squared differences by subtracting a $\frac{m_1^2}{2E}\mathbf{I}$ matrix.
+
+
 \end{itemize}}
+
+
 
 
 \subsection{Constant Electron Number Density}
@@ -1185,11 +1287,11 @@ As the math tells us, $\sin^2 2\theta$ and $\sin^2 2\theta_m$ are the two terms 
 
 Recall that we have defined two characteristic lengths, $l_v$ and $l_m$. The overall oscillation length in matter becomes\footnote{We know that $\omega>0$ here since we have already determined the hierarchy for $m_1$ and $m_2$. How? There is a significant effect on the oscillations here if $\omega<0$!}
 
-\begin{align*}
+\begin{align} 
 l &= \frac{2\pi}{\omega_m} \\
 & = \frac{2\pi}{\omega \sqrt{ \hat\Delta^2 + 1 - 2 \hat\Delta \cos 2\theta_v }} \\
-& = \frac{l_v}{ \sqrt{\left(\frac{l_v}{l_m} \right)^2 +1 - 2\frac{l_v}{l_m}\cos 2\theta_v  }}
-\end{align*}
+& = \frac{l_v}{ \sqrt{\left(\frac{l_v}{l_m} \right)^2 +1 - 2\frac{l_v}{l_m}\cos 2\theta_v  }} \label{overal-oscillation-length}
+\end{align}
 
 This expression shows exactly why the different length scales are important.
 
@@ -1197,7 +1299,7 @@ This expression shows exactly why the different length scales are important.
 \item  $\lvert \frac{l_v}{l_m} \rvert \ll 1 \Rightarrow l\to l_v$, matter effect is minimal.
 \item  $\lvert \frac{l_v}{l_m} \rvert \gg 1 \Rightarrow l\to 0 $, matter effect kills the oscillations.
 \item  $\lvert \frac{l_v}{l_m}\rvert \sim 1 \Rightarrow l\to \frac{l_v}{2\sin\theta_v}$, more interesting region.\footnote{Assume $\sin\theta_v>0$.} To linear approximation, \begin{equation*}
-l \approx \frac{l_v}{2\sin\theta_v} \left( 1 -  \frac{l_v/l_m - 1}{2} \right).
+l \approx \frac{l_v}{2\sin\theta_v} \left( 1 -  \frac{l_v/l_m - 1}{2} \right) = \frac{l_v}{4\sin\theta_v} \left( 1 -  \frac{l_v}{l_m } \right) .
 \end{equation*} notice that at resonance \begin{equation*}
 l = \frac{l_v}{2\sin \theta_v}.
 \end{equation*}
@@ -1468,7 +1570,7 @@ The first order differential equations of $C_L(x)$ and $C_H(x)$ can be combined 
 \ddot C_L - \left(  \frac{\dot v}{v} - i\delta \omega_m \right) \dot C_L + v^2 C_L = 0.
 \end{equation*}
 
-In our linear approximation that $\frac{d\hat\Delta}{dx}$ is a constant.\footnote{We are assuming that $n(x)$ is linearly depending on $x$ which means $\hat\Delta$ is a linear function of $x$. Thus $\frac{d\hat\Delta}{dx}$ is a constant.} The equation simplifies to
+{\bf{If we use the approximation that $\frac{d\hat\Delta}{dx}$ is a constant.}}\footnote{We are assuming that $n(x)$ is linearly depending on $x$ which means $\hat\Delta$ is a linear function of $x$. Thus $\frac{d\hat\Delta}{dx}$ is a constant.} The equation simplifies to
 
 \begin{equation*}
 \ddot C_L + i\delta\omega_m \dot C_L + v^2 C_L = 0,
@@ -1504,6 +1606,8 @@ These constants are determined by the initial condition. The state of the system
 \end{align*}
 
 
+If we do not assume the vanish of $\dot v$, we need to do substitution of the function $C_L$ and reduce the equation to Weber equation.\cite{Zener1932} 
+
 Suppose we have the initial condition as $\ket{\Psi_m(x=0)} = \ket{\nu_L}$, the system can jump to $\ket{\nu_H}$ since the state at arbitrary position $x$ is a mixing of the two states.\footnote{In fact this approximation is valid at the level crossing.} The rate of jumping is given by\cite{Vutha2010,Zener1932,Rubbmark1981}
 
 \begin{equation*}
@@ -1511,12 +1615,18 @@ Suppose we have the initial condition as $\ket{\Psi_m(x=0)} = \ket{\nu_L}$, the 
 \end{equation*}
 
 
-The probability jumping to state $\ket{\nu_H}$ after the level crossing (at infinite $x$) is
+The probability jumping to state $\ket{\nu_H}$ after the level crossing (at infinite $x$) is\footnote{\begin{align*}
+&P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H})\\
+=& e^{-2\pi\Gamma} \\
+ =& \exp\left( -2\pi \frac{v^2}{\frac{d\omega_m}{dx}} \right) \\
+ =& \exp\left( -2\pi \frac{\left( -\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx}  \right)^2}{\frac{d\omega_m}{dx}} \right).
+\end{align*}
+}
 
 \begin{align*}
 P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) &= e^{-2\pi\Gamma} \\
-& = \exp\left( -2\pi \frac{v^2}{\frac{d\omega_m}{dx}} \right) \\
-& = \exp\left( -2\pi \frac{\left( -\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx}  \right)^2}{\frac{d\omega_m}{dx}} \right).
+& = 
+\exp \left( -\frac{\pi}{2}\frac{\sin^2 2\theta_v}{\cos 2\theta_v} \frac{\omega}{\lvert \frac{1}{N} \frac{dN}{dx} x_r \rvert} \right)
 \end{align*}
 
 The survival probability can be calculated by counting the probability left on the initial state.
@@ -1896,7 +2006,7 @@ n \approx \frac{\omega}{G_F} \approx 10^{-14} \mathrm{GeV^3} .
 
 
 
-In terms of $\mathrm{cm^{-3}}$, the results would be $ 10^{36} \mathrm{cm^{-3}}$.
+In terms of $\mathrm{cm^{-3}}$, the results would be of the order $ 10^{25} \mathrm{cm^{-3}}$.
 
 Combining the two relations between density and pressure, we can find the density profile with respect to radius.
 
@@ -1953,6 +2063,9 @@ n =  10^{-13 - 4.3\hat x} \mathrm{GeV}^{3}.
 
 The numerical results can be obtains by plugging this result into the differential equation solver. The result is shown in figure \ref{fig:numMSW-model-1}.
 
+
+
+{\color{red}I need a comparison between numerical and analytical which is not really matching! The expression $P=\frac{1}{2}+\frac{1}{2}\cos 2\theta_m \cos 2\theta_v$ is really suspicious.}
 
 
 \begin{figure}
