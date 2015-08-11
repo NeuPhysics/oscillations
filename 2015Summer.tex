@@ -1550,11 +1550,11 @@ Hamiltonian applied to this state results in
 \mathbf{H_m} \ket{\Psi_m} =& \omega_{m1} C_L(x) e^{-i\int \omega_{m1}dx} \ket{\nu_L} -ivC_L(x) e^{-i\int \omega_{m1}dx}\ket{\nu_H} \\ &+\omega_{m2}C_H(x) e^{-i\int \omega_{m2}dx}\ket{\nu_H} + iv C_H(x) e^{-i\int \omega_{m2}dx}\ket{\nu_L}.
 \end{align*}
 
-Plug the state $\ket{\Psi_m}$ into the Schrödinger equation, we have
+Plug the state $\ket{\Psi_m}$ into the Schr\"odinger equation, we have
 
 \begin{align*}
-\dot C_L(x) &= v C_H(x) e^{ - i\int \delta \omega_m dx} \\
-\dot C_H(x) & = -v C_L(x) e^{i\int \delta\omega_m dx} ,
+\dot C_L(x) &= v C_H(x) e^{  i\int \delta \omega_m dx} \\
+\dot C_H(x) & = -v C_L(x) e^{ - i\int \delta\omega_m dx} ,
 \end{align*}
 
 in which $\delta\omega_m$ is defined as
@@ -1563,32 +1563,56 @@ in which $\delta\omega_m$ is defined as
 \delta \omega_m = \omega_{m2} - \omega_{m1}.
 \end{equation*}
 
+The boundary condition for this problem {\bf{in general}} is that
+
+\begin{equation*}
+\ket{\Psi_m(0)} = C_L(0)\ket{\nu_L} + C_H(0) \ket{\nu_H}.
+\end{equation*}
+
+{\bf{It should be made clear that the problem we will be discussing is the transition from one state to another in first order approximation. That means we will confine this system so that the initial condition is $\ket{\Psi_m(-\infty)} = \ket{\nu_L}$.}} In terms of $C_L$ and $C_H$,
+
+\begin{align*}
+C_L(-\infty) &= 0, \\
+\lvert C_H(-\infty) \rvert^2 & = 1.
+\end{align*}
+
 
 The first order differential equations of $C_L(x)$ and $C_H(x)$ can be combined and produce a second order differential equation.
 
 \begin{equation*}
-\ddot C_L - \left(  \frac{\dot v}{v} - i\delta \omega_m \right) \dot C_L + v^2 C_L = 0.
+\ddot C_L - \left(   \frac{\dot v}{v} + i\delta \omega_m \right) \dot C_L + v^2 C_L = 0.
 \end{equation*}
 
-{\bf{If we use the approximation that $\frac{d\hat\Delta}{dx}$ is a constant.}}\footnote{We are assuming that $n(x)$ is linearly depending on $x$ which means $\hat\Delta$ is a linear function of $x$. Thus $\frac{d\hat\Delta}{dx}$ is a constant.} The equation simplifies to
+{\bf{If we use the approximation that $\frac{d\hat\Delta}{dx}$ is a constant,}}\footnote{We are assuming that $n(x)$ is linearly depending on $x$ which means $\hat\Delta$ is a linear function of $x$. Thus $\frac{d\hat\Delta}{dx}$ is a constant.} The equation simplifies to
 
 \begin{equation*}
-\ddot C_L + i\delta\omega_m \dot C_L + v^2 C_L = 0,
+\ddot C_L - i\delta\omega_m \dot C_L + v^2 C_L = 0,
 \end{equation*}
 
 where $v=-\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx}$ is constant.
 
+Furthermore, the eigenvalues are not varying very fast and satisfies the condition that
+
+\begin{equation*}
+\delta \omega_m = \alpha x,
+\end{equation*}
+
+where $\alpha$ is a constant and comes from the first order of the expression.
+
+
+
+
 Assuming one of the solutions is $e^{rx}$, we could insert it to the second order differential equation and get the characteristic equation,
 
 \begin{equation*}
-r^2 + i\delta \omega_m r + v^2 = 0,
+r^2 - i\delta \omega_m r + v^2 = 0,
 \end{equation*}
 
 which has two solutions
 
 \begin{align*}
-r_1 & =  i \frac{-\delta\omega_m + \sqrt{\delta\omega_m+ 4v^2} }{2} \\
-r_2 & = i\frac{-\delta\omega_m - \sqrt{\delta\omega_m+ 4v^2} }{2}.
+r_1 & =  i \frac{\delta\omega_m + \sqrt{\delta\omega_m+ 4v^2} }{2} \\
+r_2 & = i\frac{\delta\omega_m - \sqrt{\delta\omega_m+ 4v^2} }{2}.
 \end{align*}
 
 The solutions to $C_L(x)$ and $C_H(x)$ will be
@@ -1605,33 +1629,141 @@ These constants are determined by the initial condition. The state of the system
 & + \left( c_1 e^{r_1 x} + c_2 e^{r_2 x} \right) \frac{ e^{ i\int \delta\omega_m dx } }{v} e^{-i\int_0^x \omega_{m2}(x') dx'} \ket{\nu_H}.
 \end{align*}
 
+{\color{red}Doesn't make sense.}
 
-If we do not assume the vanish of $\dot v$, we need to do substitution of the function $C_L$ and reduce the equation to Weber equation.\cite{Zener1932} 
 
-Suppose we have the initial condition as $\ket{\Psi_m(x=0)} = \ket{\nu_L}$, the system can jump to $\ket{\nu_H}$ since the state at arbitrary position $x$ is a mixing of the two states.\footnote{In fact this approximation is valid at the level crossing.} The rate of jumping is given by\cite{Vutha2010,Zener1932,Rubbmark1981}
+{\bf{In the paper by Zener,}} we need to do substitution of the function $C_L$ and reduce the equation to Weber equation.\cite{Zener1932} 
+
+Define a new variable $W$ which is determined by\footnote{This is done by assuming $C_L=f(x)W$ and plugging it back to the equation then set the coefficient of $\dot C_L$ to $0$.}
 
 \begin{equation*}
-\Gamma = \frac{(2v )^2}{4\left( \frac{d\omega_m}{dx} \right)} = \frac{v^2}{\frac{d\omega_m}{dx}}.
+C_L = e^{ \frac{i}{2}\int \delta \omega_m dx } W.
+\end{equation*}
+
+Then we get a simple equation about $W$,
+
+\begin{equation*}
+\ddot W + \left( v^2 + \frac{i \alpha}{2} + \frac{\alpha^2 x^2}{4}  \right) W = 0,
+\end{equation*}
+
+which can be reduced to the standard form of Weber equation with the new parameters\footnote{They are found using a single assumption that $z=gx$.}
+
+\begin{align*}
+z &= g x \\
+\nu &= i \frac{v^2}{\alpha},
+\end{align*}
+
+where $g^2\equiv -i\alpha$ ($g=(1-i)\sqrt{\alpha} /\sqrt{2}=\sqrt{\alpha}e^{-i\pi/4}x$). The equation we need to solve becomes
+
+\begin{equation*}
+\frac{d^2 W(z)}{dz^2} + \left( \nu +\frac{1}{2} - \frac{1}{4}z^2 \right) W(z) = 0 .
 \end{equation*}
 
 
-The probability jumping to state $\ket{\nu_H}$ after the level crossing (at infinite $x$) is\footnote{\begin{align*}
-&P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H})\\
-=& e^{-2\pi\Gamma} \\
- =& \exp\left( -2\pi \frac{v^2}{\frac{d\omega_m}{dx}} \right) \\
- =& \exp\left( -2\pi \frac{\left( -\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx}  \right)^2}{\frac{d\omega_m}{dx}} \right).
-\end{align*}
-}
+\begin{figure}
+\centering
+\includegraphics{assets/weber1.png}
+\caption{The parabolic cylinder function $D_\nu(z)$ for $\nu=1$ (blue) and $\nu=2$ (red). But for imaginary $z$ the function blows up.}
+\end{figure}
+
+The Weber equation has two independent solutions $D_\nu(z)$ and $D_{-\nu-1}(iz)$.\footnote{They are alled Parabolic Cylinder Function on wolfram mathworld. \url{http://mathworld.wolfram.com/ParabolicCylinderFunction.html}}
+
+
+Since $D_{\nu}(z)$ blows up for complex $z\propto e^{-\pi i/4}$, the solution that works is $D_{-\nu-1}(iz)$. Then the solution to $U_L$ is
+
+\begin{equation*}
+U_L(x) = u_{+} D_{-iv^2/\alpha -1} (\frac{1-i}{\sqrt{2}} x) ,
+\end{equation*}
+
+or
+
+\begin{equation*}
+U_L(x) = u_- D_{-iv^2/\alpha -1} ( - \frac{1-i}{\sqrt{2}} x) .
+\end{equation*}
+
+
+The asymptotic expression for $D_{-\nu-1}$ on the line of $e^{-i\pi/4}$ and $e^{-3i\pi/4}$ at infinite contour radius on complex plane are
 
 \begin{align*}
-P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) &= e^{-2\pi\Gamma} \\
+D_{-\nu-1}(i x e^{-3i\pi/4}) &\to e^{i(\nu+1)\pi/4} e^{i x^2/4} x^{-\nu-1} \\
+D_{-\nu-1}(i x e^{-i\pi/4}) &\to e^{-i(\nu+1)\pi/4} e^{-i x^2/4} x^{-\nu-1}.
+\end{align*}
+
+So the real part of these asymptotic expressions are 
+
+\begin{align*}
+ e^{i\nu\pi/4} x^{-\nu-1} &= e^{-v^2\pi/4\alpha} x^{-\nu-1} 
+ e^{-i\nu\pi/4} x^{-\nu-1} &=e^{v^2\nu\pi/4\alpha} x^{-\nu-1}
+\end{align*}
+
+Apply the boundary condition we have the results of the coefficients\footnote{The details depends on the signs of $\alpha$.}
+
+\begin{align*}
+\lvert u_+ \rvert = \lvert u_- \rvert = e^{\gamma \pi/4}\sqrt{\gamma} ,
+\end{align*}
+
+where $\gamma = \frac{v^2}{\lvert \alpha \rvert}$.
+
+
+What we need to find out is the state at $t\to \infty$, which depends on the asymptotic values of $D_{-\nu-1}$,
+
+\begin{align*}
+C_L(x) &\to \sqrt{\gamma} e^{-\gamma \pi/4} \left(  e^{3\pi (\nu+1)i/4} e^{-ix^2/4} x^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{\pi\nu/4} e^{i x^2 /4} x^\nu  \right) ,
+\end{align*}
+
+or 
+
+\begin{align*}
+C_L & \to \sqrt{\gamma} e^{-\gamma \pi/4} \left(   e^{-3\pi (\nu+1)i/4} e^{ix^2/4} x^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{\pi\nu/4} e^{ - i x^2 /4} x^\nu   \right).
+\end{align*}
+
+
+The transition rate is determined by $\lvert C_L \rvert^2$,\cite{Zener1932}
+
+\begin{equation*}
+\lvert C_L(\infty) \rvert = \gamma e^{-\pi\gamma} \frac{2\pi}{\Gamma(i\gamma +1) \Gamma(-i\gamma +1)} = 2e^{-\pi\gamma}\sinh \pi\gamma = 1-e^{-2\pi\gamma}.
+\end{equation*}
+
+
+Now we understand the transition probability is given by
+
+\begin{equation*}
+P_{tran} = e^{-2\pi\gamma}.
+\end{equation*}
+
+
+
+
+
+
+Suppose we have the initial condition as $\ket{\Psi_m(x=-\infty)} = \ket{\nu_L}$, the system can jump to $\ket{\nu_H}$ since the state at arbitrary position $x$ is a mixing of the two states.\footnote{In fact this approximation is valid at the level crossing.} The rate of jumping is given by\cite{Vutha2010,Zener1932,Rubbmark1981}
+
+\begin{equation*}
+\gamma  = \frac{v^2}{\lvert \frac{d\omega_m}{x dx}\rvert_{x_r} }.
+\end{equation*}
+
+
+The probability jumping to state $\ket{\nu_H}$ after the level crossing (at infinite $x$) is
+
+\begin{align*}
+&P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H})\\
+=& e^{-2\pi\gamma} \\
+ =& \exp\left( -2\pi \frac{v^2}{ \lvert \frac{d\omega_m}{xdx} \rvert_{x_r} } \right) \\
+ =& \exp\left( -2\pi \frac{\left( -\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx} \omega \right)^2}{\lvert \frac{d\omega_m}{xdx} \rvert_{x_r} } \right)\\
+ =& \exp\left(  -\frac{\pi}{2} \frac{\sin^2 2\theta_v \omega}{ \cos 2\theta_v \lvert \frac{d \hat\Delta}{dx}/\hat\Delta  \rvert_{x_r}  }   \right)
+\end{align*}
+
+The final result is
+
+\begin{align*}
+P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) 
 & = 
-\exp \left( -\frac{\pi}{2}\frac{\sin^2 2\theta_v}{\cos 2\theta_v} \frac{\omega}{\lvert \frac{1}{N} \frac{dN}{dx} x_r \rvert} \right)
+\exp \left( -\frac{\pi}{2}\frac{\sin^2 2\theta_v}{\cos 2\theta_v} \frac{\omega}{\lvert \frac{1}{\hat\Delta} \frac{d\hat\Delta}{dx} \vert_{x_r} \rvert} \right)
 \end{align*}
 
 The survival probability can be calculated by counting the probability left on the initial state.
 
-To be clear, if electron neutrinos are produced inside core of our sun, it will be the light state. Since the interaction with matter is very strong, it transfers to $\ket{\nu_L}$ with probability $P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) $ due to the gradient of the matter profile which works as the perturbation. Thus the final state will be a mixing of $\ket{\nu_L}$ and $\ket{\nu_H}$.
+To be clear, if electron neutrinos are produced inside core of our sun, it will be the heavy state. Since the interaction with matter is very strong, it transfers to $\ket{\nu_L}$ with probability $P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) $ due to the gradient of the matter profile which works as the perturbation. Thus the final state will be a mixing of $\ket{\nu_L}$ and $\ket{\nu_H}$.
 
 
 
@@ -1809,7 +1941,7 @@ Notice that in fact the detection happens in vacuum, which means $\theta_m(x)=\t
 \end{align*}
 
 
-{\color{red}Recall that the adiabatic result is of the form
+{\color{red}This means that the adiabatic result is of the form
 \begin{equation*}
 P(\nu_e,x)_{\mathrm{adiabatic}} = \frac{1}{2} ( 1+ \cos 2\theta_m \cos 2\theta_v ).
 \end{equation*}}
