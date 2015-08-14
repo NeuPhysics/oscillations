@@ -20,6 +20,8 @@
 % for units.
 \usepackage{units}
 
+\usepackage{ulem}
+
 % The fancyvrb package lets us customize the formatting of verbatim
 % environments.  We use a slightly smaller font.
 \usepackage{fancyvrb}
@@ -478,7 +480,7 @@ P(\nu_a, L) = 1 -  \sin^2 (2\theta_v) \sin^2 \left( \frac{\Delta m^2 L}{4E} \rig
 \end{itemize}
 
 
-\subsection{Density Matrix}
+\subsection{Flavor Basis}
 
 This problem can be solved using density matrix $\rho$ and Von Neumann equation
 
@@ -619,7 +621,7 @@ P(\nu_e,L) &= 1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 L}{4E} \right) \\
 
 
 
-\subsection{Numerical Results for 2 Flavor Oscillations}
+\subsection{Another Method for 2 Flavor Oscillations}
 
 
 To solve a set of first order differential equations, I need the determinant of coefficient matrix. For 2 flavor neutrino oscillations,
@@ -634,7 +636,7 @@ u(t) \\ v(t)
 \end{pmatrix}.
 \end{equation*}
 
-To find the solutions I need the eigenvalues $\lambda$ I need to find the determinant
+To find the solutions I need the eigenvalues $\lambda$. I need to find the determinant
 
 \begin{align*}
 &\det \left( - i\frac{\Delta m^2}{4E} \begin{pmatrix}
@@ -913,7 +915,7 @@ Since the probability for differential flavors of neutrinos are represented in b
 \begin{figure}
 \centering
 \includegraphics{assets/vacOsc3FlavorTernary900}
-\caption{Ternary diagram for neutrino oscillations. The state starts from bottom left, which means that the system has only electron neutrinos. As the neutrino travels, it oscillates in curves. After one period of the beat, it reaches the far end and then oscillates backwards.}\
+\caption{Ternary diagram for neutrino oscillations. The state starts from bottom left, which means that the system has only electron neutrinos. As the neutrino travels, it oscillates in curves. After one period of the beat, it reaches the far end and then oscillates backwards.}
 \label{fig:ternaryPlot900}
 \end{figure}
 
@@ -1016,11 +1018,11 @@ The importance of this length is that it is a result of refractive index which c
 With the definition of oscillation length in matter, a comparison between this length and the vacuum oscillation length can be made. Choose $\Delta m_{21}^2=10^{-4}\times 10^{-18}\mathrm{GeV^{2}}$\footnote{Fermi constant is $G_F=1.17\times 10^{-5}\mathrm{GeV^{-2}}$.}, we have
 
 \begin{align*}
-l_v &= 4\times 10^{19}\pi \left( \frac{E}{10^{-3}} \right) \mathrm{GeV^{-1}} \\
-l_m &=  1.2\times 10^{19}\pi \left( \frac{10^{-14}}{n} \right) \mathrm{GeV^{-1}}
+l_v &= 4\times 10^{19}\pi \left( \frac{E}{1 \mathrm{MeV} } \right) \mathrm{GeV^{-1}} = 7.9\times 10^3 \pi   \left( \frac{E}{1 \mathrm{MeV} } \right)\mathrm{m}  \\
+l_m &=  1.2\times 10^{19}\pi \left( \frac{10^{-14}}{n} \right) \mathrm{GeV^{-1}} = 1.2\times 10^4\pi \left( \frac{10^{-24}\mathrm{cm^{-3}}}{n} \right) 
 \end{align*}
 
-The two lenght are equal if
+The two length are equal if
 
 \begin{equation*}
 \left(\frac{10^{-14}}{n} \right) = 3.3 \left( \frac{E}{10^{-3}}\right)
@@ -1446,56 +1448,50 @@ The first condition is trivial which corresponds to vacuum however the second co
 
 In principle we could use Taylor expansion of $\mathbf{U_m}$ to find the series of the derivatives of $\cos\theta(x)$ and $\sin\theta(x)$, however it doesn't looks like the easy way. Now we go back to find the Taylor expansion of the Hamiltonian which only involves the expression $\sin 2\theta(x)$ and $\cos 2\theta(x)$.
 
-The series of them are
+Since we are dealing with resonance which is located at $\hat\Delta =1$, the quantities can be expanded around $\hat\Delta - = 0$.
+
+The series of them are\footnote{Assuming $\sin\theta$ is not negative.}
 
 \begin{align*}
-\sin 2\theta(x) & = \sin 2\theta_v + \cos 2\theta_v \sin 2\theta_v \hat\Delta + \mathcal{O}(\hat\Delta)^2 \\
-\cos 2\theta(x) & = \cos 2\theta_v -\sin^2 2\theta_v \hat \Delta + \mathcal{O}(\hat\Delta)^2 .
+\sin 2\theta(x) & = \sin 2\theta_v \left( \frac{1}{ 2\sin\theta_v } - \frac{1}{4\sin\theta_v} (\hat\Delta - 1)  + \mathcal{O}(\hat\Delta -1)^2 \right) \\
+& = \cos\theta_v - \frac{\cos\theta_v}{2}(\hat\Delta - 1) +\mathcal{O}(\hat\Delta - 1)^2 \\
+\cos 2\theta(x) & = -\sin\theta_v - \frac{\cos\theta_v}{2\tan\theta_v} (\hat\Delta - 1)+ \mathcal{O}(\hat\Delta -1)^2 .
 \end{align*}
 
 Notice that for small $\theta_v$ the first order can be neglected sine they are second or higher order small quantities.
 
-$\sin\theta(x)$ and $\cos\theta(x)$ can be found using these results.
+$\sin\theta(x)$ and $\cos\theta(x)$ can be found using these results up to second order.\footnote{We need second order because we are going to take the derivative of x. However, in this special case, we can directly solve out $\sin\theta(x)$ and $\cos\theta(x)$ using by plug the approximation $\hat\Delta(x) = 1+\hat\Delta'(x_r)(x-x_r)$ into the expression of $\sin 2\theta(x)$ and $\cos 2\theta(x)$ and WITHOUT Taylor expand $\sin 2\theta(x)$ and $\cos 2\theta(x)$.}
+
+
+To find out the solutions the explicit expression for $\mathbf{U_m}$ is required.\footnote{\begin{equation*}
+\mathbf{U_m} = \begin{pmatrix} \cos \theta(x) & \sin\theta(x) \\ -\sin\theta(x) & \cos\theta(x) \end{pmatrix} 
+\end{equation*}} This can be done using Mathematica along with the derivative of this rotation matrix with respect to $x$ where a trick
 
 \begin{align*}
-\sin\theta(x) & = \sin \theta_v + \cos^2\theta_v \sin\theta_v \hat\Delta + \mathcal{O}(\hat\Delta^2) \\
-\cos\theta(x) & = \cos\theta_v - \cos\theta_v \sin^2\theta_v \hat\Delta + \mathcal{O}(\hat\Delta^2).
+\partial_x \mathbf{U_m} & = \frac{d \hat\Delta'(x_r)(x-x_r)}{dx} \partial_{ \hat\Delta'(x_r)(x-x_r)} \mathbf{U_m} 
 \end{align*}
 
-To find out the solutions the explicit expression for $\mathbf{U_m}$ is required. The rotation matrix is
+has been used.
 
-\begin{align*}
-\mathbf{U_m} &= \begin{pmatrix} \cos \theta(x) & \sin\theta(x) \\ -\sin\theta(x) & \cos\theta(x) \end{pmatrix} \\
-&\approx \begin{pmatrix}
-\cos\theta_v - \cos\theta_v \sin^2\theta_v \hat\Delta &  \sin \theta_v + \cos^2\theta_v \sin\theta_v \hat\Delta \\
--  \sin \theta_v - \cos^2\theta_v \sin\theta_v \hat\Delta & \cos\theta_v - \cos\theta_v \sin^2\theta_v \hat\Delta
-\end{pmatrix}.
-\end{align*}
-
-The derivative of this rotation matrix with respect to $x$ is
-
-\begin{align*}
-\partial_x \mathbf{U_m} & = \frac{d \hat\Delta}{dx} \begin{pmatrix}
- - \cos\theta_v \sin^2\theta_v  &  \cos^2\theta_v \sin\theta_v  \\
- - \cos^2\theta_v \sin\theta_v  &  - \cos\theta_v \sin^2\theta_v 
-\end{pmatrix}
-\end{align*}
-
-
-The effective potential is\footnote{This expression comes from the result of the first order approximation of $\sin\theta(x)$ and $\cos\theta(x)$.}
+The effective potential is\footnote{This expression comes from the result of the second order approximation of $\sin\theta(x)$ and $\cos\theta(x)$.}
 
 \begin{align*}
 \mathbf{V_m} & = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) \\
-& = - i\sin\theta_v \cos\theta_v \frac{d\hat\Delta}{dx} \begin{pmatrix}
-\cos\theta_v\sin\theta_v \hat \Delta & 1 \\
--1 & \cos\theta_v \sin\theta_v \hat\Delta 
+& = - i \frac{\hat\Delta'(x_r) \sin 2\theta_v}{ 2( 2+\hat\Delta'(x)(x-x_r) ( 2+ \hat\Delta'(x)(x-x_r)) ) - 2( 1 + \hat\Delta'(x)(x-x_r) ) \cos 2\theta_v }   \begin{pmatrix}
+0 & 1 \\
+-1 & 0
 \end{pmatrix} .
 \end{align*}
 
-Since $\frac{d\hat\Delta}{dx} \hat\Delta$ is one order higher than $\hat\Delta$, the effective potential can be simplified to first order, which is
+To keep only first order\footnote{\begin{equation*}
+\sigma_2 = - i  \begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}.
+\end{equation*}}
 
 \begin{align*}
-\mathbf{V_m} & = - i\sin\theta_v \cos\theta_v \frac{d\hat\Delta}{dx} \begin{pmatrix}
+\mathbf{V_m} & = - i \hat\Delta'(x_r) \frac{\cot\theta_v}{4} \left( -1 + \hat\Delta'(x_r)(x-x_r)  \right)  \begin{pmatrix}
 0 & 1 \\
 -1 & 0
 \end{pmatrix}.
@@ -1515,11 +1511,20 @@ i\partial_x\ket{\Psi_m} = \mathbf{H_{md}} \ket{\Psi_m},
 where the eigenstates are $\ket{\nu_L}$ and $\ket{\nu_H}$.
 
 
+
+
+
+
+
+
+
+
 In general we define
 
-\begin{equation*}
-v = -\sin\theta_v \cos\theta_v\frac{d\hat\Delta}{dx}
-\end{equation*}
+\begin{align*}
+v &= -  \hat\Delta'(x_r) \frac{\cot\theta_v}{4} \left( -1 + \hat\Delta'(x_r)(x-x_r)  \right)  \\
+&\approx   \hat\Delta'(x_r) \frac{\cot\theta_v}{4}
+\end{align*}
 
 so that
 
@@ -1591,45 +1596,46 @@ The first order differential equations of $C_L(x)$ and $C_H(x)$ can be combined 
 
 where $v=-\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx}$ is constant.
 
-Furthermore, the eigenvalues are not varying very fast and satisfies the condition that
+\sout{Furthermore, the eigenvalues are not varying very fast and satisfies the condition that}
 
 \begin{equation*}
 \delta \omega_m = \alpha x,
 \end{equation*}
 
-where $\alpha$ is a constant and comes from the first order of the expression.
+\sout{where $\alpha$ is a constant and comes from the first order of the expression.}
 
 
 
 
-Assuming one of the solutions is $e^{rx}$, we could insert it to the second order differential equation and get the characteristic equation,
+\sout{Assuming one of the solutions is $e^{rx}$, we could insert it to the second order differential equation and get the characteristic equation,}
 
 \begin{equation*}
 r^2 - i\delta \omega_m r + v^2 = 0,
 \end{equation*}
 
-which has two solutions
+\sout{which has two solutions}
 
 \begin{align*}
 r_1 & =  i \frac{\delta\omega_m + \sqrt{\delta\omega_m+ 4v^2} }{2} \\
 r_2 & = i\frac{\delta\omega_m - \sqrt{\delta\omega_m+ 4v^2} }{2}.
 \end{align*}
 
-The solutions to $C_L(x)$ and $C_H(x)$ will be
+\sout{The solutions to $C_L(x)$ and $C_H(x)$ will be}
 
 \begin{align*}
 C_L(x) & = c_1 e^{r_1 x} + c_2 e^{r_2 x} \\
 C_H(x) & = \left( c_1 e^{r_1 x} + c_2 e^{r_2 x} \right) \frac{ e^{ i\int \delta\omega_m dx } }{v} .
 \end{align*}
 
-These constants are determined by the initial condition. The state of the system at any $x$ is
+\sout{These constants are determined by the initial condition. The state of the system at any $x$ is}
 
 \begin{align*}
 \ket{\Psi_m(x)} = & \left( c_1 e^{r_1 x} + c_2 e^{r_2 x} \right) e^{-i\int_0^x \omega_{m1}(x') dx'} \ket{\nu_L}  \\
 & + \left( c_1 e^{r_1 x} + c_2 e^{r_2 x} \right) \frac{ e^{ i\int \delta\omega_m dx } }{v} e^{-i\int_0^x \omega_{m2}(x') dx'} \ket{\nu_H}.
 \end{align*}
 
-{\color{red}Doesn't make sense.}
+
+\sout{{\color{red}Doesn't make sense.}}
 
 
 {\bf{In the paper by Zener,}} we need to do substitution of the function $C_L$ and reduce the equation to Weber equation.\cite{Zener1932} 
@@ -1895,10 +1901,10 @@ P(\nu_e,x) &= \lvert \braket{\Psi_m(0)}{\Psi_m(x)}  \rvert^2 \\
 & = \lvert A_L(x) \rvert^2 + \lvert A_H(x) \rvert^2 + 2 \mathbf{Re}( A_L^*(x) A_H(x) \exp(2i\phi) ),
 \end{align*}
 
-where $\phi$ is a constant
+where $\phi$ is defined as
 
 \begin{align*}
-\phi = \int_{x_0}^{x_r} \frac{\omega_m(x')}{2}dx' 
+\phi = \int_{x_r}^{x} \frac{\omega_m(x')}{2}dx' 
 \end{align*}
 
 Note that for any complex number $(a+ib)e^{i\phi} \equiv \rho e^{i\psi}$,
@@ -2197,7 +2203,6 @@ The numerical results can be obtains by plugging this result into the differenti
 
 
 
-{\color{red}I need a comparison between numerical and analytical which is not really matching! The expression $P=\frac{1}{2}+\frac{1}{2}\cos 2\theta_m \cos 2\theta_v$ is really suspicious.}
 
 
 \begin{figure}
