@@ -1473,11 +1473,11 @@ To find out the solutions the explicit expression for $\mathbf{U_m}$ is required
 
 has been used.
 
-The effective potential is\footnote{This expression comes from the result of the second order approximation of $\sin\theta(x)$ and $\cos\theta(x)$.}
+The effective potential is\footnote{This expression comes from the result of the second order approximation of $\sin\theta(x)$ and $\cos\theta(x)$. There is a reason that this expression $\mathbf{U_m^{-1}}\partial_x \mathbf{U_m}$ has only off-diagonal elements.}
 
 \begin{align*}
 \mathbf{V_m} & = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) \\
-& = - i \frac{\hat\Delta'(x_r) \sin 2\theta_v}{ 2( 2+\hat\Delta'(x)(x-x_r) ( 2+ \hat\Delta'(x)(x-x_r)) ) - 2( 1 + \hat\Delta'(x)(x-x_r) ) \cos 2\theta_v }   \begin{pmatrix}
+& = - i \frac{\hat\Delta'(x_r) \sin 2\theta_v}{ 2( 2+(\hat\Delta(x) -1)  ( 2+ (\hat\Delta'(x) - 1)) ) - 2( 1 + (\hat\Delta'(x) - 1) ) \cos 2\theta_v }   \begin{pmatrix}
 0 & 1 \\
 -1 & 0
 \end{pmatrix} .
@@ -1491,7 +1491,7 @@ To keep only first order\footnote{\begin{equation*}
 \end{equation*}}
 
 \begin{align*}
-\mathbf{V_m} & = - i \hat\Delta'(x_r) \frac{\cot\theta_v}{4} \left( -1 + \hat\Delta'(x_r)(x-x_r)  \right)  \begin{pmatrix}
+\mathbf{V_m(x)} & = - i \hat\Delta'(x_r) \frac{\sin 2\theta_v}{4(\cos 2\theta_v -1)} \left( -1 + (\hat\Delta(x) - 1)  \right)  \begin{pmatrix}
 0 & 1 \\
 -1 & 0
 \end{pmatrix}.
@@ -1522,8 +1522,8 @@ where the eigenstates are $\ket{\nu_L}$ and $\ket{\nu_H}$.
 In general we define
 
 \begin{align*}
-v &= -  \hat\Delta'(x_r) \frac{\cot\theta_v}{4} \left( -1 + \hat\Delta'(x_r)(x-x_r)  \right)  \\
-&\approx   \hat\Delta'(x_r) \frac{\cot\theta_v}{4}
+v &= -  \hat\Delta'(x_r) \frac{\cot \theta_v}{4} \left( -1 + (\hat\Delta(x_r) - 1)  \right)  \\
+&\approx   \hat\Delta'(x_r) \frac{\cot \theta_v}{4}
 \end{align*}
 
 so that
@@ -1640,26 +1640,36 @@ C_H(x) & = \left( c_1 e^{r_1 x} + c_2 e^{r_2 x} \right) \frac{ e^{ i\int \delta\
 
 {\bf{In the paper by Zener,}} we need to do substitution of the function $C_L$ and reduce the equation to Weber equation.\cite{Zener1932} 
 
+The eigenvalues are not varying very fast and satisfies the condition that
+
+\begin{equation*}
+\delta \omega_m =  \omega_m(x_r) +  \alpha (x-x_r),
+\end{equation*}
+
+where $\alpha = \delta \omega_m(x_r)$ is a constant and comes from the first order of the expression.
+
+
+
 Define a new variable $W$ which is determined by\footnote{This is done by assuming $C_L=f(x)W$ and plugging it back to the equation then set the coefficient of $\dot C_L$ to $0$.}
 
 \begin{equation*}
-C_L = e^{ \frac{i}{2}\int \delta \omega_m dx } W.
+C_L = e^{ \frac{i}{2}\int \delta \omega_m dx' } W.
 \end{equation*}
 
 Then we get a simple equation about $W$,
 
 \begin{equation*}
-\ddot W + \left( v^2 + \frac{i \alpha}{2} + \frac{\alpha^2 x^2}{4}  \right) W = 0,
+\ddot W + \left( v^2 + \frac{i \alpha}{2} + \frac{\alpha^2 }{4} (x - x_r + \frac{2\sin\theta_v}{\alpha})^2  \right) W = 0,
 \end{equation*}
 
 which can be reduced to the standard form of Weber equation with the new parameters\footnote{They are found using a single assumption that $z=gx$.}
 
 \begin{align*}
-z &= g x \\
-\nu &= i \frac{v^2}{\alpha},
+z &= g \left(x - x_r + \frac{2\sin\theta_v}{ \alpha'} \right) \\
+\nu &= i \frac{v^2}{\alpha'},
 \end{align*}
 
-where $g^2\equiv -i\alpha$ ($g=(1-i)\sqrt{\alpha} /\sqrt{2}=\sqrt{\alpha}e^{-i\pi/4}x$). The equation we need to solve becomes
+where $g^2\equiv -i\alpha'$ ($g=(1-i)\sqrt{\left\vert \alpha' \right\vert } /\sqrt{2}=\sqrt{\left\vert \alpha' \right\vert }e^{-i\pi/4}$) and $\alpha' = -\alpha$. The equation we need to solve becomes
 
 \begin{equation*}
 \frac{d^2 W(z)}{dz^2} + \left( \nu +\frac{1}{2} - \frac{1}{4}z^2 \right) W(z) = 0 .
@@ -1698,36 +1708,36 @@ D_{-\nu-1}(i x e^{-i\pi/4}) &\to e^{-i(\nu+1)\pi/4} e^{-i x^2/4} x^{-\nu-1}.
 So the real part of these asymptotic expressions are 
 
 \begin{align*}
- e^{i\nu\pi/4} x^{-\nu-1} &= e^{-v^2\pi/4\alpha} x^{-\nu-1} 
- e^{-i\nu\pi/4} x^{-\nu-1} &=e^{v^2\nu\pi/4\alpha} x^{-\nu-1}
+ e^{i\nu\pi/4} x^{-\nu-1} &= e^{-v^2\pi/4\alpha'} x^{-\nu-1} \\
+ e^{-i\nu\pi/4} x^{-\nu-1} &=e^{v^2\pi/4\alpha'} x^{-\nu-1}
 \end{align*}
 
 Apply the boundary condition we have the results of the coefficients\footnote{The details depends on the signs of $\alpha$.}
 
 \begin{align*}
-\lvert u_+ \rvert = \lvert u_- \rvert = e^{\gamma \pi/4}\sqrt{\gamma} ,
+\lvert u_+ \rvert = \lvert u_- \rvert = e^{-\gamma \pi/4}\sqrt{\gamma} ,
 \end{align*}
 
 where $\gamma = \frac{v^2}{\lvert \alpha \rvert}$.
 
 
-What we need to find out is the state at $t\to \infty$, which depends on the asymptotic values of $D_{-\nu-1}$,
+What we need to find out is the state at $x\to \infty$, which depends on the asymptotic values of $D_{-\nu-1}$,
 
 \begin{align*}
-C_L(x) &\to \sqrt{\gamma} e^{-\gamma \pi/4} \left(  e^{3\pi (\nu+1)i/4} e^{-ix^2/4} x^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{\pi\nu/4} e^{i x^2 /4} x^\nu  \right) ,
+C_L(x) &\to \sqrt{\gamma} e^{-\gamma \pi/4} \left(  e^{3\pi (\nu+1)i/4} e^{-ix'^2/4} x'^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{i \pi\nu/4} e^{i x'^2 /4} x'^\nu  \right) ,
 \end{align*}
 
 or 
 
 \begin{align*}
-C_L & \to \sqrt{\gamma} e^{-\gamma \pi/4} \left(   e^{-3\pi (\nu+1)i/4} e^{ix^2/4} x^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{\pi\nu/4} e^{ - i x^2 /4} x^\nu   \right).
+C_L & \to \sqrt{\gamma} e^{-\gamma \pi/4} \left(   e^{-3\pi (\nu+1)i/4} e^{ix'^2/4} x'^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{i \pi\nu/4} e^{ - i x'^2 /4} x'^\nu   \right).
 \end{align*}
 
 
 The transition rate is determined by $\lvert C_L \rvert^2$,\cite{Zener1932}
 
 \begin{equation*}
-\lvert C_L(\infty) \rvert = \gamma e^{-\pi\gamma} \frac{2\pi}{\Gamma(i\gamma +1) \Gamma(-i\gamma +1)} = 2e^{-\pi\gamma}\sinh \pi\gamma = 1-e^{-2\pi\gamma}.
+\lvert C_L(\infty) \rvert^2 = \gamma e^{-\pi\gamma} \frac{2\pi}{\Gamma(i\gamma +1) \Gamma(-i\gamma +1)} = 2e^{-\pi\gamma}\sinh \pi\gamma = 1-e^{-2\pi\gamma}.
 \end{equation*}
 
 
@@ -1745,7 +1755,7 @@ P_{tran} = e^{-2\pi\gamma}.
 Suppose we have the initial condition as $\ket{\Psi_m(x=-\infty)} = \ket{\nu_L}$, the system can jump to $\ket{\nu_H}$ since the state at arbitrary position $x$ is a mixing of the two states.\footnote{In fact this approximation is valid at the level crossing.} The rate of jumping is given by\cite{Vutha2010,Zener1932,Rubbmark1981}
 
 \begin{equation*}
-\gamma  = \frac{v^2}{\lvert \frac{d\omega_m}{x dx}\rvert_{x_r} }.
+\gamma  = \frac{v^2}{\left\vert \frac{d\omega_m}{dx}\right\vert_{x_r} }.
 \end{equation*}
 
 
@@ -1754,17 +1764,22 @@ The probability jumping to state $\ket{\nu_H}$ after the level crossing (at infi
 \begin{align*}
 &P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H})\\
 =& e^{-2\pi\gamma} \\
- =& \exp\left( -2\pi \frac{v^2}{ \lvert \frac{d\omega_m}{xdx} \rvert_{x_r} } \right) \\
- =& \exp\left( -2\pi \frac{\left( -\sin\theta_v\cos\theta_v \frac{d\hat\Delta}{dx} \omega \right)^2}{\lvert \frac{d\omega_m}{xdx} \rvert_{x_r} } \right)\\
- =& \exp\left(  -\frac{\pi}{2} \frac{\sin^2 2\theta_v \omega}{ \cos 2\theta_v \lvert \frac{d \hat\Delta}{dx}/\hat\Delta  \rvert_{x_r}  }   \right)
+ =& \exp\left( -2\pi \frac{v^2}{ \left\vert \frac{d\omega_m}{dx} \right\vert_{x_r} } \right) \\
+ =& \exp\left( -2\pi \frac{\left( \cot\theta_v \frac{d\hat\Delta}{dx}  /4\right)^2}{\left\vert \frac{d\omega_m}{dx} \right\vert_{x_r} } \right)
 \end{align*}
 
-The final result is
+We have
+
+\begin{equation*}
+\left.\frac{d \delta \omega_m}{dx}\right\vert_{x_r} = \left.\frac{d\hat\Delta}{dx} \frac{d\delta \omega_m}{d\hat\Delta} \right\vert_{x_r} = \hat\Delta'(x_r) \omega \sin\theta_v 
+\end{equation*}
+
+The final result should be (which is different from the result I have)
 
 \begin{align*}
 P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) 
 & = 
-\exp \left( -\frac{\pi}{2}\frac{\sin^2 2\theta_v}{\cos 2\theta_v} \frac{\omega}{\lvert \frac{1}{\hat\Delta} \frac{d\hat\Delta}{dx} \vert_{x_r} \rvert} \right)
+\exp \left( -\frac{\pi}{2}\frac{\sin^2 2\theta_v}{\cos 2\theta_v} \frac{\omega}{\lvert  \frac{d\hat\Delta}{dx} \vert_{x_r} \rvert} \right)
 \end{align*}
 
 The survival probability can be calculated by counting the probability left on the initial state.
